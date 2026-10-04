@@ -20,17 +20,17 @@ const INITIAL_TRANCHE: BudgetTrancheState = {
 };
 
 const ACTION_CONFIG: Record<DecisionFrameworkAction, { color: string; bg: string; border: string; label: string }> = {
-  SCALE: { color: '#34d399', bg: 'rgba(16,185,129,0.12)', border: 'rgba(16,185,129,0.3)', label: 'SCALE' },
-  CONTINUE: { color: '#818cf8', bg: 'rgba(99,102,241,0.12)', border: 'rgba(99,102,241,0.3)', label: 'CONTINUE' },
-  ITERATE: { color: '#f59e0b', bg: 'rgba(245,158,11,0.12)', border: 'rgba(245,158,11,0.3)', label: 'ITERATE' },
-  KILL: { color: '#ef4444', bg: 'rgba(239,68,68,0.12)', border: 'rgba(239,68,68,0.3)', label: 'KILL' },
+  SCALE: { color: '#047857', bg: '#ecfdf5', border: '#a7f3d0', label: 'SCALE' },
+  CONTINUE: { color: '#4338ca', bg: '#eef2ff', border: '#c7d2fe', label: 'CONTINUE' },
+  ITERATE: { color: '#b45309', bg: '#fffbeb', border: '#fde68a', label: 'ITERATE' },
+  KILL: { color: '#b91c1c', bg: '#fef2f2', border: '#fecaca', label: 'KILL' },
 };
 
 const STATUS_CONFIG: Record<string, { color: string; bg: string; border: string; label: string }> = {
-  testing: { color: '#f59e0b', bg: 'rgba(245,158,11,0.1)', border: 'rgba(245,158,11,0.25)', label: '🧪 Testing' },
-  implemented: { color: '#10b981', bg: 'rgba(16,185,129,0.1)', border: 'rgba(16,185,129,0.25)', label: '✅ Implemented' },
-  rejected: { color: '#ef4444', bg: 'rgba(239,68,68,0.1)', border: 'rgba(239,68,68,0.25)', label: '❌ Rejected' },
-  monitoring: { color: '#6366f1', bg: 'rgba(99,102,241,0.1)', border: 'rgba(99,102,241,0.25)', label: '👁 Monitoring' },
+  testing: { color: '#b45309', bg: '#fffbeb', border: '#fde68a', label: '🧪 Testing' },
+  implemented: { color: '#047857', bg: '#ecfdf5', border: '#a7f3d0', label: '✅ Implemented' },
+  rejected: { color: '#b91c1c', bg: '#fef2f2', border: '#fecaca', label: '❌ Rejected' },
+  monitoring: { color: '#4338ca', bg: '#eef2ff', border: '#c7d2fe', label: '👁 Monitoring' },
 };
 
 const FUNNEL_STEPS = [

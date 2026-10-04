@@ -98,9 +98,9 @@ export default function CampusLeague() {
             onClick={() => setSortBy(key)}
             style={{
               padding: '6px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, cursor: 'pointer',
-              border: sortBy === key ? '1px solid rgba(99,102,241,0.5)' : '1px solid rgba(255,255,255,0.08)',
-              background: sortBy === key ? 'rgba(99,102,241,0.15)' : 'rgba(255,255,255,0.04)',
-              color: sortBy === key ? '#818cf8' : 'rgba(241,241,245,0.6)',
+              border: sortBy === key ? '1.5px solid #4f46e5' : '1px solid #cbd5e1',
+              background: sortBy === key ? '#eef2ff' : '#ffffff',
+              color: sortBy === key ? '#4338ca' : '#475569',
             }}
           >
             {label}

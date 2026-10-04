@@ -298,13 +298,12 @@ export default function CampusCaptainPage() {
             <select
               id="captain-campus-code"
               className="input-base"
-              style={{ backgroundColor: '#12141f', color: '#f1f1f5' }}
               value={form.campusCode}
               onChange={e => setForm(f => ({ ...f, campusCode: e.target.value }))}
             >
-              <option value="" style={{ backgroundColor: '#161824', color: '#f1f1f5' }}>Select campus code</option>
+              <option value="">Select campus code</option>
               {DEMO_CAMPUS_CODES.map(c => (
-                <option key={c.code} value={c.code} style={{ backgroundColor: '#161824', color: '#f1f1f5' }}>
+                <option key={c.code} value={c.code}>
                   {c.code} — {c.name}
                 </option>
               ))}

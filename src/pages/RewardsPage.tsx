@@ -52,9 +52,9 @@ export default function RewardsPage() {
             style={{
               padding: '10px 16px', borderRadius: '8px 8px 0 0', fontSize: 13, fontWeight: 600, cursor: 'pointer',
               border: 'none',
-              background: activeTab === tab.id ? 'rgba(99,102,241,0.15)' : 'transparent',
-              color: activeTab === tab.id ? '#818cf8' : 'rgba(241,241,245,0.5)',
-              borderBottom: activeTab === tab.id ? '2px solid #6366f1' : '2px solid transparent',
+              background: activeTab === tab.id ? '#eef2ff' : 'transparent',
+              color: activeTab === tab.id ? '#4338ca' : '#64748b',
+              borderBottom: activeTab === tab.id ? '2px solid #4f46e5' : '2px solid transparent',
             }}
           >
             {tab.label}

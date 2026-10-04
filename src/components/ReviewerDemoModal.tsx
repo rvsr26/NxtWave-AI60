@@ -97,27 +97,27 @@ export default function ReviewerDemoModal({ currentStep, onSelectStep, onClose }
       right: 24,
       width: 'min(440px, calc(100vw - 32px))',
       zIndex: 9999,
-      background: 'rgba(18, 18, 28, 0.95)',
+      background: 'rgba(255, 255, 255, 0.98)',
       backdropFilter: 'blur(20px)',
-      border: '1px solid rgba(99, 102, 241, 0.35)',
+      border: '1px solid #c7d2fe',
       borderRadius: 16,
-      boxShadow: '0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(99, 102, 241, 0.2)',
+      boxShadow: '0 20px 40px rgba(15, 23, 42, 0.15), 0 4px 12px rgba(79, 70, 229, 0.08)',
       padding: '20px 22px',
-      color: '#f1f1f5',
+      color: '#0f172a',
       animation: 'fadeInUp 0.3s ease',
     }}>
       {/* Modal Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <span style={{ fontSize: 18 }}>🧭</span>
-          <span style={{ fontWeight: 800, fontSize: 14, letterSpacing: '0.02em', color: '#c7d2fe' }}>
+          <span style={{ fontWeight: 800, fontSize: 14, letterSpacing: '0.02em', color: '#4338ca' }}>
             REVIEWER EVALUATION TOUR
           </span>
         </div>
         <button
           onClick={onClose}
           style={{
-            background: 'none', border: 'none', color: 'rgba(241, 241, 245, 0.5)',
+            background: 'none', border: 'none', color: '#64748b',
             cursor: 'pointer', fontSize: 18, padding: '2px 6px',
           }}
           title="Close review tour"
@@ -134,10 +134,10 @@ export default function ReviewerDemoModal({ currentStep, onSelectStep, onClose }
             onClick={() => onSelectStep(s.number)}
             style={{
               flex: 1,
-              height: 4,
-              borderRadius: 2,
+              height: 5,
+              borderRadius: 3,
               cursor: 'pointer',
-              background: idx + 1 <= currentStep ? '#818cf8' : 'rgba(255, 255, 255, 0.1)',
+              background: idx + 1 <= currentStep ? '#4f46e5' : '#e2e8f0',
               transition: 'background 0.3s ease',
             }}
             title={`Step ${s.number}: ${s.title}`}
@@ -147,27 +147,27 @@ export default function ReviewerDemoModal({ currentStep, onSelectStep, onClose }
 
       {/* Current Step Content */}
       <div style={{ marginBottom: 16 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
           <span className="mono" style={{
-            fontSize: 11, fontWeight: 800, color: '#34d399',
-            background: 'rgba(16, 185, 129, 0.15)', padding: '2px 8px', borderRadius: 4,
+            fontSize: 11, fontWeight: 800, color: '#047857',
+            background: '#ecfdf5', border: '1px solid #a7f3d0', padding: '2px 8px', borderRadius: 4,
           }}>
             Step {active.number} of {REVIEWER_STEPS.length}
           </span>
-          <p style={{ fontSize: 14, fontWeight: 800, margin: 0, color: '#f1f1f5' }}>
+          <p style={{ fontSize: 14, fontWeight: 800, margin: 0, color: '#0f172a' }}>
             {active.title}
           </p>
         </div>
 
-        <p style={{ fontSize: 12, color: 'rgba(241, 241, 245, 0.75)', lineHeight: 1.5, margin: '6px 0 10px' }}>
+        <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.5, margin: '6px 0 10px' }}>
           {active.description}
         </p>
 
         <div style={{
-          background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.25)',
-          borderRadius: 8, padding: '8px 12px',
+          background: '#eef2ff', border: '1px solid #c7d2fe',
+          borderRadius: 8, padding: '9px 12px',
         }}>
-          <p style={{ fontSize: 11, color: '#c7d2fe', margin: 0, lineHeight: 1.4 }}>
+          <p style={{ fontSize: 12, color: '#4338ca', margin: 0, lineHeight: 1.4 }}>
             🎯 <strong>Reviewer Focus:</strong> {active.focus}
           </p>
         </div>
@@ -178,29 +178,27 @@ export default function ReviewerDemoModal({ currentStep, onSelectStep, onClose }
         <button
           disabled={currentStep <= 1}
           onClick={() => onSelectStep(currentStep - 1)}
+          className="btn-secondary"
           style={{
             padding: '7px 14px', borderRadius: 8, fontSize: 12, fontWeight: 600,
             cursor: currentStep <= 1 ? 'not-allowed' : 'pointer',
             opacity: currentStep <= 1 ? 0.4 : 1,
-            background: 'rgba(255, 255, 255, 0.05)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
-            color: '#f1f1f5',
           }}
         >
           ← Prev
         </button>
 
-        <span style={{ fontSize: 11, color: 'rgba(241, 241, 245, 0.4)' }}>
+        <span style={{ fontSize: 11, color: '#64748b' }}>
           Under 3-min walkthrough
         </span>
 
         {currentStep < REVIEWER_STEPS.length ? (
           <button
             onClick={() => onSelectStep(currentStep + 1)}
+            className="btn-primary"
             style={{
               padding: '7px 16px', borderRadius: 8, fontSize: 12, fontWeight: 700,
-              cursor: 'pointer', background: 'linear-gradient(135deg, #6366f1, #4f46e5)',
-              border: 'none', color: '#ffffff', boxShadow: '0 2px 10px rgba(99, 102, 241, 0.4)',
+              cursor: 'pointer',
             }}
           >
             Next Step →
@@ -208,10 +206,10 @@ export default function ReviewerDemoModal({ currentStep, onSelectStep, onClose }
         ) : (
           <button
             onClick={onClose}
+            className="btn-green"
             style={{
               padding: '7px 16px', borderRadius: 8, fontSize: 12, fontWeight: 700,
-              cursor: 'pointer', background: 'linear-gradient(135deg, #10b981, #059669)',
-              border: 'none', color: '#ffffff',
+              cursor: 'pointer',
             }}
           >
             Finish Tour ✓

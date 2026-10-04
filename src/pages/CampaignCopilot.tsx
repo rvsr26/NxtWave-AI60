@@ -86,12 +86,11 @@ export default function CampaignCopilot() {
             <select
               id="copilot-audience"
               className="input-base"
-              style={{ backgroundColor: '#12141f', color: '#f1f1f5' }}
               value={audience}
               onChange={e => setAudience(e.target.value)}
             >
               {AUDIENCES.map(a => (
-                <option key={a} value={a} style={{ backgroundColor: '#161824', color: '#f1f1f5' }}>
+                <option key={a} value={a}>
                   {a}
                 </option>
               ))}
@@ -100,7 +99,7 @@ export default function CampaignCopilot() {
 
           {/* Channel */}
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: 'rgba(241,241,245,0.8)', marginBottom: 8 }}>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 8 }}>
               Channel
             </label>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
@@ -111,9 +110,9 @@ export default function CampaignCopilot() {
                   onClick={() => setChannel(c)}
                   style={{
                     padding: '7px 12px', borderRadius: 8, fontSize: 12, fontWeight: 600, cursor: 'pointer',
-                    border: channel === c ? '1px solid rgba(99,102,241,0.5)' : '1px solid rgba(255,255,255,0.08)',
-                    background: channel === c ? 'rgba(99,102,241,0.15)' : 'rgba(255,255,255,0.04)',
-                    color: channel === c ? '#818cf8' : 'rgba(241,241,245,0.6)',
+                    border: channel === c ? '1.5px solid #4f46e5' : '1px solid #cbd5e1',
+                    background: channel === c ? '#eef2ff' : '#ffffff',
+                    color: channel === c ? '#4338ca' : '#475569',
                   }}
                 >
                   {c}
@@ -124,18 +123,17 @@ export default function CampaignCopilot() {
 
           {/* Goal */}
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: 'rgba(241,241,245,0.8)', marginBottom: 8 }}>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 8 }}>
               Campaign Goal
             </label>
             <select
               id="copilot-goal"
               className="input-base"
-              style={{ backgroundColor: '#12141f', color: '#f1f1f5' }}
               value={goal}
               onChange={e => setGoal(e.target.value)}
             >
               {GOALS.map(g => (
-                <option key={g} value={g} style={{ backgroundColor: '#161824', color: '#f1f1f5' }}>
+                <option key={g} value={g}>
                   {g}
                 </option>
               ))}

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { AppProvider, useApp } from './context/AppContext';
-import Navigation from './components/Navigation';
+import { Sidebar, TopBar } from './components/Navigation';
 import HomePage from './pages/HomePage';
 import PassportGenerator from './pages/PassportGenerator';
 import PassportCard from './components/PassportCard';
@@ -34,8 +34,6 @@ type Page =
   | 'simulator'
   | 'admin';
 
-import ReviewerDemoModal, { REVIEWER_STEPS } from './components/ReviewerDemoModal';
-
 // Map navigation menu IDs to page IDs
 type NavPage = 'home' | 'register' | 'success' | 'referrals' | 'rewards' | 'campus' | 'captain' | 'dashboard' | 'experiments' | 'decisions' | 'copilot' | 'simulator' | 'admin';
 
@@ -49,8 +47,7 @@ function AppContent() {
   const { state } = useApp();
   const [page, setPage] = useState<Page>(getInitialPage);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const [reviewerTourOpen, setReviewerTourOpen] = useState(false);
-  const [tourStep, setTourStep] = useState(1);
+  const mainRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -77,33 +74,19 @@ function AppContent() {
     if (navPage === 'register') setPage('register');
     else if (navPage === 'success') setPage('success');
     else setPage(navPage as Page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
 
-  function handleSelectTourStep(stepNum: number) {
-    setTourStep(stepNum);
-    const stepObj = REVIEWER_STEPS[stepNum - 1];
-    if (stepObj) {
-      navigateTo(stepObj.page as NavPage);
+    // Only scroll the main page content to top, NEVER reset the sidebar scroll position
+    if (mainRef.current) {
+      mainRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  }
-
-  function handleStartReviewerTour() {
-    setTourStep(1);
-    setReviewerTourOpen(true);
-    navigateTo('home');
   }
 
   const currentNavPage: NavPage =
     page === 'passport' ? 'home' :
     page === 'success' ? 'success' :
     page as NavPage;
-
-  const { Sidebar, TopBar } = Navigation({
-    currentPage: currentNavPage,
-    onNavigate: navigateTo,
-    onStartReviewerDemo: handleStartReviewerTour,
-  });
 
   function renderPage() {
     switch (page) {
@@ -156,34 +139,20 @@ function AppContent() {
   if (isMobile) {
     return (
       <div style={{ minHeight: '100vh', background: 'var(--color-surface-0)' }}>
-        <TopBar />
-        <main>
+        <TopBar currentPage={currentNavPage} onNavigate={navigateTo} />
+        <main ref={mainRef}>
           {renderPage()}
         </main>
-        {reviewerTourOpen && (
-          <ReviewerDemoModal
-            currentStep={tourStep}
-            onSelectStep={handleSelectTourStep}
-            onClose={() => setReviewerTourOpen(false)}
-          />
-        )}
       </div>
     );
   }
 
   return (
     <div style={{ display: 'flex', minHeight: '100vh', background: 'var(--color-surface-0)' }}>
-      <Sidebar />
-      <main style={{ flex: 1, overflow: 'auto', minHeight: '100vh' }}>
+      <Sidebar currentPage={currentNavPage} onNavigate={navigateTo} />
+      <main ref={mainRef} style={{ flex: 1, overflowY: 'auto', maxHeight: '100vh' }}>
         {renderPage()}
       </main>
-      {reviewerTourOpen && (
-        <ReviewerDemoModal
-          currentStep={tourStep}
-          onSelectStep={handleSelectTourStep}
-          onClose={() => setReviewerTourOpen(false)}
-        />
-      )}
     </div>
   );
 }

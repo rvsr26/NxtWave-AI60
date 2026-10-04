@@ -22,8 +22,8 @@ function SliderInput({ label, value, min, max, step, onChange, format }: {
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
-        <label style={{ fontSize: 13, fontWeight: 600, color: 'rgba(241,241,245,0.8)' }}>{label}</label>
-        <span style={{ fontSize: 14, fontWeight: 800, color: '#818cf8' }}>
+        <label style={{ fontSize: 13, fontWeight: 700, color: '#334155' }}>{label}</label>
+        <span style={{ fontSize: 14, fontWeight: 800, color: '#4338ca' }}>
           {format ? format(value) : value}
         </span>
       </div>
@@ -33,14 +33,14 @@ function SliderInput({ label, value, min, max, step, onChange, format }: {
         onChange={e => onChange(parseFloat(e.target.value))}
         style={{
           width: '100%', height: 6, borderRadius: 999,
-          background: `linear-gradient(90deg, #6366f1 ${((value - min) / (max - min)) * 100}%, rgba(255,255,255,0.1) ${((value - min) / (max - min)) * 100}%)`,
+          background: `linear-gradient(90deg, #4f46e5 ${((value - min) / (max - min)) * 100}%, #e2e8f0 ${((value - min) / (max - min)) * 100}%)`,
           outline: 'none', cursor: 'pointer',
           WebkitAppearance: 'none', appearance: 'none',
         }}
       />
       <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 4 }}>
-        <span style={{ fontSize: 10, color: 'rgba(241,241,245,0.3)' }}>{min}</span>
-        <span style={{ fontSize: 10, color: 'rgba(241,241,245,0.3)' }}>{max}</span>
+        <span style={{ fontSize: 10, color: '#94a3b8' }}>{min}</span>
+        <span style={{ fontSize: 10, color: '#94a3b8' }}>{max}</span>
       </div>
     </div>
   );

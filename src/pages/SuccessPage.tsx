@@ -51,12 +51,12 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'var(--color-surface-0)',
+      background: '#f8fafc',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '40px 24px',
+      padding: '48px 24px',
     }}>
       <div style={{ maxWidth: 640, width: '100%', textAlign: 'center' }}>
         {/* Celebration */}
@@ -68,12 +68,12 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
         </div>
         <h2 style={{
           fontSize: 'clamp(26px, 4vw, 36px)',
-          fontWeight: 900, color: '#f1f1f5',
+          fontWeight: 900, color: '#0f172a',
           letterSpacing: '-0.02em', marginBottom: 8,
         }}>
           You're in, {reg.name.split(' ')[0]}!
         </h2>
-        <p style={{ color: 'rgba(241,241,245,0.6)', fontSize: 15, marginBottom: 32, lineHeight: 1.6 }}>
+        <p style={{ color: '#475569', fontSize: 15, marginBottom: 32, lineHeight: 1.6 }}>
           Your seat is reserved for <strong>Build Your First AI Project in 60 Minutes</strong>.<br />
           Now share your referral link and compete on the campus leaderboard!
         </p>
@@ -81,20 +81,20 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
         {/* Passport recap */}
         {passport && (
           <div className="card" style={{
-            background: 'linear-gradient(135deg, rgba(99,102,241,0.12), rgba(167,139,250,0.06))',
-            border: '1px solid rgba(99,102,241,0.25)',
+            background: '#eef2ff',
+            border: '1px solid #c7d2fe',
             marginBottom: 24, textAlign: 'left',
           }}>
-            <p className="section-label" style={{ marginBottom: 8 }}>Your Confirmed Project Passport</p>
+            <p className="section-label" style={{ color: '#4338ca', marginBottom: 8 }}>Your Confirmed Project Passport</p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
               <div style={{
                 width: 44, height: 44, borderRadius: 10,
-                background: 'linear-gradient(135deg, #6366f1, #4f46e5)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22,
+                background: 'linear-gradient(135deg, #4f46e5, #4338ca)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22, color: '#ffffff',
               }}>🤖</div>
               <div>
-                <p style={{ fontWeight: 800, color: '#f1f1f5', fontSize: 17 }}>{passport.projectName}</p>
-                <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.55)', marginTop: 2 }}>
+                <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 17, margin: 0 }}>{passport.projectName}</p>
+                <p style={{ fontSize: 13, color: '#64748b', marginTop: 2, margin: '2px 0 0' }}>
                   {passport.difficulty} · {passport.interest} · {reg.branch}
                 </p>
               </div>
@@ -105,7 +105,7 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
         {/* Referral Dashboard Section */}
         <div className="card" style={{ marginBottom: 24, textAlign: 'left' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-            <p style={{ fontWeight: 800, color: '#f1f1f5', fontSize: 16, margin: 0 }}>
+            <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 16, margin: 0 }}>
               👥 Your Referral Dashboard
             </p>
             <span className="chip chip-amber">
@@ -115,47 +115,47 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
 
           {/* 4 Stats Grid */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 10, marginBottom: 16 }}>
-            <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: '10px 12px' }}>
-              <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', fontWeight: 700, margin: 0 }}>REFERRAL CODE</p>
-              <p className="mono" style={{ fontSize: 16, fontWeight: 900, color: '#818cf8', margin: '4px 0 0' }}>{reg.referralCode}</p>
+            <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 8, padding: '10px 12px' }}>
+              <p style={{ fontSize: 10, color: '#64748b', fontWeight: 700, margin: 0 }}>REFERRAL CODE</p>
+              <p className="mono" style={{ fontSize: 16, fontWeight: 900, color: '#4338ca', margin: '4px 0 0' }}>{reg.referralCode}</p>
             </div>
-            <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: '10px 12px' }}>
-              <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', fontWeight: 700, margin: 0 }}>QUALIFIED REFERRALS</p>
-              <p style={{ fontSize: 18, fontWeight: 900, color: '#34d399', margin: '4px 0 0' }}>{qualifiedCount}</p>
+            <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 8, padding: '10px 12px' }}>
+              <p style={{ fontSize: 10, color: '#64748b', fontWeight: 700, margin: 0 }}>QUALIFIED REFERRALS</p>
+              <p style={{ fontSize: 18, fontWeight: 900, color: '#047857', margin: '4px 0 0' }}>{qualifiedCount}</p>
             </div>
-            <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: '10px 12px' }}>
-              <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', fontWeight: 700, margin: 0 }}>CURRENT RANK</p>
-              <p style={{ fontSize: 18, fontWeight: 900, color: '#fcd34d', margin: '4px 0 0' }}>#{currentRank}</p>
+            <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 8, padding: '10px 12px' }}>
+              <p style={{ fontSize: 10, color: '#64748b', fontWeight: 700, margin: 0 }}>CURRENT RANK</p>
+              <p style={{ fontSize: 18, fontWeight: 900, color: '#b45309', margin: '4px 0 0' }}>#{currentRank}</p>
             </div>
-            <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: '10px 12px' }}>
-              <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', fontWeight: 700, margin: 0 }}>REWARD STATUS</p>
-              <p style={{ fontSize: 11, fontWeight: 800, color: '#34d399', margin: '4px 0 0', lineHeight: 1.3 }}>{rewardStatusText}</p>
+            <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 8, padding: '10px 12px' }}>
+              <p style={{ fontSize: 10, color: '#64748b', fontWeight: 700, margin: 0 }}>REWARD STATUS</p>
+              <p style={{ fontSize: 11, fontWeight: 800, color: '#047857', margin: '4px 0 0', lineHeight: 1.3 }}>{rewardStatusText}</p>
             </div>
           </div>
 
           {/* Reward Status Banner */}
           <div style={{
-            background: qualifiedCount >= 3 ? 'rgba(16,185,129,0.1)' : 'rgba(99,102,241,0.08)',
-            border: `1px solid ${qualifiedCount >= 3 ? 'rgba(16,185,129,0.3)' : 'rgba(99,102,241,0.2)'}`,
+            background: qualifiedCount >= 3 ? '#ecfdf5' : '#eef2ff',
+            border: `1px solid ${qualifiedCount >= 3 ? '#a7f3d0' : '#c7d2fe'}`,
             borderRadius: 10, padding: '12px 16px', marginBottom: 16,
           }}>
-            <p style={{ fontSize: 13, fontWeight: 700, color: qualifiedCount >= 3 ? '#34d399' : '#818cf8', marginBottom: 4 }}>
+            <p style={{ fontSize: 13, fontWeight: 700, color: qualifiedCount >= 3 ? '#047857' : '#4338ca', marginBottom: 4, margin: '0 0 4px' }}>
               🏆 Top 3 Referral Rewards: #1 ₹250 · #2 ₹150 · #3 ₹100
             </p>
-            <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.65)', margin: 0, lineHeight: 1.5 }}>
+            <p style={{ fontSize: 12, color: '#475569', margin: 0, lineHeight: 1.5 }}>
               Referrals qualify only after verified registration. Anti-fraud checks prevent duplicate signups and self-referrals.
             </p>
           </div>
 
           <div style={{
             display: 'flex', alignItems: 'center', gap: 8,
-            background: 'rgba(255,255,255,0.05)',
-            border: '1px solid rgba(255,255,255,0.1)',
+            background: '#ffffff',
+            border: '1px solid #cbd5e1',
             borderRadius: 10, padding: '10px 14px',
             marginBottom: 14, overflow: 'hidden',
           }}>
             <span className="mono" style={{
-              flex: 1, fontSize: 12, color: '#818cf8',
+              flex: 1, fontSize: 12, color: '#4338ca',
               overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
             }}>
               {referralUrl}
@@ -188,15 +188,15 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
         {/* Campus info */}
         {reg.campus && (
           <div style={{
-            background: 'rgba(245,158,11,0.08)',
-            border: '1px solid rgba(245,158,11,0.2)',
+            background: '#fffbeb',
+            border: '1px solid #fde68a',
             borderRadius: 12, padding: '16px', marginBottom: 24,
             textAlign: 'left',
           }}>
-            <p style={{ fontSize: 13, fontWeight: 700, color: '#fcd34d', marginBottom: 4 }}>
+            <p style={{ fontSize: 13, fontWeight: 700, color: '#b45309', marginBottom: 4, margin: '0 0 4px' }}>
               🏫 Campus Code: {reg.campus}
             </p>
-            <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.6)' }}>
+            <p style={{ fontSize: 13, color: '#64748b', margin: 0 }}>
               Your registration counts toward your campus score in the AI60 Campus League!
             </p>
           </div>
@@ -213,12 +213,14 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
             { label: 'Registered', value: new Date(reg.registeredAt).toLocaleDateString() },
           ].map(({ label, value }) => (
             <div key={label} style={{
-              background: 'rgba(255,255,255,0.03)',
-              border: '1px solid rgba(255,255,255,0.06)',
+              background: '#ffffff',
+              border: '1px solid #e2e8f0',
               borderRadius: 10, padding: '12px 14px',
+              textAlign: 'left',
+              boxShadow: '0 1px 3px rgba(15,23,42,0.02)',
             }}>
               <p className="section-label" style={{ marginBottom: 4 }}>{label}</p>
-              <p style={{ fontSize: 14, fontWeight: 600, color: '#f1f1f5' }} className={label === 'Referral Code' ? 'mono' : ''}>
+              <p style={{ fontSize: 14, fontWeight: 600, color: '#0f172a', margin: 0 }} className={label === 'Referral Code' ? 'mono' : ''}>
                 {value}
               </p>
             </div>

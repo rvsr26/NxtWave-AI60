@@ -57,9 +57,9 @@ export default function ExperimentLab() {
             style={{
               padding: '8px 16px',
               borderRadius: 10, fontSize: 13, fontWeight: 600, cursor: 'pointer',
-              border: selected === e.id ? '1px solid rgba(99,102,241,0.5)' : '1px solid rgba(255,255,255,0.08)',
-              background: selected === e.id ? 'rgba(99,102,241,0.15)' : 'rgba(255,255,255,0.04)',
-              color: selected === e.id ? '#818cf8' : 'rgba(241,241,245,0.6)',
+              border: selected === e.id ? '1.5px solid #4f46e5' : '1px solid #cbd5e1',
+              background: selected === e.id ? '#eef2ff' : '#ffffff',
+              color: selected === e.id ? '#4338ca' : '#475569',
             }}
           >
             Exp #{e.number} — {e.title.split(' ').slice(0, 4).join(' ')}…
