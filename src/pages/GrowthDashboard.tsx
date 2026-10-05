@@ -76,7 +76,7 @@ export default function GrowthDashboard() {
       <div style={{ marginBottom: 28 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 8 }}>
           <h1 style={{
-            fontSize: 28, fontWeight: 900, color: '#f1f1f5',
+            fontSize: 28, fontWeight: 900, color: '#0f172a',
             letterSpacing: '-0.02em', margin: 0,
           }}>
             📊 AI60 Growth Command Center
@@ -84,35 +84,36 @@ export default function GrowthDashboard() {
           <span className="chip chip-brand">7-Day Campaign System</span>
           <span className="chip chip-demo">Includes Simulation Data</span>
         </div>
-        <p style={{ color: 'rgba(241,241,245,0.65)', fontSize: 14, margin: 0, lineHeight: 1.6 }}>
+        <p style={{ color: '#475569', fontSize: 14, margin: 0, lineHeight: 1.6 }}>
           Measurable growth system tracking 500 registrations across organic communities, campus captains, verified referrals, and ₹300 Student Creator Growth Challenge.
         </p>
       </div>
 
       {/* Target Progress Card with 3-Way Data Integrity Indicators */}
       <div style={{
-        background: 'linear-gradient(135deg, rgba(99,102,241,0.12), rgba(16,185,129,0.08))',
-        border: '1px solid rgba(99,102,241,0.25)',
+        background: '#ffffff',
+        border: '1px solid #e2e8f0',
         borderRadius: 16, padding: '24px', marginBottom: 28,
+        boxShadow: '0 1px 3px rgba(15,23,42,0.04), 0 6px 16px -4px rgba(15,23,42,0.02)',
       }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 16, marginBottom: 16 }}>
           <div>
             <p className="section-label" style={{ marginBottom: 4 }}>CAMPAIGN TARGET</p>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
-              <span style={{ fontSize: 50, fontWeight: 900, color: '#f1f1f5', lineHeight: 1, letterSpacing: '-0.04em' }}>
+              <span style={{ fontSize: 50, fontWeight: 900, color: '#0f172a', lineHeight: 1, letterSpacing: '-0.04em' }}>
                 {totalRegs}
               </span>
-              <span style={{ fontSize: 20, color: 'rgba(241,241,245,0.4)', fontWeight: 700 }}>/ {TARGET}</span>
+              <span style={{ fontSize: 20, color: '#64748b', fontWeight: 700 }}>/ {TARGET}</span>
             </div>
-            <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.5)', marginTop: 4 }}>verified & demo registrations</p>
+            <p style={{ fontSize: 13, color: '#64748b', marginTop: 4 }}>verified & demo registrations</p>
           </div>
           <div style={{ textAlign: 'right' }}>
-            <p style={{ fontSize: 36, fontWeight: 900, color: '#818cf8', lineHeight: 1, letterSpacing: '-0.02em', margin: 0 }}>
+            <p style={{ fontSize: 36, fontWeight: 900, color: '#4338ca', lineHeight: 1, letterSpacing: '-0.02em', margin: 0 }}>
               {((totalRegs / TARGET) * 100).toFixed(1)}%
             </p>
-            <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.45)', margin: '4px 0 0' }}>of 500 target reached</p>
+            <p style={{ fontSize: 12, color: '#64748b', margin: '4px 0 0' }}>of 500 target reached</p>
             {TARGET - totalRegs > 0 && (
-              <p style={{ fontSize: 12, color: '#fcd34d', fontWeight: 700, marginTop: 4, margin: '4px 0 0' }}>
+              <p style={{ fontSize: 12, color: '#b45309', fontWeight: 700, marginTop: 4, margin: '4px 0 0' }}>
                 {TARGET - totalRegs} to go in 7-day model
               </p>
             )}
@@ -123,35 +124,35 @@ export default function GrowthDashboard() {
           <div style={{
             height: '100%', borderRadius: 999,
             width: `${Math.min((totalRegs / TARGET) * 100, 100)}%`,
-            background: 'linear-gradient(90deg, #6366f1, #10b981)',
+            background: 'linear-gradient(90deg, #4f46e5, #059669)',
             transition: 'width 0.8s ease',
           }} />
         </div>
 
         {/* 3-Tier Data Honesty Bar */}
         <div style={{
-          paddingTop: 12, borderTop: '1px solid rgba(255,255,255,0.08)',
+          paddingTop: 12, borderTop: '1px solid #f1f5f9',
           display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12,
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981' }} />
+            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#059669' }} />
             <div>
-              <p style={{ fontSize: 11, fontWeight: 700, color: '#34d399', margin: 0 }}>ACTUAL DEMO EVENTS</p>
-              <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', margin: 0 }}>{regs.filter(r => !r.isSimulated).length} verified live registrations</p>
+              <p style={{ fontSize: 11, fontWeight: 700, color: '#047857', margin: 0 }}>ACTUAL DEMO EVENTS</p>
+              <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>{regs.filter(r => !r.isSimulated).length} verified live registrations</p>
             </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b' }} />
+            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#d97706' }} />
             <div>
-              <p style={{ fontSize: 11, fontWeight: 700, color: '#fcd34d', margin: 0 }}>SIMULATION DATA</p>
-              <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', margin: 0 }}>{simRegs} illustrative student records</p>
+              <p style={{ fontSize: 11, fontWeight: 700, color: '#b45309', margin: 0 }}>SIMULATION DATA</p>
+              <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>{simRegs} illustrative student records</p>
             </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#818cf8' }} />
+            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#4f46e5' }} />
             <div>
-              <p style={{ fontSize: 11, fontWeight: 700, color: '#a5b4fc', margin: 0 }}>PLANNING ASSUMPTIONS</p>
-              <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', margin: 0 }}>500-student model / ₹2,000 budget</p>
+              <p style={{ fontSize: 11, fontWeight: 700, color: '#4338ca', margin: 0 }}>PLANNING ASSUMPTIONS</p>
+              <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>500-student model / ₹2,000 budget</p>
             </div>
           </div>
         </div>
@@ -405,8 +406,8 @@ export default function GrowthDashboard() {
           <div className="card" style={{ marginBottom: 24 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16, flexWrap: 'wrap', gap: 10 }}>
               <div>
-                <p className="section-label" style={{ color: '#f59e0b', marginBottom: 4 }}>CREATOR GROWTH CHALLENGE</p>
-                <h2 style={{ fontSize: 20, fontWeight: 800, color: '#f1f1f5', margin: 0 }}>
+                <p className="section-label" style={{ color: '#b45309', marginBottom: 4 }}>CREATOR GROWTH CHALLENGE</p>
+                <h2 style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', margin: 0 }}>
                   Student Creator Growth Challenge (Prize: ₹300)
                 </h2>
               </div>
@@ -416,40 +417,40 @@ export default function GrowthDashboard() {
               </div>
             </div>
 
-            <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.65)', lineHeight: 1.6, marginBottom: 20 }}>
+            <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.6, marginBottom: 20 }}>
               Instead of spending ₹300 on cold paid ads, ₹300 is awarded as a performance prize to the student creator who drives the best verified workshop acquisition.
               Content formats include Instagram Reels, WhatsApp creatives, LinkedIn posts, X threads, and short videos.
             </p>
 
             {/* Scoring Model Callout */}
             <div style={{
-              background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)',
+              background: '#f8fafc', border: '1px solid #e2e8f0',
               borderRadius: 12, padding: '16px', marginBottom: 24,
             }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10, flexWrap: 'wrap', gap: 8 }}>
-                <strong style={{ color: '#f1f1f5', fontSize: 13 }}>📐 Published Creator Scoring Model (100% Total)</strong>
-                <span style={{ fontSize: 11, color: '#34d399', fontWeight: 700 }}>Focus on Actual Growth &gt; Vanity Views</span>
+                <strong style={{ color: '#0f172a', fontSize: 13 }}>📐 Published Creator Scoring Model (100% Total)</strong>
+                <span style={{ fontSize: 11, color: '#047857', fontWeight: 700 }}>Focus on Actual Growth &gt; Vanity Views</span>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 10 }}>
-                <div style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.25)', borderRadius: 8, padding: '10px' }}>
-                  <span style={{ fontSize: 11, color: '#818cf8', display: 'block', fontWeight: 700 }}>QUALIFIED REGS</span>
-                  <strong style={{ fontSize: 18, color: '#f1f1f5' }}>60%</strong>
-                  <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.5)', margin: '2px 0 0' }}>Primary decision driver</p>
+                <div style={{ background: '#eef2ff', border: '1px solid #c7d2fe', borderRadius: 8, padding: '10px' }}>
+                  <span style={{ fontSize: 11, color: '#4338ca', display: 'block', fontWeight: 700 }}>QUALIFIED REGS</span>
+                  <strong style={{ fontSize: 18, color: '#0f172a' }}>60%</strong>
+                  <p style={{ fontSize: 10, color: '#64748b', margin: '2px 0 0' }}>Primary decision driver</p>
                 </div>
-                <div style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.25)', borderRadius: 8, padding: '10px' }}>
-                  <span style={{ fontSize: 11, color: '#34d399', display: 'block', fontWeight: 700 }}>CLICK-THROUGH (CTR)</span>
-                  <strong style={{ fontSize: 18, color: '#f1f1f5' }}>20%</strong>
-                  <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.5)', margin: '2px 0 0' }}>Interest & hook quality</p>
+                <div style={{ background: '#ecfdf5', border: '1px solid #a7f3d0', borderRadius: 8, padding: '10px' }}>
+                  <span style={{ fontSize: 11, color: '#047857', display: 'block', fontWeight: 700 }}>CLICK-THROUGH (CTR)</span>
+                  <strong style={{ fontSize: 18, color: '#0f172a' }}>20%</strong>
+                  <p style={{ fontSize: 10, color: '#64748b', margin: '2px 0 0' }}>Interest & hook quality</p>
                 </div>
-                <div style={{ background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.25)', borderRadius: 8, padding: '10px' }}>
-                  <span style={{ fontSize: 11, color: '#fcd34d', display: 'block', fontWeight: 700 }}>ENGAGEMENT</span>
-                  <strong style={{ fontSize: 18, color: '#f1f1f5' }}>10%</strong>
-                  <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.5)', margin: '2px 0 0' }}>Comments & shares</p>
+                <div style={{ background: '#fffbeb', border: '1px solid #fde68a', borderRadius: 8, padding: '10px' }}>
+                  <span style={{ fontSize: 11, color: '#b45309', display: 'block', fontWeight: 700 }}>ENGAGEMENT</span>
+                  <strong style={{ fontSize: 18, color: '#0f172a' }}>10%</strong>
+                  <p style={{ fontSize: 10, color: '#64748b', margin: '2px 0 0' }}>Comments & shares</p>
                 </div>
-                <div style={{ background: 'rgba(236,72,153,0.08)', border: '1px solid rgba(236,72,153,0.25)', borderRadius: 8, padding: '10px' }}>
-                  <span style={{ fontSize: 11, color: '#f472b6', display: 'block', fontWeight: 700 }}>CREATIVITY</span>
-                  <strong style={{ fontSize: 18, color: '#f1f1f5' }}>10%</strong>
-                  <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.5)', margin: '2px 0 0' }}>Originality of messaging</p>
+                <div style={{ background: '#fdf2f8', border: '1px solid #fbcfe8', borderRadius: 8, padding: '10px' }}>
+                  <span style={{ fontSize: 11, color: '#be185d', display: 'block', fontWeight: 700 }}>CREATIVITY</span>
+                  <strong style={{ fontSize: 18, color: '#0f172a' }}>10%</strong>
+                  <p style={{ fontSize: 10, color: '#64748b', margin: '2px 0 0' }}>Originality of messaging</p>
                 </div>
               </div>
             </div>
@@ -458,9 +459,10 @@ export default function GrowthDashboard() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16, marginBottom: 24 }}>
               {creators.map(c => (
                 <div key={c.id} style={{
-                  background: c.isWinner ? 'rgba(16,185,129,0.06)' : 'rgba(255,255,255,0.02)',
-                  border: c.isWinner ? '1px solid rgba(16,185,129,0.35)' : '1px solid rgba(255,255,255,0.08)',
+                  background: c.isWinner ? '#f0fdf4' : '#ffffff',
+                  border: c.isWinner ? '1px solid #86efac' : '1px solid #e2e8f0',
                   borderRadius: 12, padding: '18px', position: 'relative',
+                  boxShadow: '0 1px 3px rgba(15,23,42,0.03)',
                 }}>
                   {c.isWinner && (
                     <div style={{ position: 'absolute', top: 12, right: 12 }}>
@@ -469,45 +471,45 @@ export default function GrowthDashboard() {
                   )}
 
                   <div style={{ marginBottom: 12 }}>
-                    <p style={{ fontSize: 14, fontWeight: 800, color: c.isWinner ? '#34d399' : '#f1f1f5', margin: '0 0 2px' }}>
+                    <p style={{ fontSize: 15, fontWeight: 800, color: c.isWinner ? '#15803d' : '#0f172a', margin: '0 0 2px' }}>
                       {c.creatorName}
                     </p>
                     <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-                      <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.5)', fontFamily: 'var(--font-mono)' }}>Code: {c.creatorCode}</span>
-                      <span style={{ fontSize: 11, color: '#818cf8' }}>• {c.format}</span>
+                      <span style={{ fontSize: 11, color: '#64748b', fontFamily: 'var(--font-mono)' }}>Code: {c.creatorCode}</span>
+                      <span style={{ fontSize: 11, color: '#4338ca', fontWeight: 600 }}>• {c.format}</span>
                     </div>
                   </div>
 
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, fontSize: 12, marginBottom: 12 }}>
-                    <div style={{ background: 'rgba(255,255,255,0.03)', padding: '8px 10px', borderRadius: 6 }}>
-                      <span style={{ color: 'rgba(241,241,245,0.4)', display: 'block', fontSize: 10 }}>REACH (VIEWS)</span>
-                      <strong style={{ color: '#f1f1f5' }}>{c.reach.toLocaleString()}</strong>
+                    <div style={{ background: '#f8fafc', padding: '8px 10px', borderRadius: 6, border: '1px solid #e2e8f0' }}>
+                      <span style={{ color: '#64748b', display: 'block', fontSize: 10, fontWeight: 600 }}>REACH (VIEWS)</span>
+                      <strong style={{ color: '#0f172a' }}>{c.reach.toLocaleString()}</strong>
                     </div>
-                    <div style={{ background: 'rgba(255,255,255,0.03)', padding: '8px 10px', borderRadius: 6 }}>
-                      <span style={{ color: 'rgba(241,241,245,0.4)', display: 'block', fontSize: 10 }}>CLICKS</span>
-                      <strong style={{ color: '#f1f1f5' }}>{c.clicks}</strong>
+                    <div style={{ background: '#f8fafc', padding: '8px 10px', borderRadius: 6, border: '1px solid #e2e8f0' }}>
+                      <span style={{ color: '#64748b', display: 'block', fontSize: 10, fontWeight: 600 }}>CLICKS</span>
+                      <strong style={{ color: '#0f172a' }}>{c.clicks}</strong>
                     </div>
-                    <div style={{ background: 'rgba(255,255,255,0.03)', padding: '8px 10px', borderRadius: 6 }}>
-                      <span style={{ color: 'rgba(241,241,245,0.4)', display: 'block', fontSize: 10 }}>CTR</span>
-                      <strong style={{ color: '#fcd34d' }}>{c.ctr}%</strong>
+                    <div style={{ background: '#f8fafc', padding: '8px 10px', borderRadius: 6, border: '1px solid #e2e8f0' }}>
+                      <span style={{ color: '#64748b', display: 'block', fontSize: 10, fontWeight: 600 }}>CTR</span>
+                      <strong style={{ color: '#b45309' }}>{c.ctr}%</strong>
                     </div>
-                    <div style={{ background: 'rgba(16,185,129,0.08)', padding: '8px 10px', borderRadius: 6, border: '1px solid rgba(16,185,129,0.2)' }}>
-                      <span style={{ color: '#34d399', display: 'block', fontSize: 10, fontWeight: 700 }}>QUALIFIED REGS</span>
-                      <strong style={{ color: '#34d399', fontSize: 14 }}>{c.qualifiedRegistrations}</strong>
+                    <div style={{ background: '#ecfdf5', padding: '8px 10px', borderRadius: 6, border: '1px solid #a7f3d0' }}>
+                      <span style={{ color: '#047857', display: 'block', fontSize: 10, fontWeight: 700 }}>QUALIFIED REGS</span>
+                      <strong style={{ color: '#047857', fontSize: 14 }}>{c.qualifiedRegistrations}</strong>
                     </div>
                   </div>
 
                   <div style={{
                     display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                    padding: '8px 12px', background: 'rgba(255,255,255,0.04)', borderRadius: 8,
+                    padding: '8px 12px', background: '#f8fafc', borderRadius: 8, border: '1px solid #e2e8f0',
                   }}>
-                    <span style={{ fontSize: 12, color: 'rgba(241,241,245,0.6)' }}>Composite Score:</span>
+                    <span style={{ fontSize: 12, color: '#64748b', fontWeight: 600 }}>Composite Score:</span>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                      <strong style={{ fontSize: 16, color: c.isWinner ? '#34d399' : '#818cf8' }}>{c.totalScore} / 100</strong>
+                      <strong style={{ fontSize: 16, color: c.isWinner ? '#15803d' : '#4338ca' }}>{c.totalScore} / 100</strong>
                       <span style={{
                         fontSize: 10, fontWeight: 800, padding: '2px 6px', borderRadius: 4,
-                        background: c.action === 'SCALE' ? 'rgba(16,185,129,0.2)' : c.action === 'ITERATE' ? 'rgba(245,158,11,0.2)' : 'rgba(239,68,68,0.2)',
-                        color: c.action === 'SCALE' ? '#34d399' : c.action === 'ITERATE' ? '#fcd34d' : '#fca5a5',
+                        background: c.action === 'SCALE' ? '#dcfce7' : c.action === 'ITERATE' ? '#fef3c7' : '#fee2e2',
+                        color: c.action === 'SCALE' ? '#15803d' : c.action === 'ITERATE' ? '#b45309' : '#b91c1c',
                       }}>
                         {c.action}
                       </span>
@@ -519,11 +521,11 @@ export default function GrowthDashboard() {
 
             {/* Compact Creator Leaderboard */}
             <div style={{
-              background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)',
+              background: '#f8fafc', border: '1px solid #e2e8f0',
               borderRadius: 12, padding: '16px 20px', marginBottom: 20,
             }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12, flexWrap: 'wrap', gap: 8 }}>
-                <p style={{ fontSize: 14, fontWeight: 800, color: '#f1f1f5', margin: 0 }}>
+                <p style={{ fontSize: 14, fontWeight: 800, color: '#0f172a', margin: 0 }}>
                   🏆 Compact Creator Leaderboard
                 </p>
                 <span className="chip chip-amber" style={{ fontSize: 10 }}>Prize: ₹300</span>
@@ -536,28 +538,28 @@ export default function GrowthDashboard() {
                 ].map(entry => (
                   <div key={entry.name} style={{
                     display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                    padding: '8px 12px', borderRadius: 8,
-                    background: entry.isLeader ? 'rgba(16,185,129,0.08)' : 'rgba(255,255,255,0.02)',
-                    border: entry.isLeader ? '1px solid rgba(16,185,129,0.3)' : '1px solid rgba(255,255,255,0.04)',
+                    padding: '10px 14px', borderRadius: 8,
+                    background: entry.isLeader ? '#f0fdf4' : '#ffffff',
+                    border: entry.isLeader ? '1px solid #86efac' : '1px solid #e2e8f0',
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                      <span style={{ fontWeight: 800, color: entry.isLeader ? '#fbbf24' : 'rgba(241,241,245,0.5)', width: 24 }}>
+                      <span style={{ fontWeight: 800, color: entry.isLeader ? '#d97706' : '#64748b', width: 24 }}>
                         #{entry.rank}
                       </span>
-                      <strong style={{ color: '#f1f1f5', fontSize: 13 }}>{entry.name}</strong>
-                      <span style={{ fontSize: 11, color: entry.isLeader ? '#34d399' : 'rgba(241,241,245,0.4)', fontWeight: 600 }}>
+                      <strong style={{ color: '#0f172a', fontSize: 13 }}>{entry.name}</strong>
+                      <span style={{ fontSize: 11, color: entry.isLeader ? '#047857' : '#64748b', fontWeight: 600 }}>
                         ({entry.status})
                       </span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-                      <span style={{ fontSize: 12, color: 'rgba(241,241,245,0.7)' }}>
-                        <strong style={{ color: '#34d399' }}>{entry.regs}</strong> qualified regs
+                      <span style={{ fontSize: 12, color: '#475569' }}>
+                        <strong style={{ color: '#047857' }}>{entry.regs}</strong> qualified regs
                       </span>
-                      <span style={{ fontSize: 12, fontWeight: 800, color: entry.isLeader ? '#34d399' : '#818cf8' }}>
+                      <span style={{ fontSize: 12, fontWeight: 800, color: entry.isLeader ? '#047857' : '#4338ca' }}>
                         Score: {entry.score}
                       </span>
                       {entry.isLeader && (
-                        <span style={{ fontSize: 11, fontWeight: 800, color: '#fbbf24', background: 'rgba(251,191,36,0.12)', padding: '2px 6px', borderRadius: 4 }}>
+                        <span style={{ fontSize: 11, fontWeight: 800, color: '#b45309', background: '#fef3c7', padding: '2px 8px', borderRadius: 4 }}>
                           {entry.prize}
                         </span>
                       )}
@@ -565,25 +567,25 @@ export default function GrowthDashboard() {
                   </div>
                 ))}
               </div>
-              <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.45)', margin: '10px 0 0', fontStyle: 'italic' }}>
+              <p style={{ fontSize: 11, color: '#64748b', margin: '10px 0 0', fontStyle: 'italic' }}>
                 “Final winner determined after the campaign based on qualified registrations and the published scoring model.”
               </p>
             </div>
 
             {/* Growth Decision Framework Callout */}
             <div style={{
-              background: 'linear-gradient(135deg, rgba(99,102,241,0.08), rgba(16,185,129,0.06))',
-              border: '1px solid rgba(99,102,241,0.25)', borderRadius: 10, padding: '16px 20px',
+              background: '#eef2ff',
+              border: '1px solid #c7d2fe', borderRadius: 10, padding: '16px 20px',
             }}>
-              <p style={{ fontSize: 13, fontWeight: 700, color: '#818cf8', margin: '0 0 4px' }}>
+              <p style={{ fontSize: 13, fontWeight: 700, color: '#4338ca', margin: '0 0 4px' }}>
                 🧠 Growth Decision Framework (KILL · ITERATE · SCALE)
               </p>
-              <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.75)', margin: '0 0 8px', lineHeight: 1.5 }}>
+              <p style={{ fontSize: 12, color: '#334155', margin: '0 0 8px', lineHeight: 1.5 }}>
                 • <strong>Creator B &rarr; SCALE:</strong> Highest qualified registrations (31) and highest CTR (8.3%). Awarded current ₹300 prize leadership.<br />
                 • <strong>Creator A &rarr; ITERATE:</strong> Solid conversion (24 qualified regs), but reach can expand via placement WhatsApp groups.<br />
                 • <strong>Creator C &rarr; KILL:</strong> High vanity reach (6,100) and clicks (410) but low qualified registrations (18). Vanity memes do not convert serious engineering students.
               </p>
-              <p style={{ fontSize: 12, fontWeight: 700, color: '#34d399', margin: 0 }}>
+              <p style={{ fontSize: 12, fontWeight: 700, color: '#047857', margin: 0 }}>
                 Growth Insight: Views are useful. Clicks are useful. Registrations matter more. Qualified registrations matter most.
               </p>
             </div>
