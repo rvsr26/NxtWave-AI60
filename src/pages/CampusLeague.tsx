@@ -43,21 +43,22 @@ export default function CampusLeague() {
             <span className="chip chip-demo">Illustrative Simulation</span>
           )}
         </div>
-        <p style={{ color: '#334155', fontSize: 14, lineHeight: 1.6 }}>
-          College-level competition designed to tap collegiate peer affinity. Proposed reward: Top campus cohorts unlock the <strong style={{ color: '#0f172a' }}>AI Placement Starter Kit &amp; VIP live Q&amp;A session</strong>.
+        <p style={{ color: '#0f172a', fontWeight: 600, fontSize: 15, lineHeight: 1.6 }}>
+          College-level competition designed to tap collegiate peer affinity. Proposed reward: Top campus cohorts unlock the <strong style={{ color: '#4338ca' }}>AI Placement Starter Kit &amp; VIP live Q&amp;A session</strong>.
         </p>
 
         {/* Institutional Governance Disclaimer */}
         <div style={{
           marginTop: 12,
-          padding: '10px 14px',
+          padding: '12px 16px',
           background: '#f8fafc',
-          border: '1px solid #cbd5e1',
+          border: '1.5px solid #94a3b8',
           borderRadius: 8,
-          fontSize: 12,
-          color: '#475569',
+          fontSize: 13,
+          color: '#0f172a',
+          fontWeight: 600,
         }}>
-          💡 <em style={{ color: '#334155' }}>Note: College cohorts (Amrita, VIT, SRM, BITS, MIT, NIT) are illustrative examples modeling the proposed inter-college competition structure. They do not imply official institutional partnerships or endorsements from these colleges.</em>
+          💡 <span style={{ color: '#0f172a' }}>Note: College cohorts (Amrita, VIT, SRM, BITS, MIT, NIT) are illustrative examples modeling the proposed inter-college competition structure. They do not imply official institutional partnerships or endorsements from these colleges.</span>
         </div>
       </div>
 

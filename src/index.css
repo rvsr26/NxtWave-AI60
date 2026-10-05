@@ -496,7 +496,7 @@ select.input-base option:checked {
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #64748b;
+  color: #0f172a;
 }
 
 /* Funnel bar */
@@ -539,6 +539,11 @@ select.input-base option:checked {
   letter-spacing: 0.08em;
 }
 
+/* Universal typography default - ensures maximum contrast across all devices */
+p, li, dd, dt, label {
+  color: #0f172a;
+}
+
 /* ==========================================================================
    LIGHT THEME GLOBAL NORMALIZATION & INLINE-STYLE TRANSLATION
    Automatically translates dark inline color signatures to accessible light theme
@@ -550,40 +555,12 @@ select.input-base option:checked {
 [style*="color: #f1f1f5"],
 [style*="color: #f8fafc"],
 [style*="color: rgb(241, 241, 245)"],
-[style*="color: rgb(248, 250, 252)"] {
+[style*="color: rgb(248, 250, 252)"],
+[style*="rgba(241, 241, 245"],
+[style*="rgba(241,241,245"],
+[style*="rgb(241, 241, 245"],
+[style*="rgb(241,241,245"] {
   color: #0f172a !important;
-}
-
-/* Secondary & muted text hierarchy */
-[style*="rgba(241, 241, 245, 0.8)"],
-[style*="rgba(241, 241, 245, 0.75)"],
-[style*="rgba(241, 241, 245, 0.7)"],
-[style*="rgba(241,241,245,0.8)"],
-[style*="rgba(241,241,245,0.75)"],
-[style*="rgba(241,241,245,0.7)"] {
-  color: #334155 !important;
-}
-
-[style*="rgba(241, 241, 245, 0.6)"],
-[style*="rgba(241, 241, 245, 0.55)"],
-[style*="rgba(241, 241, 245, 0.5)"],
-[style*="rgba(241,241,245,0.6)"],
-[style*="rgba(241,241,245,0.55)"],
-[style*="rgba(241,241,245,0.5)"] {
-  color: #64748b !important;
-}
-
-[style*="rgba(241, 241, 245, 0.45)"],
-[style*="rgba(241, 241, 245, 0.4)"],
-[style*="rgba(241, 241, 245, 0.35)"],
-[style*="rgba(241, 241, 245, 0.3)"],
-[style*="rgba(241, 241, 245, 0.25)"],
-[style*="rgba(241,241,245,0.45)"],
-[style*="rgba(241,241,245,0.4)"],
-[style*="rgba(241,241,245,0.35)"],
-[style*="rgba(241,241,245,0.3)"],
-[style*="rgba(241,241,245,0.25)"] {
-  color: #94a3b8 !important;
 }
 
 /* Light purple/indigo accents translated to authoritative high-contrast royal indigo */

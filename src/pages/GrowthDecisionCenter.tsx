@@ -158,7 +158,7 @@ export default function GrowthDecisionCenter() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 18, marginBottom: 18 }}>
           <div style={{ background: '#ffffff', borderRadius: 12, padding: '16px', border: '1px solid #fecaca' }}>
             <p className="section-label" style={{ color: '#b91c1c', marginBottom: 6 }}>📡 Current Signal</p>
-            <p style={{ fontSize: 14, color: '#334155', lineHeight: 1.6, margin: 0 }}>
+            <p style={{ fontSize: 14, color: '#0f172a', fontWeight: 600, lineHeight: 1.6, margin: 0 }}>
               Paid social acquisition is weaker than the strongest organic acquisition lever. Simulation indicates cold paid ads yield ~3.2% conversion with poor qualification (&gt;₹25/qual reg) compared to peer referral loops (22.4% CVR, ~₹3.8/qual reg).
             </p>
           </div>
@@ -290,27 +290,27 @@ export default function GrowthDecisionCenter() {
                         {config.label}
                       </span>
                     </div>
-                    <p style={{ fontSize: 12, color: '#64748b', marginTop: 4, margin: '4px 0 0' }}>
-                      Quality Signal: {ch.qualitySignal}
+                    <p style={{ fontSize: 13, color: '#0f172a', fontWeight: 600, marginTop: 4, margin: '4px 0 0' }}>
+                      Quality Signal: <span style={{ color: '#334155', fontWeight: 700 }}>{ch.qualitySignal}</span>
                     </p>
                   </div>
 
                   {/* Metrics Badges */}
                   <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: 10, color: '#64748b', textTransform: 'uppercase', margin: 0 }}>Planned</p>
+                      <p style={{ fontSize: 10, color: '#0f172a', fontWeight: 700, textTransform: 'uppercase', margin: 0 }}>Planned</p>
                       <p className="mono" style={{ fontSize: 14, fontWeight: 700, color: '#0f172a', margin: 0 }}>{ch.plannedRegistrations}</p>
                     </div>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: 10, color: '#047857', textTransform: 'uppercase', margin: 0 }}>Qualified</p>
+                      <p style={{ fontSize: 10, color: '#047857', fontWeight: 700, textTransform: 'uppercase', margin: 0 }}>Qualified</p>
                       <p className="mono" style={{ fontSize: 14, fontWeight: 800, color: '#047857', margin: 0 }}>{ch.qualifiedRegistrations}</p>
                     </div>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: 10, color: '#4338ca', textTransform: 'uppercase', margin: 0 }}>Conv Rate</p>
+                      <p style={{ fontSize: 10, color: '#4338ca', fontWeight: 700, textTransform: 'uppercase', margin: 0 }}>Conv Rate</p>
                       <p className="mono" style={{ fontSize: 14, fontWeight: 700, color: '#4338ca', margin: 0 }}>{ch.conversionRate}%</p>
                     </div>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: 10, color: '#64748b', textTransform: 'uppercase', margin: 0 }}>Cost</p>
+                      <p style={{ fontSize: 10, color: '#0f172a', fontWeight: 700, textTransform: 'uppercase', margin: 0 }}>Cost</p>
                       <p className="mono" style={{ fontSize: 14, fontWeight: 700, color: '#0f172a', margin: 0 }}>₹{ch.cost}</p>
                     </div>
                   </div>
@@ -320,18 +320,18 @@ export default function GrowthDecisionCenter() {
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 14 }}>
                   <div>
-                    <p style={{ fontSize: 11, fontWeight: 800, color: '#475569', textTransform: 'uppercase', marginBottom: 4 }}>
+                    <p style={{ fontSize: 12, fontWeight: 800, color: '#0f172a', textTransform: 'uppercase', marginBottom: 4 }}>
                       Why this decision?
                     </p>
-                    <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.5, margin: 0 }}>
+                    <p style={{ fontSize: 14, color: '#0f172a', fontWeight: 600, lineHeight: 1.6, margin: 0 }}>
                       {ch.why}
                     </p>
                   </div>
                   <div>
-                    <p style={{ fontSize: 11, fontWeight: 800, color: '#4338ca', textTransform: 'uppercase', marginBottom: 4 }}>
+                    <p style={{ fontSize: 12, fontWeight: 800, color: '#4338ca', textTransform: 'uppercase', marginBottom: 4 }}>
                       Next Action
                     </p>
-                    <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.5, margin: 0 }}>
+                    <p style={{ fontSize: 14, color: '#0f172a', fontWeight: 600, lineHeight: 1.6, margin: 0 }}>
                       → {ch.nextAction}
                     </p>
                   </div>

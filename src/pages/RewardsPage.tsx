@@ -15,24 +15,24 @@ export default function RewardsPage() {
           <span className="chip chip-amber">₹2,000 Total Allocation</span>
           <span className="chip chip-demo">Simulation Assumptions</span>
         </div>
-        <p style={{ color: '#475569', fontSize: 14, lineHeight: 1.6, margin: 0 }}>
+        <p style={{ color: '#0f172a', fontWeight: 600, fontSize: 15, lineHeight: 1.6, margin: 0 }}>
           Incentive architecture designed to reward student promotional creators, quality peer distribution, and post-workshop hands-on project creation.
         </p>
       </div>
 
       {/* Disclaimers & Governance Alert */}
       <div style={{
-        background: '#fffbeb', border: '1px solid #fde68a',
+        background: '#fffbeb', border: '1.5px solid #f59e0b',
         borderRadius: 12, padding: '16px 20px', marginBottom: 28, display: 'flex', gap: 12, alignItems: 'flex-start',
       }}>
-        <span style={{ fontSize: 20 }}>⚖️</span>
+        <span style={{ fontSize: 22 }}>⚖️</span>
         <div>
-          <p style={{ fontSize: 13, fontWeight: 700, color: '#92400e', margin: '0 0 4px' }}>
-            Campaign Simulation Notice & Human-in-the-Loop Governance
+          <p style={{ fontSize: 14, fontWeight: 800, color: '#78350f', margin: '0 0 4px' }}>
+            Campaign Simulation Notice &amp; Human-in-the-Loop Governance
           </p>
-          <p style={{ fontSize: 12, color: '#78350f', margin: 0, lineHeight: 1.6 }}>
+          <p style={{ fontSize: 13, color: '#0f172a', fontWeight: 600, margin: 0, lineHeight: 1.6 }}>
             Rewards are campaign simulation assumptions and would require organizer approval before a real-world campaign launch.
-            All AI-assisted scoring and grading serve solely as support mechanisms; <strong>final judging and prize decisions are strictly human-controlled.</strong>
+            All AI-assisted scoring and grading serve solely as support mechanisms; <strong style={{ color: '#991b1b' }}>final judging and prize decisions are strictly human-controlled.</strong>
           </p>
         </div>
       </div>
@@ -50,10 +50,10 @@ export default function RewardsPage() {
             key={tab.id}
             onClick={() => setActiveTab(tab.id as typeof activeTab)}
             style={{
-              padding: '10px 16px', borderRadius: '8px 8px 0 0', fontSize: 13, fontWeight: 600, cursor: 'pointer',
+              padding: '10px 16px', borderRadius: '8px 8px 0 0', fontSize: 13, fontWeight: 700, cursor: 'pointer',
               border: 'none',
               background: activeTab === tab.id ? '#eef2ff' : 'transparent',
-              color: activeTab === tab.id ? '#4338ca' : '#64748b',
+              color: activeTab === tab.id ? '#4338ca' : '#0f172a',
               borderBottom: activeTab === tab.id ? '2px solid #4f46e5' : '2px solid transparent',
             }}
           >
@@ -79,7 +79,7 @@ export default function RewardsPage() {
             </div>
           </div>
 
-          <p style={{ fontSize: 14, color: '#334155', lineHeight: 1.6, marginBottom: 16 }}>
+          <p style={{ fontSize: 15, color: '#0f172a', fontWeight: 600, lineHeight: 1.6, marginBottom: 16 }}>
             Instead of spending ₹300 on cold paid ads, ₹300 is awarded as a performance prize to the student creator who drives the best verified workshop acquisition. Content formats include Instagram Reels, WhatsApp creatives, LinkedIn posts, X threads, and short videos.
           </p>
 

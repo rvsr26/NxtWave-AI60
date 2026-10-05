@@ -52,20 +52,20 @@ export default function CampaignCopilot() {
             {hasApiKey ? '✓ OpenAI Connected' : '⚡ Deterministic Mode'}
           </span>
         </div>
-        <p style={{ color: '#475569', fontSize: 14, lineHeight: 1.6 }}>
-          Generate 3 testable growth angles: <strong>Career Angle</strong>, <strong>Project Angle</strong>, and <strong>Community Angle</strong>.
+        <p style={{ color: '#0f172a', fontWeight: 600, fontSize: 15, lineHeight: 1.6 }}>
+          Generate 3 testable growth angles: <strong style={{ color: '#4338ca' }}>Career Angle</strong>, <strong style={{ color: '#047857' }}>Project Angle</strong>, and <strong style={{ color: '#b45309' }}>Community Angle</strong>.
         </p>
 
         {/* Operating Mantra Banner */}
         <div style={{
           marginTop: 16,
           background: '#eef2ff',
-          border: '1px solid #c7d2fe',
+          border: '1.5px solid #a5b4fc',
           borderRadius: 10, padding: '12px 18px',
           display: 'flex', alignItems: 'center', gap: 12,
         }}>
-          <span style={{ fontSize: 18 }}>💡</span>
-          <p style={{ fontSize: 13, fontWeight: 700, color: '#312e81', margin: 0, letterSpacing: '0.01em' }}>
+          <span style={{ fontSize: 20 }}>💡</span>
+          <p style={{ fontSize: 14, fontWeight: 800, color: '#1e1b4b', margin: 0, letterSpacing: '0.01em' }}>
             "AI proposes. Experiments measure. I decide."
           </p>
         </div>
@@ -80,7 +80,7 @@ export default function CampaignCopilot() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 20 }}>
           {/* Audience */}
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 8 }}>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 800, color: '#0f172a', marginBottom: 8 }}>
               Target Audience
             </label>
             <select
@@ -99,7 +99,7 @@ export default function CampaignCopilot() {
 
           {/* Channel */}
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 8 }}>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 800, color: '#0f172a', marginBottom: 8 }}>
               Channel
             </label>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
@@ -109,10 +109,10 @@ export default function CampaignCopilot() {
                   id={`channel-${c.toLowerCase()}`}
                   onClick={() => setChannel(c)}
                   style={{
-                    padding: '7px 12px', borderRadius: 8, fontSize: 12, fontWeight: 600, cursor: 'pointer',
-                    border: channel === c ? '1.5px solid #4f46e5' : '1px solid #cbd5e1',
+                    padding: '7px 12px', borderRadius: 8, fontSize: 12, fontWeight: 700, cursor: 'pointer',
+                    border: channel === c ? '2px solid #4338ca' : '1px solid #94a3b8',
                     background: channel === c ? '#eef2ff' : '#ffffff',
-                    color: channel === c ? '#4338ca' : '#475569',
+                    color: channel === c ? '#4338ca' : '#0f172a',
                   }}
                 >
                   {c}
