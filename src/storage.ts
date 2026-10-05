@@ -1,7 +1,7 @@
 // Storage layer — works with localStorage, easily replaceable with Supabase
 import type {
   Registration, Campus, CampusCaptain, ProjectPassport,
-  AnalyticsEvent, Referral, Experiment, DecisionLog
+  AnalyticsEvent, Referral, Experiment, DecisionLog, SharerProfile
 } from './types';
 
 const KEYS = {
@@ -11,6 +11,7 @@ const KEYS = {
   PASSPORTS: 'ai60_passports',
   EVENTS: 'ai60_events',
   REFERRALS: 'ai60_referrals',
+  SHARER_PROFILE: 'ai60_sharer_profile',
   EXPERIMENTS: 'ai60_experiments',
   DECISION_LOGS: 'ai60_decision_logs',
   SESSION_ID: 'ai60_session_id',
@@ -101,8 +102,17 @@ export const getReferrals = (): Referral[] =>
 
 export const saveReferral = (referral: Referral): void => {
   const all = getReferrals();
+  // Prevent duplicate referral registration IDs
+  if (all.some(r => r.registrationId && r.registrationId === referral.registrationId)) return;
   setItem(KEYS.REFERRALS, [...all, referral]);
 };
+
+// ─── Sharer Profile (No signup needed) ───────────────────────────────────────
+export const getSharerProfile = (): SharerProfile | null =>
+  getItem<SharerProfile | null>(KEYS.SHARER_PROFILE, null);
+
+export const saveSharerProfile = (profile: SharerProfile): void =>
+  setItem(KEYS.SHARER_PROFILE, profile);
 
 // ─── Experiments ─────────────────────────────────────────────────────────────
 export const getExperiments = (): Experiment[] =>

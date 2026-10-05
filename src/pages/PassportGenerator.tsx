@@ -3,6 +3,7 @@ import { useApp } from '../context/AppContext';
 import { generateProjectPassport } from '../ai';
 import { Analytics } from '../analytics';
 import { savePassport } from '../storage';
+import { api } from '../services/api';
 
 const BRANCHES = [
   'Computer Science',
@@ -49,15 +50,27 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
     setStep('loading');
 
     try {
-      const passport = await generateProjectPassport({ branch, experience, interest, domain, goal });
+      // 1. Generate & persist via backend MongoDB API
+      const res = await api.passports.generate({ branch, experience, interest, domain, goal });
+      const passport = res.passport;
       savePassport(passport);
       setCurrentPassport(passport);
       Analytics.passportGenerated(passport.projectName, interest);
       setStep('result');
       onPassportGenerated();
     } catch {
-      setStep('form');
-      setError('Something went wrong. Please try again.');
+      // 2. Deterministic client fallback if network / backend unreachable
+      try {
+        const passport = await generateProjectPassport({ branch, experience, interest, domain, goal });
+        savePassport(passport);
+        setCurrentPassport(passport);
+        Analytics.passportGenerated(passport.projectName, interest);
+        setStep('result');
+        onPassportGenerated();
+      } catch {
+        setStep('form');
+        setError('Something went wrong. Please try again.');
+      }
     }
   }
 

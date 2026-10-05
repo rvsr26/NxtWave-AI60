@@ -1,6 +1,6 @@
-// Analytics event tracking layer
 import { trackEvent, getSessionId } from './storage';
 import type { EventType, AnalyticsEvent } from './types';
+import { api } from './services/api';
 
 function generateId(): string {
   return `evt_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
@@ -31,6 +31,11 @@ export function track(eventType: EventType, properties: Record<string, string | 
     referralCode: urlParams.ref || properties.referralCode as string || undefined,
   };
   trackEvent(event);
+
+  // Asynchronously sync event to MongoDB
+  api.analytics.track(event).catch(() => {
+    // Fail silently in offline or prototype fallback
+  });
 }
 
 // Convenience helpers

@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ai60-growth-os-api
+    env: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLIENT_URL
+        value: https://nxt-wave-ai-60.vercel.app
+      - key: MONGO_URI
+        sync: false

@@ -44,10 +44,20 @@ export interface Referral {
   id: string;
   referrerCode: string;
   referreeEmail: string;
+  referreeName?: string;
+  referreeCollege?: string;
   registrationId: string;
   createdAt: string;
   isSimulated?: boolean;
   isVerified?: boolean; // verified after complete registration
+}
+
+export interface SharerProfile {
+  name: string;
+  college: string;
+  sharerCode: string;
+  createdAt: string;
+  customized?: boolean;
 }
 
 export interface ReferralLeaderboardEntry {

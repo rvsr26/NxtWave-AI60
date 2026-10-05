@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
+import { isBackendOnline } from '../services/api';
 
 export type Page =
   | 'home'
@@ -131,7 +132,11 @@ export function Sidebar({ currentPage, onNavigate }: NavigationProps) {
           <div style={{ textAlign: 'left' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
               <p style={{ fontSize: 15, fontWeight: 900, color: '#0f172a', lineHeight: 1, letterSpacing: '-0.02em', margin: 0 }}>AI60</p>
-              <span style={{ fontSize: 9, fontWeight: 800, background: '#eef2ff', color: '#4338ca', padding: '1px 5px', borderRadius: 4, letterSpacing: '0.04em' }}>LIVE</span>
+              {isBackendOnline() ? (
+                <span style={{ fontSize: 9, fontWeight: 800, background: '#dcfce7', color: '#15803d', padding: '1px 5px', borderRadius: 4, letterSpacing: '0.04em' }}>MONGODB LIVE</span>
+              ) : (
+                <span style={{ fontSize: 9, fontWeight: 800, background: '#fef3c7', color: '#b45309', padding: '1px 5px', borderRadius: 4, letterSpacing: '0.04em' }}>LOCAL MODE</span>
+              )}
             </div>
             <p style={{ fontSize: 10, fontWeight: 700, color: '#64748b', lineHeight: 1, marginTop: 4, letterSpacing: '0.04em', margin: '4px 0 0' }}>GROWTH CHALLENGE</p>
           </div>
