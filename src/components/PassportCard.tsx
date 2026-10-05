@@ -9,9 +9,9 @@ interface Props {
 
 export default function PassportCard({ passport, onRegister, referralCode }: Props) {
   const difficultyColor = {
-    Beginner: '#10b981',
-    Intermediate: '#f59e0b',
-    Advanced: '#ef4444',
+    Beginner: '#059669',
+    Intermediate: '#d97706',
+    Advanced: '#dc2626',
   }[passport.difficulty];
 
   return (
@@ -28,21 +28,22 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
         <h2 style={{
           fontSize: 'clamp(22px, 4vw, 32px)',
           fontWeight: 900,
-          color: '#f1f1f5',
+          color: '#0f172a',
           letterSpacing: '-0.02em',
           lineHeight: 1.2,
         }}>
           Your personalized project is ready
         </h2>
-        <p style={{ color: 'rgba(241,241,245,0.5)', fontSize: 14, marginTop: 8 }}>
+        <p style={{ color: '#64748b', fontSize: 14, marginTop: 8 }}>
           This is an example project concept tailored to your interests — not a guaranteed workshop curriculum.
         </p>
       </div>
 
       {/* Passport Card */}
       <div className="card fade-in-up" style={{
-        border: '1px solid rgba(99,102,241,0.3)',
-        background: 'linear-gradient(135deg, rgba(99,102,241,0.08), rgba(167,139,250,0.05))',
+        border: '1px solid #c7d2fe',
+        background: '#ffffff',
+        boxShadow: '0 4px 20px -2px rgba(79, 70, 229, 0.08), 0 2px 6px rgba(15, 23, 42, 0.03)',
         marginBottom: 24,
         position: 'relative',
         overflow: 'hidden',
@@ -51,7 +52,7 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
         <div style={{
           position: 'absolute', top: 0, right: 0,
           width: 120, height: 120,
-          background: 'radial-gradient(circle at top right, rgba(99,102,241,0.15), transparent 70%)',
+          background: 'radial-gradient(circle at top right, rgba(99,102,241,0.08), transparent 70%)',
         }} />
 
         {/* Project Header */}
@@ -66,18 +67,19 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
               <div style={{
                 width: 42, height: 42, borderRadius: 10,
-                background: 'linear-gradient(135deg, #6366f1, #4f46e5)',
+                background: 'linear-gradient(135deg, #4f46e5, #4338ca)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontSize: 20, flexShrink: 0,
+                boxShadow: '0 2px 8px rgba(79, 70, 229, 0.25)',
               }}>🤖</div>
               <div>
                 <p className="section-label" style={{ marginBottom: 2 }}>Project Name</p>
-                <h3 style={{ fontSize: 22, fontWeight: 800, color: '#f1f1f5', lineHeight: 1.2 }}>
+                <h3 style={{ fontSize: 22, fontWeight: 800, color: '#0f172a', lineHeight: 1.2 }}>
                   {passport.projectName}
                 </h3>
               </div>
             </div>
-            <p style={{ color: 'rgba(241,241,245,0.7)', fontSize: 14, lineHeight: 1.6 }}>
+            <p style={{ color: '#334155', fontSize: 14, lineHeight: 1.6 }}>
               {passport.description}
             </p>
           </div>
@@ -88,16 +90,16 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
         {/* Metadata row */}
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 20 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span style={{ fontSize: 12, color: 'rgba(241,241,245,0.4)' }}>Difficulty:</span>
+            <span style={{ fontSize: 12, color: '#64748b', fontWeight: 600 }}>Difficulty:</span>
             <span style={{
               fontSize: 12, fontWeight: 700, color: difficultyColor,
-              background: `${difficultyColor}18`,
-              border: `1px solid ${difficultyColor}30`,
+              background: `${difficultyColor}14`,
+              border: `1px solid ${difficultyColor}35`,
               padding: '2px 8px', borderRadius: 999,
             }}>{passport.difficulty}</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span style={{ fontSize: 12, color: 'rgba(241,241,245,0.4)' }}>Area:</span>
+            <span style={{ fontSize: 12, color: '#64748b', fontWeight: 600 }}>Area:</span>
             <span className="chip chip-brand" style={{ fontSize: 11 }}>{passport.interest}</span>
           </div>
         </div>
@@ -112,9 +114,9 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
                 borderRadius: 999,
                 fontSize: 12,
                 fontWeight: 600,
-                background: 'rgba(99,102,241,0.1)',
-                border: '1px solid rgba(99,102,241,0.2)',
-                color: '#a5b4fc',
+                background: '#eef2ff',
+                border: '1px solid #c7d2fe',
+                color: '#4338ca',
               }}>
                 {skill}
               </span>
@@ -124,27 +126,30 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
 
         {/* Why this project fits me */}
         <div style={{
-          background: 'rgba(16,185,129,0.08)',
-          border: '1px solid rgba(16,185,129,0.2)',
-          borderRadius: 10, padding: '16px 18px', marginBottom: 20,
+          background: '#f0fdf4',
+          border: '1px solid #a7f3d0',
+          borderRadius: 12, padding: '16px 18px', marginBottom: 20,
         }}>
-          <p className="section-label" style={{ color: '#34d399', marginBottom: 8 }}>💡 Why This Project Fits You</p>
+          <p className="section-label" style={{ color: '#047857', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 6 }}>
+            <span>💡</span> Why This Project Fits You
+          </p>
           <div style={{
-            fontSize: 12, color: 'rgba(241,241,245,0.6)', marginBottom: 10,
-            background: 'rgba(255,255,255,0.04)', padding: '6px 10px', borderRadius: 6, display: 'inline-block',
+            fontSize: 12, color: '#334155', marginBottom: 12,
+            background: '#ffffff', border: '1px solid #a7f3d0', padding: '6px 12px', borderRadius: 8, display: 'inline-block',
+            fontWeight: 500,
           }}>
-            Selected: <strong style={{ color: '#818cf8' }}>{passport.interest}</strong> + <strong style={{ color: '#34d399' }}>{passport.difficulty}</strong> + <span style={{ color: '#fcd34d' }}>Class of 2027</span>
+            Selected: <strong style={{ color: '#4338ca' }}>{passport.interest}</strong> + <strong style={{ color: '#047857' }}>{passport.difficulty}</strong> + <span style={{ color: '#b45309', fontWeight: 700 }}>Class of 2027</span>
           </div>
           {passport.whyReasons && passport.whyReasons.length > 0 ? (
-            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <ul style={{ margin: 0, paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
               {passport.whyReasons.map((reason, i) => (
-                <li key={i} style={{ fontSize: 13, color: 'rgba(241,241,245,0.85)', lineHeight: 1.5 }}>
+                <li key={i} style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.6 }}>
                   {reason}
                 </li>
               ))}
             </ul>
           ) : (
-            <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.75)', lineHeight: 1.6, margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.6, margin: 0 }}>
               {passport.relevance}
             </p>
           )}
@@ -159,10 +164,10 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
                 padding: '4px 10px',
                 borderRadius: 6,
                 fontSize: 12,
-                fontWeight: 500,
-                background: 'rgba(6,182,212,0.1)',
-                border: '1px solid rgba(6,182,212,0.2)',
-                color: '#67e8f9',
+                fontWeight: 600,
+                background: '#ecfeff',
+                border: '1px solid #a5f3fc',
+                color: '#0e7490',
               }}>
                 {tech}
               </span>
@@ -173,15 +178,17 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
         {/* Example Resume Bullet & Interview Talking Point */}
         {passport.resumeBullet && (
           <div style={{
-            background: 'rgba(99,102,241,0.07)',
-            border: '1px solid rgba(99,102,241,0.25)',
-            borderRadius: 10, padding: '14px 16px', marginBottom: 14,
+            background: '#eef2ff',
+            border: '1px solid #c7d2fe',
+            borderRadius: 12, padding: '16px 18px', marginBottom: 14,
           }}>
-            <p className="section-label" style={{ color: '#a5b4fc', marginBottom: 6 }}>📄 Placement Resume Bullet Point</p>
-            <p style={{ fontSize: 13, color: '#f1f1f5', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
+            <p className="section-label" style={{ color: '#4338ca', marginBottom: 6, display: 'flex', alignItems: 'center', gap: 6 }}>
+              <span>📄</span> Placement Resume Bullet Point
+            </p>
+            <p style={{ fontSize: 13, color: '#1e1b4b', lineHeight: 1.6, fontStyle: 'italic', margin: 0, fontWeight: 500 }}>
               • {passport.resumeBullet}
             </p>
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', marginTop: 6, margin: '6px 0 0' }}>
+            <p style={{ fontSize: 11, color: '#64748b', marginTop: 8, margin: '8px 0 0' }}>
               Action-oriented technical bullet point tailored for 2027 campus placements.
             </p>
           </div>
@@ -189,15 +196,17 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
 
         {passport.interviewTalkingPoint && (
           <div style={{
-            background: 'rgba(16,185,129,0.07)',
-            border: '1px solid rgba(16,185,129,0.25)',
-            borderRadius: 10, padding: '14px 16px', marginBottom: 20,
+            background: '#ecfdf5',
+            border: '1px solid #a7f3d0',
+            borderRadius: 12, padding: '16px 18px', marginBottom: 20,
           }}>
-            <p className="section-label" style={{ color: '#34d399', marginBottom: 6 }}>🎙 Recruiter Interview Talking Point</p>
-            <p style={{ fontSize: 13, color: '#f1f1f5', lineHeight: 1.6, margin: 0 }}>
+            <p className="section-label" style={{ color: '#047857', marginBottom: 6, display: 'flex', alignItems: 'center', gap: 6 }}>
+              <span>🎙</span> Recruiter Interview Talking Point
+            </p>
+            <p style={{ fontSize: 13, color: '#064e3b', lineHeight: 1.6, margin: 0, fontWeight: 500 }}>
               {passport.interviewTalkingPoint}
             </p>
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', marginTop: 6, margin: '6px 0 0' }}>
+            <p style={{ fontSize: 11, color: '#64748b', marginTop: 8, margin: '8px 0 0' }}>
               Architectural defense statement for answering “Walk me through an AI project you've built.”
             </p>
           </div>
@@ -206,21 +215,23 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
         {/* 60-minute Build Roadmap */}
         {passport.buildRoadmap && passport.buildRoadmap.length > 0 && (
           <div style={{
-            background: 'rgba(255,255,255,0.03)',
-            border: '1px solid rgba(255,255,255,0.08)',
-            borderRadius: 10, padding: '16px', marginBottom: 20,
+            background: '#f8fafc',
+            border: '1px solid #e2e8f0',
+            borderRadius: 12, padding: '16px 18px', marginBottom: 20,
           }}>
-            <p className="section-label" style={{ color: '#fcd34d', marginBottom: 12 }}>⏱ 60-Minute Build Roadmap</p>
+            <p className="section-label" style={{ color: '#b45309', marginBottom: 12, display: 'flex', alignItems: 'center', gap: 6 }}>
+              <span>⏱</span> 60-Minute Build Roadmap
+            </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
               {passport.buildRoadmap.map((item, i) => (
                 <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'baseline', fontSize: 13 }}>
                   <span className="mono" style={{
-                    color: '#818cf8', fontWeight: 700, fontSize: 11, minWidth: 55, flexShrink: 0,
-                    background: 'rgba(99,102,241,0.12)', padding: '2px 6px', borderRadius: 4, textAlign: 'center',
+                    color: '#4338ca', fontWeight: 700, fontSize: 11, minWidth: 55, flexShrink: 0,
+                    background: '#eef2ff', border: '1px solid #c7d2fe', padding: '2px 6px', borderRadius: 4, textAlign: 'center',
                   }}>
                     {item.time}
                   </span>
-                  <span style={{ color: 'rgba(241,241,245,0.8)', lineHeight: 1.4 }}>
+                  <span style={{ color: '#334155', lineHeight: 1.5 }}>
                     {item.task}
                   </span>
                 </div>
@@ -231,12 +242,14 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
 
         {/* What you'll build */}
         <div style={{
-          background: 'rgba(99,102,241,0.08)',
-          border: '1px solid rgba(99,102,241,0.2)',
-          borderRadius: 10, padding: '14px 16px', marginBottom: 20,
+          background: '#f0fdf4',
+          border: '1px solid #bbf7d0',
+          borderRadius: 12, padding: '14px 16px', marginBottom: 20,
         }}>
-          <p className="section-label" style={{ color: '#818cf8', marginBottom: 6 }}>🛠 Live Workshop Scope</p>
-          <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.75)', lineHeight: 1.6 }}>
+          <p className="section-label" style={{ color: '#047857', marginBottom: 6, display: 'flex', alignItems: 'center', gap: 6 }}>
+            <span>🛠</span> Live Workshop Scope
+          </p>
+          <p style={{ fontSize: 13, color: '#1e293b', lineHeight: 1.6, margin: 0 }}>
             {passport.workshopBuild}
           </p>
         </div>
@@ -244,13 +257,14 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
         {/* Next step */}
         <div style={{
           display: 'flex', alignItems: 'flex-start', gap: 10,
-          background: 'rgba(255,255,255,0.04)',
-          borderRadius: 10, padding: '12px 14px',
+          background: '#f8fafc',
+          border: '1px solid #e2e8f0',
+          borderRadius: 12, padding: '14px 16px',
         }}>
-          <span style={{ fontSize: 16, flexShrink: 0 }}>→</span>
+          <span style={{ fontSize: 16, flexShrink: 0, color: '#4f46e5' }}>→</span>
           <div>
             <p className="section-label" style={{ marginBottom: 4 }}>Next Step After Workshop</p>
-            <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.7)', lineHeight: 1.5 }}>
+            <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.5, margin: 0 }}>
               {passport.nextStep}
             </p>
           </div>
@@ -282,11 +296,11 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
         <div style={{
           marginTop: 24, textAlign: 'center',
           padding: '12px 16px',
-          background: 'rgba(16,185,129,0.08)',
-          border: '1px solid rgba(16,185,129,0.2)',
+          background: '#ecfdf5',
+          border: '1px solid #a7f3d0',
           borderRadius: 10,
         }}>
-          <p style={{ fontSize: 13, color: '#34d399' }}>
+          <p style={{ fontSize: 13, color: '#047857', margin: 0 }}>
             👋 You were referred by <strong>{referralCode}</strong>
           </p>
         </div>
@@ -294,7 +308,7 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
 
       <p style={{
         textAlign: 'center', fontSize: 12,
-        color: 'rgba(241,241,245,0.3)', marginTop: 20,
+        color: '#64748b', marginTop: 20,
       }}>
         This is a personalized project concept, not a guaranteed workshop curriculum.
       </p>

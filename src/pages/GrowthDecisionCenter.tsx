@@ -105,24 +105,24 @@ export default function GrowthDecisionCenter() {
       {/* Page Header */}
       <div style={{ marginBottom: 32 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 10 }}>
-          <h1 style={{ fontSize: 30, fontWeight: 900, color: '#f1f1f5', letterSpacing: '-0.02em', margin: 0 }}>
+          <h1 style={{ fontSize: 30, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>
             🧭 Growth Decision Center
           </h1>
           <span className="chip chip-demo">SIMULATION DATA — illustrative scenario, not actual campaign results</span>
         </div>
-        <p style={{ color: 'rgba(241,241,245,0.7)', fontSize: 15, lineHeight: 1.6, margin: 0, maxWidth: 840 }}>
+        <p style={{ color: '#475569', fontSize: 15, lineHeight: 1.6, margin: 0, maxWidth: 840 }}>
           <strong>DATA → INSIGHT → DECISION → ACTION → NEXT EXPERIMENT</strong>.
           If this campaign were live tomorrow, where should effort and budget go next?
           Every channel and experiment is evaluated through rigorous guardrails prioritizing <em>qualified registrations</em> over vanity traffic.
         </p>
         <div style={{
           marginTop: 12,
-          padding: '8px 14px',
-          background: 'rgba(255,255,255,0.03)',
-          border: '1px solid rgba(255,255,255,0.06)',
+          padding: '10px 14px',
+          background: '#f8fafc',
+          border: '1px solid #e2e8f0',
           borderRadius: 8,
           fontSize: 12,
-          color: 'rgba(241,241,245,0.5)',
+          color: '#64748b',
         }}>
           💡 <em>Decision rules are proposed campaign guardrails, not observed campaign outcomes. Planning numbers represent hypotheses to validate.</em>
         </div>
@@ -132,8 +132,8 @@ export default function GrowthDecisionCenter() {
       {/* SECTION 1: "WHAT SHOULD I DO NEXT?" CARD                      */}
       {/* ============================================================== */}
       <div className="card fade-in-up" style={{
-        background: 'linear-gradient(135deg, rgba(99,102,241,0.15), rgba(16,185,129,0.1))',
-        border: '1px solid rgba(99,102,241,0.35)',
+        background: 'linear-gradient(135deg, #eef2ff, #ecfdf5)',
+        border: '1px solid #c7d2fe',
         borderRadius: 16,
         padding: '24px 28px',
         marginBottom: 36,
@@ -142,10 +142,10 @@ export default function GrowthDecisionCenter() {
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <span style={{ fontSize: 24 }}>🎯</span>
             <div>
-              <p className="mono" style={{ fontSize: 11, fontWeight: 800, color: '#818cf8', letterSpacing: '0.08em', margin: 0 }}>
+              <p className="mono" style={{ fontSize: 11, fontWeight: 800, color: '#4338ca', letterSpacing: '0.08em', margin: 0 }}>
                 ACTIVE CAMPAIGN DIRECTIVE
               </p>
-              <h2 style={{ fontSize: 22, fontWeight: 900, color: '#f1f1f5', margin: '2px 0 0' }}>
+              <h2 style={{ fontSize: 22, fontWeight: 900, color: '#0f172a', margin: '2px 0 0' }}>
                 WHAT SHOULD I DO NEXT?
               </h2>
             </div>
@@ -156,16 +156,16 @@ export default function GrowthDecisionCenter() {
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 18, marginBottom: 18 }}>
-          <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 12, padding: '16px', border: '1px solid rgba(255,255,255,0.06)' }}>
-            <p className="section-label" style={{ color: '#fca5a5', marginBottom: 6 }}>📡 Current Signal</p>
-            <p style={{ fontSize: 14, color: 'rgba(241,241,245,0.9)', lineHeight: 1.6, margin: 0 }}>
+          <div style={{ background: '#ffffff', borderRadius: 12, padding: '16px', border: '1px solid #fecaca' }}>
+            <p className="section-label" style={{ color: '#b91c1c', marginBottom: 6 }}>📡 Current Signal</p>
+            <p style={{ fontSize: 14, color: '#334155', lineHeight: 1.6, margin: 0 }}>
               Paid social acquisition is weaker than the strongest organic acquisition lever. Simulation indicates cold paid ads yield ~3.2% conversion with poor qualification (&gt;₹25/qual reg) compared to peer referral loops (22.4% CVR, ~₹3.8/qual reg).
             </p>
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 12, padding: '16px', border: '1px solid rgba(255,255,255,0.06)' }}>
-            <p className="section-label" style={{ color: '#34d399', marginBottom: 6 }}>⚡ Recommended Action</p>
-            <ul style={{ margin: 0, paddingLeft: 18, fontSize: 14, color: '#f1f1f5', lineHeight: 1.7 }}>
+          <div style={{ background: '#ffffff', borderRadius: 12, padding: '16px', border: '1px solid #a7f3d0' }}>
+            <p className="section-label" style={{ color: '#047857', marginBottom: 6 }}>⚡ Recommended Action</p>
+            <ul style={{ margin: 0, paddingLeft: 18, fontSize: 14, color: '#0f172a', lineHeight: 1.7 }}>
               <li><strong>Stop additional spend</strong> on cold paid social ads (KILL action).</li>
               <li><strong>Retest the stronger message</strong> (Creator B portfolio walkthrough) across student creators.</li>
               <li><strong>Reallocate future budget</strong> into high-trust peer incentives (Campus Captain perks &amp; referral leaderboards).</li>
@@ -174,8 +174,8 @@ export default function GrowthDecisionCenter() {
         </div>
 
         <div style={{
-          background: 'rgba(16,185,129,0.08)',
-          border: '1px solid rgba(16,185,129,0.25)',
+          background: '#ecfdf5',
+          border: '1px solid #a7f3d0',
           borderRadius: 10,
           padding: '12px 18px',
           display: 'flex',
@@ -183,8 +183,8 @@ export default function GrowthDecisionCenter() {
           gap: 12,
         }}>
           <span style={{ fontSize: 20 }}>🧠</span>
-          <p style={{ fontSize: 13, color: '#f1f1f5', margin: 0, lineHeight: 1.5 }}>
-            <strong style={{ color: '#34d399' }}>Core Growth Rationale:</strong> &ldquo;Optimize for <em>qualified registrations</em>, not clicks.&rdquo; High-intent student peer discovery drives actual 60-minute workshop completion and project submissions.
+          <p style={{ fontSize: 13, color: '#064e3b', margin: 0, lineHeight: 1.5 }}>
+            <strong style={{ color: '#047857' }}>Core Growth Rationale:</strong> &ldquo;Optimize for <em>qualified registrations</em>, not clicks.&rdquo; High-intent student peer discovery drives actual 60-minute workshop completion and project submissions.
           </p>
         </div>
       </div>
@@ -196,12 +196,12 @@ export default function GrowthDecisionCenter() {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 14, marginBottom: 16 }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 4 }}>
-              <h2 style={{ fontSize: 22, fontWeight: 900, color: '#f1f1f5', margin: 0 }}>
+              <h2 style={{ fontSize: 22, fontWeight: 900, color: '#0f172a', margin: 0 }}>
                 Channel Decision Framework
               </h2>
               <span className="chip chip-demo" style={{ fontSize: 10 }}>Simulation Guardrails</span>
             </div>
-            <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.55)', margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#64748b', margin: 0 }}>
               Transparent guardrail evaluation for each distribution channel.
             </p>
           </div>
@@ -219,9 +219,9 @@ export default function GrowthDecisionCenter() {
                   fontSize: 12,
                   fontWeight: 700,
                   cursor: 'pointer',
-                  border: filterAction === action ? '1px solid #818cf8' : '1px solid rgba(255,255,255,0.08)',
-                  background: filterAction === action ? 'rgba(99,102,241,0.2)' : 'rgba(255,255,255,0.03)',
-                  color: filterAction === action ? '#c7d2fe' : 'rgba(241,241,245,0.6)',
+                  border: filterAction === action ? '1.5px solid #4f46e5' : '1px solid #cbd5e1',
+                  background: filterAction === action ? '#eef2ff' : '#ffffff',
+                  color: filterAction === action ? '#4338ca' : '#475569',
                 }}
               >
                 {action}
@@ -232,8 +232,8 @@ export default function GrowthDecisionCenter() {
 
         {/* Decision Rules Guide */}
         <div style={{
-          background: 'rgba(255,255,255,0.02)',
-          border: '1px solid rgba(255,255,255,0.07)',
+          background: '#f8fafc',
+          border: '1px solid #e2e8f0',
           borderRadius: 12,
           padding: '14px 18px',
           marginBottom: 18,
@@ -241,18 +241,19 @@ export default function GrowthDecisionCenter() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))',
           gap: 12,
           fontSize: 12,
+          color: '#334155',
         }}>
           <div>
-            <span style={{ color: '#34d399', fontWeight: 800 }}>SCALE:</span> Strong qualified efficiency &amp; sufficient signal.
+            <span style={{ color: '#047857', fontWeight: 800 }}>SCALE:</span> Strong qualified efficiency &amp; sufficient signal.
           </div>
           <div>
-            <span style={{ color: '#818cf8', fontWeight: 800 }}>CONTINUE:</span> Promising hypothesis, awaiting full volume.
+            <span style={{ color: '#4338ca', fontWeight: 800 }}>CONTINUE:</span> Promising hypothesis, awaiting full volume.
           </div>
           <div>
-            <span style={{ color: '#f59e0b', fontWeight: 800 }}>ITERATE:</span> Some signal, clear creative optimization needed.
+            <span style={{ color: '#b45309', fontWeight: 800 }}>ITERATE:</span> Some signal, clear creative optimization needed.
           </div>
           <div>
-            <span style={{ color: '#ef4444', fontWeight: 800 }}>KILL:</span> Poor qualification efficiency or failed hypothesis.
+            <span style={{ color: '#dc2626', fontWeight: 800 }}>KILL:</span> Poor qualification efficiency or failed hypothesis.
           </div>
         </div>
 
@@ -267,13 +268,13 @@ export default function GrowthDecisionCenter() {
                 style={{
                   padding: '20px 24px',
                   border: `1px solid ${config.border}`,
-                  background: 'rgba(255,255,255,0.02)',
+                  background: '#ffffff',
                 }}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 12, marginBottom: 14 }}>
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                      <h3 style={{ fontSize: 18, fontWeight: 800, color: '#f1f1f5', margin: 0 }}>
+                      <h3 style={{ fontSize: 18, fontWeight: 800, color: '#0f172a', margin: 0 }}>
                         {ch.channel}
                       </h3>
                       <span style={{
@@ -289,7 +290,7 @@ export default function GrowthDecisionCenter() {
                         {config.label}
                       </span>
                     </div>
-                    <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.45)', marginTop: 4, margin: '4px 0 0' }}>
+                    <p style={{ fontSize: 12, color: '#64748b', marginTop: 4, margin: '4px 0 0' }}>
                       Quality Signal: {ch.qualitySignal}
                     </p>
                   </div>
@@ -297,20 +298,20 @@ export default function GrowthDecisionCenter() {
                   {/* Metrics Badges */}
                   <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', textTransform: 'uppercase', margin: 0 }}>Planned</p>
-                      <p className="mono" style={{ fontSize: 14, fontWeight: 700, color: '#f1f1f5', margin: 0 }}>{ch.plannedRegistrations}</p>
+                      <p style={{ fontSize: 10, color: '#64748b', textTransform: 'uppercase', margin: 0 }}>Planned</p>
+                      <p className="mono" style={{ fontSize: 14, fontWeight: 700, color: '#0f172a', margin: 0 }}>{ch.plannedRegistrations}</p>
                     </div>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: 10, color: '#34d399', textTransform: 'uppercase', margin: 0 }}>Qualified</p>
-                      <p className="mono" style={{ fontSize: 14, fontWeight: 800, color: '#34d399', margin: 0 }}>{ch.qualifiedRegistrations}</p>
+                      <p style={{ fontSize: 10, color: '#047857', textTransform: 'uppercase', margin: 0 }}>Qualified</p>
+                      <p className="mono" style={{ fontSize: 14, fontWeight: 800, color: '#047857', margin: 0 }}>{ch.qualifiedRegistrations}</p>
                     </div>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: 10, color: '#818cf8', textTransform: 'uppercase', margin: 0 }}>Conv Rate</p>
-                      <p className="mono" style={{ fontSize: 14, fontWeight: 700, color: '#818cf8', margin: 0 }}>{ch.conversionRate}%</p>
+                      <p style={{ fontSize: 10, color: '#4338ca', textTransform: 'uppercase', margin: 0 }}>Conv Rate</p>
+                      <p className="mono" style={{ fontSize: 14, fontWeight: 700, color: '#4338ca', margin: 0 }}>{ch.conversionRate}%</p>
                     </div>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', textTransform: 'uppercase', margin: 0 }}>Cost</p>
-                      <p className="mono" style={{ fontSize: 14, fontWeight: 700, color: '#f1f1f5', margin: 0 }}>₹{ch.cost}</p>
+                      <p style={{ fontSize: 10, color: '#64748b', textTransform: 'uppercase', margin: 0 }}>Cost</p>
+                      <p className="mono" style={{ fontSize: 14, fontWeight: 700, color: '#0f172a', margin: 0 }}>₹{ch.cost}</p>
                     </div>
                   </div>
                 </div>
@@ -319,18 +320,18 @@ export default function GrowthDecisionCenter() {
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 14 }}>
                   <div>
-                    <p style={{ fontSize: 11, fontWeight: 800, color: 'rgba(241,241,245,0.5)', textTransform: 'uppercase', marginBottom: 4 }}>
+                    <p style={{ fontSize: 11, fontWeight: 800, color: '#475569', textTransform: 'uppercase', marginBottom: 4 }}>
                       Why this decision?
                     </p>
-                    <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.85)', lineHeight: 1.5, margin: 0 }}>
+                    <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.5, margin: 0 }}>
                       {ch.why}
                     </p>
                   </div>
                   <div>
-                    <p style={{ fontSize: 11, fontWeight: 800, color: '#818cf8', textTransform: 'uppercase', marginBottom: 4 }}>
+                    <p style={{ fontSize: 11, fontWeight: 800, color: '#4338ca', textTransform: 'uppercase', marginBottom: 4 }}>
                       Next Action
                     </p>
-                    <p style={{ fontSize: 13, color: '#f1f1f5', lineHeight: 1.5, margin: 0 }}>
+                    <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.5, margin: 0 }}>
                       → {ch.nextAction}
                     </p>
                   </div>
@@ -345,8 +346,8 @@ export default function GrowthDecisionCenter() {
       {/* PAID ACQUISITION MICRO-EXPERIMENT (₹300 TEST TRANCHE)         */}
       {/* ============================================================== */}
       <div className="card" style={{
-        background: 'rgba(239,68,68,0.03)',
-        border: '1px solid rgba(239,68,68,0.25)',
+        background: '#fff8f8',
+        border: '1px solid #fecaca',
         borderRadius: 16,
         padding: '24px 28px',
         marginBottom: 40,
@@ -355,11 +356,11 @@ export default function GrowthDecisionCenter() {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
               <span style={{ fontSize: 20 }}>🧪</span>
-              <h3 style={{ fontSize: 18, fontWeight: 900, color: '#f1f1f5', margin: 0 }}>
+              <h3 style={{ fontSize: 18, fontWeight: 900, color: '#0f172a', margin: 0 }}>
                 Paid Acquisition Micro-Experiment (₹300 Test Budget)
               </h3>
             </div>
-            <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.6)', marginTop: 4, margin: '4px 0 0' }}>
+            <p style={{ fontSize: 13, color: '#64748b', marginTop: 4, margin: '4px 0 0' }}>
               Micro-test isolating message framing. Positioned as an experimental test tranche, not the core acquisition engine.
             </p>
           </div>
@@ -370,83 +371,83 @@ export default function GrowthDecisionCenter() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: 16, marginBottom: 16 }}>
           {/* Creative A */}
-          <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: '16px' }}>
+          <div style={{ background: '#ffffff', border: '1px solid #fecaca', borderRadius: 12, padding: '16px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-              <span className="mono" style={{ fontSize: 11, fontWeight: 800, color: '#fca5a5' }}>CREATIVE A (GENERIC HOOK)</span>
-              <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)' }}>₹150 Spend</span>
+              <span className="mono" style={{ fontSize: 11, fontWeight: 800, color: '#dc2626' }}>CREATIVE A (GENERIC HOOK)</span>
+              <span style={{ fontSize: 11, color: '#64748b' }}>₹150 Spend</span>
             </div>
-            <p style={{ fontSize: 13, fontWeight: 700, color: '#f1f1f5', margin: '0 0 12px' }}>
+            <p style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '0 0 12px' }}>
               &ldquo;Build your first AI project in 60 minutes.&rdquo;
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, fontSize: 11 }}>
               <div>
-                <p style={{ color: 'rgba(241,241,245,0.4)', margin: 0 }}>Impressions</p>
-                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#f1f1f5', margin: '2px 0 0' }}>4,800</p>
+                <p style={{ color: '#64748b', margin: 0 }}>Impressions</p>
+                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '2px 0 0' }}>4,800</p>
               </div>
               <div>
-                <p style={{ color: 'rgba(241,241,245,0.4)', margin: 0 }}>Clicks (CTR)</p>
-                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#f1f1f5', margin: '2px 0 0' }}>142 (2.9%)</p>
+                <p style={{ color: '#64748b', margin: 0 }}>Clicks (CTR)</p>
+                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '2px 0 0' }}>142 (2.9%)</p>
               </div>
               <div>
-                <p style={{ color: 'rgba(241,241,245,0.4)', margin: 0 }}>Registrations</p>
-                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#f1f1f5', margin: '2px 0 0' }}>11 (7.7%)</p>
+                <p style={{ color: '#64748b', margin: 0 }}>Registrations</p>
+                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '2px 0 0' }}>11 (7.7%)</p>
               </div>
               <div>
-                <p style={{ color: '#ef4444', margin: 0 }}>Qualified Regs</p>
-                <p className="mono" style={{ fontSize: 13, fontWeight: 800, color: '#ef4444', margin: '2px 0 0' }}>3 (27% qual)</p>
+                <p style={{ color: '#dc2626', margin: 0 }}>Qualified Regs</p>
+                <p className="mono" style={{ fontSize: 13, fontWeight: 800, color: '#dc2626', margin: '2px 0 0' }}>3 (27% qual)</p>
               </div>
               <div>
-                <p style={{ color: 'rgba(241,241,245,0.4)', margin: 0 }}>Cost / Reg</p>
-                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#f1f1f5', margin: '2px 0 0' }}>₹13.63</p>
+                <p style={{ color: '#64748b', margin: 0 }}>Cost / Reg</p>
+                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '2px 0 0' }}>₹13.63</p>
               </div>
               <div>
-                <p style={{ color: '#ef4444', margin: 0 }}>Cost / Qual Reg</p>
-                <p className="mono" style={{ fontSize: 13, fontWeight: 800, color: '#ef4444', margin: '2px 0 0' }}>₹50.00</p>
+                <p style={{ color: '#dc2626', margin: 0 }}>Cost / Qual Reg</p>
+                <p className="mono" style={{ fontSize: 13, fontWeight: 800, color: '#dc2626', margin: '2px 0 0' }}>₹50.00</p>
               </div>
             </div>
           </div>
 
           {/* Creative B */}
-          <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: 12, padding: '16px' }}>
+          <div style={{ background: '#ffffff', border: '1px solid #a7f3d0', borderRadius: 12, padding: '16px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-              <span className="mono" style={{ fontSize: 11, fontWeight: 800, color: '#34d399' }}>CREATIVE B (OUTCOME HOOK)</span>
-              <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)' }}>₹150 Spend</span>
+              <span className="mono" style={{ fontSize: 11, fontWeight: 800, color: '#047857' }}>CREATIVE B (OUTCOME HOOK)</span>
+              <span style={{ fontSize: 11, color: '#64748b' }}>₹150 Spend</span>
             </div>
-            <p style={{ fontSize: 13, fontWeight: 700, color: '#f1f1f5', margin: '0 0 12px' }}>
+            <p style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '0 0 12px' }}>
               &ldquo;Final-year student? Build an AI project for your resume in 60 minutes.&rdquo;
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, fontSize: 11 }}>
               <div>
-                <p style={{ color: 'rgba(241,241,245,0.4)', margin: 0 }}>Impressions</p>
-                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#f1f1f5', margin: '2px 0 0' }}>4,200</p>
+                <p style={{ color: '#64748b', margin: 0 }}>Impressions</p>
+                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '2px 0 0' }}>4,200</p>
               </div>
               <div>
-                <p style={{ color: 'rgba(241,241,245,0.4)', margin: 0 }}>Clicks (CTR)</p>
-                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#f1f1f5', margin: '2px 0 0' }}>168 (4.0%)</p>
+                <p style={{ color: '#64748b', margin: 0 }}>Clicks (CTR)</p>
+                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '2px 0 0' }}>168 (4.0%)</p>
               </div>
               <div>
-                <p style={{ color: 'rgba(241,241,245,0.4)', margin: 0 }}>Registrations</p>
-                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#f1f1f5', margin: '2px 0 0' }}>18 (10.7%)</p>
+                <p style={{ color: '#64748b', margin: 0 }}>Registrations</p>
+                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '2px 0 0' }}>18 (10.7%)</p>
               </div>
               <div>
-                <p style={{ color: '#34d399', margin: 0 }}>Qualified Regs</p>
-                <p className="mono" style={{ fontSize: 13, fontWeight: 800, color: '#34d399', margin: '2px 0 0' }}>8 (44% qual)</p>
+                <p style={{ color: '#047857', margin: 0 }}>Qualified Regs</p>
+                <p className="mono" style={{ fontSize: 13, fontWeight: 800, color: '#047857', margin: '2px 0 0' }}>8 (44% qual)</p>
               </div>
               <div>
-                <p style={{ color: 'rgba(241,241,245,0.4)', margin: 0 }}>Cost / Reg</p>
-                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#f1f1f5', margin: '2px 0 0' }}>₹8.33</p>
+                <p style={{ color: '#64748b', margin: 0 }}>Cost / Reg</p>
+                <p className="mono" style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '2px 0 0' }}>₹8.33</p>
               </div>
               <div>
-                <p style={{ color: '#34d399', margin: 0 }}>Cost / Qual Reg</p>
-                <p className="mono" style={{ fontSize: 13, fontWeight: 800, color: '#34d399', margin: '2px 0 0' }}>₹18.75</p>
+                <p style={{ color: '#047857', margin: 0 }}>Cost / Qual Reg</p>
+                <p className="mono" style={{ fontSize: 13, fontWeight: 800, color: '#047857', margin: '2px 0 0' }}>₹18.75</p>
               </div>
             </div>
           </div>
         </div>
 
         <div style={{
-          background: 'rgba(239,68,68,0.06)',
-          border: '1px solid rgba(239,68,68,0.2)',
+          background: '#ffffff',
+          border: '1px solid #fecaca',
           borderRadius: 10,
           padding: '12px 16px',
           display: 'flex',
@@ -458,16 +459,16 @@ export default function GrowthDecisionCenter() {
           <div>
             <span style={{
               padding: '3px 8px', borderRadius: 4, fontSize: 11, fontWeight: 800,
-              background: 'rgba(239,68,68,0.2)', border: '1px solid #ef4444', color: '#fca5a5',
+              background: '#fee2e2', border: '1px solid #f87171', color: '#dc2626',
               marginRight: 8,
             }}>
               DECISION: KILL
             </span>
-            <span style={{ fontSize: 13, color: '#f1f1f5', fontWeight: 600 }}>
+            <span style={{ fontSize: 13, color: '#0f172a', fontWeight: 600 }}>
               Stop cold paid social spend. Retest Creative B&apos;s outcome-first angle strictly through organic campus ambassadors.
             </span>
           </div>
-          <span style={{ fontSize: 12, color: 'rgba(241,241,245,0.7)', fontStyle: 'italic' }}>
+          <span style={{ fontSize: 12, color: '#64748b', fontStyle: 'italic' }}>
             🎯 Principle: Optimize for <strong>Qualified Registrations</strong>, not vanity clicks.
           </span>
         </div>
@@ -477,8 +478,8 @@ export default function GrowthDecisionCenter() {
       {/* SECTION 3: NEXT ₹500 BUDGET SIMULATOR                         */}
       {/* ============================================================== */}
       <div className="card" style={{
-        background: 'rgba(255,255,255,0.02)',
-        border: '1px solid rgba(255,255,255,0.1)',
+        background: '#ffffff',
+        border: '1px solid #e2e8f0',
         borderRadius: 16,
         padding: '28px',
         marginBottom: 40,
@@ -487,11 +488,11 @@ export default function GrowthDecisionCenter() {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
               <span style={{ fontSize: 24 }}>💰</span>
-              <h2 style={{ fontSize: 22, fontWeight: 900, color: '#f1f1f5', margin: 0 }}>
+              <h2 style={{ fontSize: 22, fontWeight: 900, color: '#0f172a', margin: 0 }}>
                 Where Should the Next ₹500 Go?
               </h2>
             </div>
-            <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.6)', marginTop: 4, margin: '4px 0 0' }}>
+            <p style={{ fontSize: 13, color: '#64748b', marginTop: 4, margin: '4px 0 0' }}>
               Interactive Tranche Simulator. Test allocation scenarios across channels.
             </p>
           </div>
@@ -522,12 +523,12 @@ export default function GrowthDecisionCenter() {
         </div>
 
         <div style={{
-          padding: '8px 14px',
-          background: 'rgba(245,158,11,0.08)',
-          border: '1px solid rgba(245,158,11,0.2)',
+          padding: '10px 14px',
+          background: '#fffbeb',
+          border: '1px solid #fde68a',
           borderRadius: 8,
           fontSize: 12,
-          color: '#fcd34d',
+          color: '#92400e',
           marginBottom: 20,
         }}>
           ⚠️ <strong>ILLUSTRATIVE SCENARIO</strong> — not actual campaign performance. Objective: <strong>MAXIMIZE QUALIFIED REGISTRATIONS</strong>, not raw clicks.
@@ -537,8 +538,8 @@ export default function GrowthDecisionCenter() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16, marginBottom: 24 }}>
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, marginBottom: 6 }}>
-              <span style={{ color: 'rgba(241,241,245,0.8)', fontWeight: 600 }}>Campus Captains</span>
-              <span className="mono" style={{ color: '#818cf8', fontWeight: 800 }}>₹{tranche.captains}</span>
+              <span style={{ color: '#334155', fontWeight: 600 }}>Campus Captains</span>
+              <span className="mono" style={{ color: '#4338ca', fontWeight: 800 }}>₹{tranche.captains}</span>
             </div>
             <input
               type="range"
@@ -547,15 +548,15 @@ export default function GrowthDecisionCenter() {
               step="50"
               value={tranche.captains}
               onChange={e => handleTrancheChange('captains', Number(e.target.value))}
-              style={{ width: '100%', accentColor: '#6366f1' }}
+              style={{ width: '100%', accentColor: '#4f46e5' }}
             />
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', marginTop: 4, margin: 0 }}>~₹2.5/qual reg (Perks pool)</p>
+            <p style={{ fontSize: 11, color: '#64748b', marginTop: 4, margin: 0 }}>~₹2.5/qual reg (Perks pool)</p>
           </div>
 
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, marginBottom: 6 }}>
-              <span style={{ color: 'rgba(241,241,245,0.8)', fontWeight: 600 }}>Referral Rewards</span>
-              <span className="mono" style={{ color: '#818cf8', fontWeight: 800 }}>₹{tranche.referrals}</span>
+              <span style={{ color: '#334155', fontWeight: 600 }}>Referral Rewards</span>
+              <span className="mono" style={{ color: '#4338ca', fontWeight: 800 }}>₹{tranche.referrals}</span>
             </div>
             <input
               type="range"
@@ -564,15 +565,15 @@ export default function GrowthDecisionCenter() {
               step="50"
               value={tranche.referrals}
               onChange={e => handleTrancheChange('referrals', Number(e.target.value))}
-              style={{ width: '100%', accentColor: '#6366f1' }}
+              style={{ width: '100%', accentColor: '#4f46e5' }}
             />
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', marginTop: 4, margin: 0 }}>~₹3.8/qual reg (Leaderboard)</p>
+            <p style={{ fontSize: 11, color: '#64748b', marginTop: 4, margin: 0 }}>~₹3.8/qual reg (Leaderboard)</p>
           </div>
 
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, marginBottom: 6 }}>
-              <span style={{ color: 'rgba(241,241,245,0.8)', fontWeight: 600 }}>Student Creators</span>
-              <span className="mono" style={{ color: '#818cf8', fontWeight: 800 }}>₹{tranche.creators}</span>
+              <span style={{ color: '#334155', fontWeight: 600 }}>Student Creators</span>
+              <span className="mono" style={{ color: '#4338ca', fontWeight: 800 }}>₹{tranche.creators}</span>
             </div>
             <input
               type="range"
@@ -581,15 +582,15 @@ export default function GrowthDecisionCenter() {
               step="50"
               value={tranche.creators}
               onChange={e => handleTrancheChange('creators', Number(e.target.value))}
-              style={{ width: '100%', accentColor: '#6366f1' }}
+              style={{ width: '100%', accentColor: '#4f46e5' }}
             />
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', marginTop: 4, margin: 0 }}>~₹7.2/qual reg (Challenge pool)</p>
+            <p style={{ fontSize: 11, color: '#64748b', marginTop: 4, margin: 0 }}>~₹7.2/qual reg (Challenge pool)</p>
           </div>
 
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, marginBottom: 6 }}>
-              <span style={{ color: 'rgba(241,241,245,0.8)', fontWeight: 600 }}>Communities</span>
-              <span className="mono" style={{ color: '#818cf8', fontWeight: 800 }}>₹{tranche.communities}</span>
+              <span style={{ color: '#334155', fontWeight: 600 }}>Communities</span>
+              <span className="mono" style={{ color: '#4338ca', fontWeight: 800 }}>₹{tranche.communities}</span>
             </div>
             <input
               type="range"
@@ -598,15 +599,15 @@ export default function GrowthDecisionCenter() {
               step="50"
               value={tranche.communities}
               onChange={e => handleTrancheChange('communities', Number(e.target.value))}
-              style={{ width: '100%', accentColor: '#6366f1' }}
+              style={{ width: '100%', accentColor: '#4f46e5' }}
             />
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', marginTop: 4, margin: 0 }}>Zero cash (Club starter kits)</p>
+            <p style={{ fontSize: 11, color: '#64748b', marginTop: 4, margin: 0 }}>Zero cash (Club starter kits)</p>
           </div>
 
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, marginBottom: 6 }}>
-              <span style={{ color: 'rgba(241,241,245,0.8)', fontWeight: 600 }}>Paid Ads</span>
-              <span className="mono" style={{ color: tranche.paidAds > 0 ? '#ef4444' : '#818cf8', fontWeight: 800 }}>₹{tranche.paidAds}</span>
+              <span style={{ color: '#334155', fontWeight: 600 }}>Paid Ads</span>
+              <span className="mono" style={{ color: tranche.paidAds > 0 ? '#dc2626' : '#4338ca', fontWeight: 800 }}>₹{tranche.paidAds}</span>
             </div>
             <input
               type="range"
@@ -615,9 +616,9 @@ export default function GrowthDecisionCenter() {
               step="50"
               value={tranche.paidAds}
               onChange={e => handleTrancheChange('paidAds', Number(e.target.value))}
-              style={{ width: '100%', accentColor: '#ef4444' }}
+              style={{ width: '100%', accentColor: '#dc2626' }}
             />
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', marginTop: 4, margin: 0 }}>~₹25.0/qual reg (High waste)</p>
+            <p style={{ fontSize: 11, color: '#64748b', marginTop: 4, margin: 0 }}>~₹25.0/qual reg (High waste)</p>
           </div>
         </div>
 
@@ -627,42 +628,42 @@ export default function GrowthDecisionCenter() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
           gap: 12,
           padding: '18px 20px',
-          background: 'rgba(99,102,241,0.06)',
-          border: '1px solid rgba(99,102,241,0.2)',
+          background: '#f8fafc',
+          border: '1px solid #e2e8f0',
           borderRadius: 12,
         }}>
           <div>
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.5)', textTransform: 'uppercase', margin: 0 }}>Tranche Allocated</p>
-            <p className="mono" style={{ fontSize: 22, fontWeight: 900, color: allocatedBudget === 500 ? '#34d399' : '#f59e0b', margin: '4px 0 0' }}>
-              ₹{allocatedBudget} <span style={{ fontSize: 13, color: 'rgba(241,241,245,0.4)' }}>/ ₹500</span>
+            <p style={{ fontSize: 11, color: '#64748b', textTransform: 'uppercase', margin: 0 }}>Tranche Allocated</p>
+            <p className="mono" style={{ fontSize: 22, fontWeight: 900, color: allocatedBudget === 500 ? '#047857' : '#b45309', margin: '4px 0 0' }}>
+              ₹{allocatedBudget} <span style={{ fontSize: 13, color: '#64748b' }}>/ ₹500</span>
             </p>
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', margin: 0 }}>
+            <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>
               {remainingBudget === 0 ? 'Fully allocated' : remainingBudget > 0 ? `₹${remainingBudget} remaining` : `Exceeds by ₹${Math.abs(remainingBudget)}`}
             </p>
           </div>
 
           <div>
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.5)', textTransform: 'uppercase', margin: 0 }}>Projected Registrations</p>
-            <p className="mono" style={{ fontSize: 22, fontWeight: 900, color: '#f1f1f5', margin: '4px 0 0' }}>
+            <p style={{ fontSize: 11, color: '#64748b', textTransform: 'uppercase', margin: 0 }}>Projected Registrations</p>
+            <p className="mono" style={{ fontSize: 22, fontWeight: 900, color: '#0f172a', margin: '4px 0 0' }}>
               ~{projectedTotalRegistrations}
             </p>
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', margin: 0 }}>Total simulated registrations</p>
+            <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>Total simulated registrations</p>
           </div>
 
           <div>
-            <p style={{ fontSize: 11, color: '#34d399', textTransform: 'uppercase', margin: 0 }}>Projected Qualified</p>
-            <p className="mono" style={{ fontSize: 22, fontWeight: 900, color: '#34d399', margin: '4px 0 0' }}>
+            <p style={{ fontSize: 11, color: '#047857', textTransform: 'uppercase', margin: 0 }}>Projected Qualified</p>
+            <p className="mono" style={{ fontSize: 22, fontWeight: 900, color: '#047857', margin: '4px 0 0' }}>
               ~{projectedQualifiedRegistrations}
             </p>
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', margin: 0 }}>Verified college attendees</p>
+            <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>Verified college attendees</p>
           </div>
 
           <div>
-            <p style={{ fontSize: 11, color: '#818cf8', textTransform: 'uppercase', margin: 0 }}>Effective Qualified CAC</p>
-            <p className="mono" style={{ fontSize: 22, fontWeight: 900, color: '#818cf8', margin: '4px 0 0' }}>
+            <p style={{ fontSize: 11, color: '#4338ca', textTransform: 'uppercase', margin: 0 }}>Effective Qualified CAC</p>
+            <p className="mono" style={{ fontSize: 22, fontWeight: 900, color: '#4338ca', margin: '4px 0 0' }}>
               ₹{projectedQualifiedRegistrations > 0 ? (allocatedBudget / projectedQualifiedRegistrations).toFixed(2) : '0.00'}
             </p>
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', margin: 0 }}>Cost per qualified acquisition</p>
+            <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>Cost per qualified acquisition</p>
           </div>
         </div>
       </div>
@@ -673,19 +674,19 @@ export default function GrowthDecisionCenter() {
       <div style={{ marginBottom: 40 }}>
         <div style={{ marginBottom: 16 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <h2 style={{ fontSize: 22, fontWeight: 900, color: '#f1f1f5', margin: 0 }}>
+            <h2 style={{ fontSize: 22, fontWeight: 900, color: '#0f172a', margin: 0 }}>
               Full Funnel Growth Loop
             </h2>
             <span className="chip chip-brand" style={{ fontSize: 10 }}>Compounding Engine</span>
           </div>
-          <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.6)', marginTop: 4, margin: '4px 0 0' }}>
+          <p style={{ fontSize: 13, color: '#64748b', marginTop: 4, margin: '4px 0 0' }}>
             Every touchpoint is designed so post-workshop student output feeds top-of-funnel discovery for the next cohort.
           </p>
         </div>
 
         <div style={{
-          background: 'rgba(255,255,255,0.02)',
-          border: '1px solid rgba(255,255,255,0.08)',
+          background: '#ffffff',
+          border: '1px solid #e2e8f0',
           borderRadius: 16,
           padding: '24px',
         }}>
@@ -694,8 +695,8 @@ export default function GrowthDecisionCenter() {
               <div
                 key={idx}
                 style={{
-                  background: 'rgba(255,255,255,0.03)',
-                  border: '1px solid rgba(255,255,255,0.06)',
+                  background: '#f8fafc',
+                  border: '1px solid #e2e8f0',
                   borderRadius: 10,
                   padding: '14px',
                   display: 'flex',
@@ -706,7 +707,7 @@ export default function GrowthDecisionCenter() {
               >
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
-                    <span className="mono" style={{ fontSize: 11, fontWeight: 800, color: '#818cf8' }}>
+                    <span className="mono" style={{ fontSize: 11, fontWeight: 800, color: '#4338ca' }}>
                       {step.step}
                     </span>
                     <span style={{
@@ -714,22 +715,22 @@ export default function GrowthDecisionCenter() {
                       fontWeight: 700,
                       padding: '2px 6px',
                       borderRadius: 4,
-                      background: 'rgba(99,102,241,0.12)',
-                      color: '#a5b4fc',
+                      background: '#eef2ff',
+                      color: '#4338ca',
                     }}>
                       {step.tag}
                     </span>
                   </div>
-                  <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.7)', lineHeight: 1.4, margin: 0 }}>
+                  <p style={{ fontSize: 12, color: '#334155', lineHeight: 1.4, margin: 0 }}>
                     {step.desc}
                   </p>
                 </div>
                 {idx < FUNNEL_STEPS.length - 1 ? (
-                  <div style={{ textAlign: 'center', color: 'rgba(241,241,245,0.25)', fontSize: 14 }}>
+                  <div style={{ textAlign: 'center', color: '#94a3b8', fontSize: 14 }}>
                     ↓
                   </div>
                 ) : (
-                  <div style={{ textAlign: 'center', color: '#34d399', fontSize: 12, fontWeight: 700 }}>
+                  <div style={{ textAlign: 'center', color: '#047857', fontSize: 12, fontWeight: 700 }}>
                     🔄 Loops back to Step 1
                   </div>
                 )}
@@ -740,11 +741,11 @@ export default function GrowthDecisionCenter() {
           <div style={{
             marginTop: 18,
             padding: '12px 16px',
-            background: 'rgba(16,185,129,0.06)',
-            border: '1px solid rgba(16,185,129,0.2)',
+            background: '#ecfdf5',
+            border: '1px solid #a7f3d0',
             borderRadius: 8,
             fontSize: 12,
-            color: 'rgba(241,241,245,0.8)',
+            color: '#064e3b',
           }}>
             🎯 <strong>The Flywheel Effect:</strong> Final-year students don&apos;t just register for a webinar; they build a portfolio project, submit it to the competition, and share it on LinkedIn/WhatsApp. Their peers see proof of tangible creation, initiating fresh peer discovery with zero paid acquisition expenditure.
           </div>
@@ -757,12 +758,12 @@ export default function GrowthDecisionCenter() {
       <div>
         <div style={{ marginBottom: 16 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <h2 style={{ fontSize: 22, fontWeight: 900, color: '#f1f1f5', margin: 0 }}>
+            <h2 style={{ fontSize: 22, fontWeight: 900, color: '#0f172a', margin: 0 }}>
               Decision Audit Trail
             </h2>
             <span className="chip chip-demo" style={{ fontSize: 10 }}>Documented History</span>
           </div>
-          <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.6)', marginTop: 4, margin: '4px 0 0' }}>
+          <p style={{ fontSize: 13, color: '#64748b', marginTop: 4, margin: '4px 0 0' }}>
             Historical decision records demonstrating evidence-based iteration.
           </p>
         </div>
@@ -777,9 +778,9 @@ export default function GrowthDecisionCenter() {
                   <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                     <div style={{
                       width: 28, height: 28, borderRadius: 6,
-                      background: 'rgba(99,102,241,0.15)',
+                      background: '#eef2ff',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontWeight: 800, fontSize: 12, color: '#818cf8',
+                      fontWeight: 800, fontSize: 12, color: '#4338ca',
                     }}>
                       {idx + 1}
                     </div>
@@ -798,14 +799,14 @@ export default function GrowthDecisionCenter() {
                       {actionConfig.label}
                     </span>
                   </div>
-                  <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.35)' }}>
+                  <span style={{ fontSize: 11, color: '#64748b' }}>
                     {new Date(log.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
                   </span>
                 </div>
 
                 <div style={{ marginBottom: 10 }}>
-                  <p className="section-label" style={{ color: 'rgba(241,241,245,0.5)', marginBottom: 4 }}>👀 Observation</p>
-                  <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.85)', lineHeight: 1.5, margin: 0 }}>
+                  <p className="section-label" style={{ color: '#64748b', marginBottom: 4 }}>👀 Observation</p>
+                  <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.5, margin: 0 }}>
                     {log.observation}
                   </p>
                 </div>
@@ -814,14 +815,14 @@ export default function GrowthDecisionCenter() {
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 12 }}>
                   <div>
-                    <p className="section-label" style={{ color: '#818cf8', marginBottom: 4 }}>🎯 Decision</p>
-                    <p style={{ fontSize: 13, color: '#f1f1f5', lineHeight: 1.5, margin: 0, fontWeight: 600 }}>
+                    <p className="section-label" style={{ color: '#4338ca', marginBottom: 4 }}>🎯 Decision</p>
+                    <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.5, margin: 0, fontWeight: 600 }}>
                       {log.decision}
                     </p>
                   </div>
                   <div>
-                    <p className="section-label" style={{ color: '#34d399', marginBottom: 4 }}>💭 Reason</p>
-                    <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.75)', lineHeight: 1.5, margin: 0 }}>
+                    <p className="section-label" style={{ color: '#047857', marginBottom: 4 }}>💭 Reason</p>
+                    <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.5, margin: 0 }}>
                       {log.reason}
                     </p>
                   </div>
@@ -832,10 +833,10 @@ export default function GrowthDecisionCenter() {
                     marginTop: 10,
                     padding: '8px 12px',
                     borderRadius: 6,
-                    background: 'rgba(16,185,129,0.06)',
-                    border: '1px solid rgba(16,185,129,0.15)',
+                    background: '#ecfdf5',
+                    border: '1px solid #a7f3d0',
                     fontSize: 12,
-                    color: '#a7f3d0',
+                    color: '#064e3b',
                   }}>
                     📈 <strong>Impact:</strong> {log.impact}
                   </div>
@@ -851,40 +852,40 @@ export default function GrowthDecisionCenter() {
       {/* ============================================================== */}
       <div className="card" style={{
         marginTop: 40,
-        background: 'linear-gradient(135deg, rgba(99,102,241,0.08), rgba(16,185,129,0.06))',
-        border: '1px solid rgba(99,102,241,0.25)',
+        background: 'linear-gradient(135deg, #eef2ff, #ecfdf5)',
+        border: '1px solid #c7d2fe',
         borderRadius: 16,
         padding: '24px 28px',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
           <span style={{ fontSize: 24 }}>🧠</span>
           <div>
-            <p className="mono" style={{ fontSize: 11, fontWeight: 800, color: '#818cf8', letterSpacing: '0.08em', margin: 0 }}>
+            <p className="mono" style={{ fontSize: 11, fontWeight: 800, color: '#4338ca', letterSpacing: '0.08em', margin: 0 }}>
               OPERATING MANTRA &amp; HUMAN-IN-THE-LOOP GOVERNANCE
             </p>
-            <h3 style={{ fontSize: 18, fontWeight: 900, color: '#f1f1f5', margin: '2px 0 0' }}>
+            <h3 style={{ fontSize: 18, fontWeight: 900, color: '#0f172a', margin: '2px 0 0' }}>
               AI Proposes. Experiments Measure. I Decide.
             </h3>
           </div>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16, marginTop: 16 }}>
-          <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 10, padding: '16px', border: '1px solid rgba(255,255,255,0.06)' }}>
-            <p style={{ fontSize: 12, fontWeight: 800, color: '#818cf8', textTransform: 'uppercase', marginBottom: 8 }}>
+          <div style={{ background: '#ffffff', borderRadius: 10, padding: '16px', border: '1px solid #c7d2fe' }}>
+            <p style={{ fontSize: 12, fontWeight: 800, color: '#4338ca', textTransform: 'uppercase', marginBottom: 8 }}>
               🤖 Where AI Powers the Campaign:
             </p>
-            <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13, color: 'rgba(241,241,245,0.85)', lineHeight: 1.6 }}>
+            <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13, color: '#334155', lineHeight: 1.6 }}>
               <li><strong>Project Personalization:</strong> Generates tailored roadmaps, modern stacks, and resume bullets in Project Passport.</li>
               <li><strong>Copy &amp; Hypothesis Generation:</strong> Rapidly brainstorms testable variants across Career, Project, and Community angles.</li>
               <li><strong>Objective Rubric Assist:</strong> Parses project submission summaries to score novelty and technical stack depth.</li>
             </ul>
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 10, padding: '16px', border: '1px solid rgba(16,185,129,0.2)' }}>
-            <p style={{ fontSize: 12, fontWeight: 800, color: '#34d399', textTransform: 'uppercase', marginBottom: 8 }}>
+          <div style={{ background: '#ffffff', borderRadius: 10, padding: '16px', border: '1px solid #a7f3d0' }}>
+            <p style={{ fontSize: 12, fontWeight: 800, color: '#047857', textTransform: 'uppercase', marginBottom: 8 }}>
               ⚖️ Where Human Judgment Decides:
             </p>
-            <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13, color: 'rgba(241,241,245,0.85)', lineHeight: 1.6 }}>
+            <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13, color: '#334155', lineHeight: 1.6 }}>
               <li><strong>Budget Allocation:</strong> Enforces the ₹2,000 hard ceiling and allocates funds to verified student incentives over paid ad waste.</li>
               <li><strong>Channel Guardrails:</strong> Decides when to SCALE, CONTINUE, ITERATE, or KILL based on qualified attendee signal.</li>
               <li><strong>Incentive &amp; Anti-Fraud Rules:</strong> Rejects self-referrals and gates rewards behind 2 verified unique domain registrations.</li>
@@ -898,8 +899,8 @@ export default function GrowthDecisionCenter() {
       {/* ============================================================== */}
       <div className="card" style={{
         marginTop: 24,
-        background: 'rgba(255,255,255,0.02)',
-        border: '1px solid rgba(255,255,255,0.08)',
+        background: '#ffffff',
+        border: '1px solid #e2e8f0',
         borderRadius: 16,
         padding: '24px 28px',
       }}>
@@ -907,11 +908,11 @@ export default function GrowthDecisionCenter() {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
               <span style={{ fontSize: 22 }}>⏱️</span>
-              <h3 style={{ fontSize: 18, fontWeight: 900, color: '#f1f1f5', margin: 0 }}>
+              <h3 style={{ fontSize: 18, fontWeight: 900, color: '#0f172a', margin: 0 }}>
                 If I Had Another 24 Hours: Proposed Next Sprints
               </h3>
             </div>
-            <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.6)', marginTop: 4, margin: '4px 0 0' }}>
+            <p style={{ fontSize: 13, color: '#64748b', marginTop: 4, margin: '4px 0 0' }}>
               Strategic growth roadmap to validate high-sensitivity assumptions before full cohort rollout.
             </p>
           </div>
@@ -921,50 +922,50 @@ export default function GrowthDecisionCenter() {
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 12 }}>
-          <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 10, padding: '14px', border: '1px solid rgba(255,255,255,0.05)' }}>
-            <span style={{ fontSize: 11, fontWeight: 800, color: '#818cf8' }}>SPRINT 1 · CAPTAIN PILOT</span>
-            <p style={{ fontSize: 13, color: '#f1f1f5', fontWeight: 600, margin: '4px 0 2px' }}>Pilot 3–5 Campus Captains</p>
-            <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.6)', margin: 0, lineHeight: 1.4 }}>
+          <div style={{ background: '#f8fafc', borderRadius: 10, padding: '14px', border: '1px solid #e2e8f0' }}>
+            <span style={{ fontSize: 11, fontWeight: 800, color: '#4338ca' }}>SPRINT 1 · CAPTAIN PILOT</span>
+            <p style={{ fontSize: 13, color: '#0f172a', fontWeight: 600, margin: '4px 0 2px' }}>Pilot 3–5 Campus Captains</p>
+            <p style={{ fontSize: 12, color: '#475569', margin: 0, lineHeight: 1.4 }}>
               Test WhatsApp broadcast activation across Amrita, VIT, and SRM placement groups to validate the 8 registrations/captain planning baseline.
             </p>
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 10, padding: '14px', border: '1px solid rgba(255,255,255,0.05)' }}>
-            <span style={{ fontSize: 11, fontWeight: 800, color: '#34d399' }}>SPRINT 2 · FUNNEL FRICTION</span>
-            <p style={{ fontSize: 13, color: '#f1f1f5', fontWeight: 600, margin: '4px 0 2px' }}>Measure Passport → Registration Drop-off</p>
-            <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.6)', margin: 0, lineHeight: 1.4 }}>
+          <div style={{ background: '#f8fafc', borderRadius: 10, padding: '14px', border: '1px solid #e2e8f0' }}>
+            <span style={{ fontSize: 11, fontWeight: 800, color: '#047857' }}>SPRINT 2 · FUNNEL FRICTION</span>
+            <p style={{ fontSize: 13, color: '#0f172a', fontWeight: 600, margin: '4px 0 2px' }}>Measure Passport → Registration Drop-off</p>
+            <p style={{ fontSize: 12, color: '#475569', margin: 0, lineHeight: 1.4 }}>
               Instrument drop-off analytics between blueprint preview and email registration to isolate form friction.
             </p>
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 10, padding: '14px', border: '1px solid rgba(255,255,255,0.05)' }}>
-            <span style={{ fontSize: 11, fontWeight: 800, color: '#fcd34d' }}>SPRINT 3 · MESSAGING VALIDATION</span>
-            <p style={{ fontSize: 13, color: '#f1f1f5', fontWeight: 600, margin: '4px 0 2px' }}>Test Career vs Project Hook</p>
-            <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.6)', margin: 0, lineHeight: 1.4 }}>
+          <div style={{ background: '#f8fafc', borderRadius: 10, padding: '14px', border: '1px solid #e2e8f0' }}>
+            <span style={{ fontSize: 11, fontWeight: 800, color: '#b45309' }}>SPRINT 3 · MESSAGING VALIDATION</span>
+            <p style={{ fontSize: 13, color: '#0f172a', fontWeight: 600, margin: '4px 0 2px' }}>Test Career vs Project Hook</p>
+            <p style={{ fontSize: 12, color: '#475569', margin: 0, lineHeight: 1.4 }}>
               A/B test &ldquo;Build an AI project you can explain in interviews&rdquo; vs &ldquo;Turn your idea into an AI prototype&rdquo; in engineering club groups.
             </p>
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 10, padding: '14px', border: '1px solid rgba(255,255,255,0.05)' }}>
-            <span style={{ fontSize: 11, fontWeight: 800, color: '#a78bfa' }}>SPRINT 4 · VIRAL AUDIT</span>
-            <p style={{ fontSize: 13, color: '#f1f1f5', fontWeight: 600, margin: '4px 0 2px' }}>Audit Verified Referral Quality</p>
-            <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.6)', margin: 0, lineHeight: 1.4 }}>
+          <div style={{ background: '#f8fafc', borderRadius: 10, padding: '14px', border: '1px solid #e2e8f0' }}>
+            <span style={{ fontSize: 11, fontWeight: 800, color: '#7c3aed' }}>SPRINT 4 · VIRAL AUDIT</span>
+            <p style={{ fontSize: 13, color: '#0f172a', fontWeight: 600, margin: '4px 0 2px' }}>Audit Verified Referral Quality</p>
+            <p style={{ fontSize: 12, color: '#475569', margin: 0, lineHeight: 1.4 }}>
               Verify referral conversion quality by checking college email domain match rates before granting leaderboard prizes.
             </p>
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 10, padding: '14px', border: '1px solid rgba(255,255,255,0.05)' }}>
-            <span style={{ fontSize: 11, fontWeight: 800, color: '#f472b6' }}>SPRINT 5 · ATTENDANCE SIGNAL</span>
-            <p style={{ fontSize: 13, color: '#f1f1f5', fontWeight: 600, margin: '4px 0 2px' }}>Compare Reg vs Attendance Intent</p>
-            <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.6)', margin: 0, lineHeight: 1.4 }}>
+          <div style={{ background: '#f8fafc', borderRadius: 10, padding: '14px', border: '1px solid #e2e8f0' }}>
+            <span style={{ fontSize: 11, fontWeight: 800, color: '#db2777' }}>SPRINT 5 · ATTENDANCE SIGNAL</span>
+            <p style={{ fontSize: 13, color: '#0f172a', fontWeight: 600, margin: '4px 0 2px' }}>Compare Reg vs Attendance Intent</p>
+            <p style={{ fontSize: 12, color: '#475569', margin: 0, lineHeight: 1.4 }}>
               Add 1-click Google Calendar invite to measure real workshop attendance commitment vs passive form submissions.
             </p>
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 10, padding: '14px', border: '1px solid rgba(255,255,255,0.05)' }}>
-            <span style={{ fontSize: 11, fontWeight: 800, color: '#38bdf8' }}>SPRINT 6 · CAPITAL EFFICIENCY</span>
-            <p style={{ fontSize: 13, color: '#f1f1f5', fontWeight: 600, margin: '4px 0 2px' }}>Dynamic Tranche Reallocation</p>
-            <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.6)', margin: 0, lineHeight: 1.4 }}>
+          <div style={{ background: '#f8fafc', borderRadius: 10, padding: '14px', border: '1px solid #e2e8f0' }}>
+            <span style={{ fontSize: 11, fontWeight: 800, color: '#0284c7' }}>SPRINT 6 · CAPITAL EFFICIENCY</span>
+            <p style={{ fontSize: 13, color: '#0f172a', fontWeight: 600, margin: '4px 0 2px' }}>Dynamic Tranche Reallocation</p>
+            <p style={{ fontSize: 12, color: '#475569', margin: 0, lineHeight: 1.4 }}>
               Kill channels exceeding ₹10 CAC per qualified student; reallocate 100% of remaining buffer into winning captain cohorts.
             </p>
           </div>
