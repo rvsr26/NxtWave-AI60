@@ -10,7 +10,10 @@ import type {
 } from '../types';
 
 const API_BASE_URL =
-  (typeof import.meta !== 'undefined' && import.meta.env?.VITE_API_URL) || '';
+  (typeof import.meta !== 'undefined' && import.meta.env?.VITE_API_URL) ||
+  (typeof window !== 'undefined' && window.location.hostname.includes('vercel.app')
+    ? 'https://nxtwave-ai60.onrender.com/api'
+    : 'http://localhost:3001/api');
 
 let isServerOnline = Boolean(API_BASE_URL && API_BASE_URL.trim().length > 0);
 let lastOfflineCheck = 0;
