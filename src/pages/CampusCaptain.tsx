@@ -104,41 +104,42 @@ export default function CampusCaptainPage() {
       <div>
         {/* Dashboard Header */}
         <div style={{
-          background: 'linear-gradient(135deg, rgba(99,102,241,0.15), rgba(167,139,250,0.08))',
-          border: '1px solid rgba(99,102,241,0.3)',
+          background: '#f8fafc',
+          border: '1px solid #cbd5e1',
           borderRadius: 16, padding: '28px', marginBottom: 24,
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 16, marginBottom: 20 }}>
             <div>
-              <p className="section-label" style={{ marginBottom: 4 }}>Campus Captain Dashboard</p>
-              <h2 style={{ fontSize: 22, fontWeight: 800, color: '#f1f1f5', lineHeight: 1.2 }}>
+              <p className="section-label" style={{ marginBottom: 4, color: '#4338ca', fontWeight: 800 }}>Campus Captain Dashboard</p>
+              <h2 style={{ fontSize: 22, fontWeight: 800, color: '#0f172a', lineHeight: 1.2 }}>
                 {captain.college}
               </h2>
-              <p className="mono" style={{ fontSize: 13, color: '#818cf8', marginTop: 4 }}>
+              <p className="mono" style={{ fontSize: 13, color: '#4338ca', marginTop: 4, fontWeight: 700 }}>
                 {captain.campusCode}
               </p>
             </div>
             <div style={{ textAlign: 'right' }}>
-              <p style={{ fontSize: 40, fontWeight: 900, color: '#f1f1f5', lineHeight: 1, letterSpacing: '-0.03em' }}>
+              <p style={{ fontSize: 40, fontWeight: 900, color: '#0f172a', lineHeight: 1, letterSpacing: '-0.03em' }}>
                 #{rank}
               </p>
-              <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.45)', fontWeight: 600 }}>Campus Rank</p>
+              <p style={{ fontSize: 12, color: '#64748b', fontWeight: 700 }}>Campus Rank</p>
             </div>
           </div>
 
           {/* Stats row */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginBottom: 20 }}>
             {[
-              { label: 'Registrations', value: campusRegs.toString(), color: '#818cf8' },
-              { label: 'Your Referrals', value: captain.registrations.toString(), color: '#34d399' },
-              { label: 'Target', value: `${target}`, color: '#fcd34d' },
+              { label: 'Registrations', value: campusRegs.toString(), color: '#4338ca' },
+              { label: 'Your Referrals', value: captain.registrations.toString(), color: '#047857' },
+              { label: 'Target', value: `${target}`, color: '#b45309' },
             ].map(s => (
               <div key={s.label} style={{
-                background: 'rgba(255,255,255,0.05)',
+                background: '#ffffff',
+                border: '1px solid #e2e8f0',
                 borderRadius: 10, padding: '14px 16px', textAlign: 'center',
               }}>
                 <p style={{ fontSize: 24, fontWeight: 800, color: s.color, lineHeight: 1 }}>{s.value}</p>
-                <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.45)', marginTop: 4, fontWeight: 600 }}>{s.label.toUpperCase()}</p>
+                <p style={{ fontSize: 11, color: '#64748b', marginTop: 4, fontWeight: 700 }}>{s.label.toUpperCase()}</p>
               </div>
             ))}
           </div>
@@ -146,18 +147,18 @@ export default function CampusCaptainPage() {
           {/* Milestone progress */}
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
-              <span style={{ fontSize: 13, fontWeight: 600, color: '#f1f1f5' }}>
+              <span style={{ fontSize: 13, fontWeight: 700, color: '#0f172a' }}>
                 {campusRegs} / {target} registrations
               </span>
-              <span style={{ fontSize: 13, color: '#fcd34d', fontWeight: 700 }}>
+              <span style={{ fontSize: 13, color: '#b45309', fontWeight: 700 }}>
                 {remaining > 0 ? `${remaining} to next milestone` : '🎯 Milestone reached!'}
               </span>
             </div>
-            <div className="progress-bar" style={{ height: 10 }}>
+            <div className="progress-bar" style={{ height: 10, background: '#cbd5e1' }}>
               <div style={{
                 height: '100%', borderRadius: 999,
                 width: `${progress}%`,
-                background: 'linear-gradient(90deg, #6366f1, #f59e0b)',
+                background: 'linear-gradient(90deg, #4f46e5, #10b981)',
                 transition: 'width 0.8s ease',
               }} />
             </div>
@@ -165,42 +166,42 @@ export default function CampusCaptainPage() {
         </div>
 
         {/* Share Link */}
-        <div className="card" style={{ marginBottom: 24 }}>
-          <p style={{ fontWeight: 700, color: '#f1f1f5', fontSize: 15, marginBottom: 4 }}>
+        <div className="card" style={{ marginBottom: 24, background: '#ffffff', border: '1px solid #cbd5e1' }}>
+          <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 15, marginBottom: 4 }}>
             📤 Campus Share Link
           </p>
-          <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.5)', marginBottom: 14 }}>
+          <p style={{ fontSize: 13, color: '#475569', marginBottom: 14 }}>
             Every student who registers via this link is attributed to {captain.college}
           </p>
 
           <div style={{
             display: 'flex', alignItems: 'center', gap: 8,
-            background: 'rgba(255,255,255,0.04)',
-            border: '1px solid rgba(255,255,255,0.08)',
+            background: '#f8fafc',
+            border: '1px solid #cbd5e1',
             borderRadius: 10, padding: '10px 14px', marginBottom: 14,
           }}>
-            <span className="mono" style={{ flex: 1, fontSize: 12, color: '#818cf8', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            <span className="mono" style={{ flex: 1, fontSize: 13, color: '#4338ca', fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
               {shareUrl}
             </span>
           </div>
 
           <div style={{ display: 'flex', gap: 10 }}>
-            <button id="captain-copy-btn" className="btn-secondary" style={{ flex: 1 }} onClick={copyShareLink}>
+            <button id="captain-copy-btn" className="btn-secondary" style={{ flex: 1, fontWeight: 700 }} onClick={copyShareLink}>
               📋 Copy Link
             </button>
-            <button id="captain-whatsapp-btn" className="btn-green" style={{ flex: 1 }} onClick={shareWhatsApp}>
+            <button id="captain-whatsapp-btn" className="btn-green" style={{ flex: 1, fontWeight: 700 }} onClick={shareWhatsApp}>
               <span>💬</span> WhatsApp
             </button>
           </div>
         </div>
 
         {/* Campaign message template */}
-        <div className="card" style={{ background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)' }}>
-          <p className="section-label" style={{ marginBottom: 8, color: '#34d399' }}>📝 WhatsApp Message Template</p>
+        <div className="card" style={{ background: '#ecfdf5', border: '1px solid #a7f3d0' }}>
+          <p className="section-label" style={{ marginBottom: 8, color: '#047857', fontWeight: 800 }}>📝 WhatsApp Message Template</p>
           <p style={{
-            fontSize: 13, color: 'rgba(241,241,245,0.8)', lineHeight: 1.8,
-            background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: 14,
-            fontStyle: 'italic',
+            fontSize: 13, color: '#1e293b', lineHeight: 1.8,
+            background: '#ffffff', border: '1px solid #a7f3d0', borderRadius: 8, padding: 14,
+            fontStyle: 'italic', margin: 0,
           }}>
             "Hey! Our college is competing in the AI60 Campus League 🏆<br/><br/>
             We need {remaining} more students from {captain.college} to register for this free AI workshop.<br/><br/>
@@ -219,11 +220,11 @@ export default function CampusCaptainPage() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 28 }}>
           <button
             onClick={() => setView('join')}
-            style={{ background: 'none', border: 'none', color: 'rgba(241,241,245,0.5)', cursor: 'pointer', fontSize: 13 }}
+            style={{ background: 'none', border: 'none', color: '#4338ca', cursor: 'pointer', fontSize: 13, fontWeight: 700 }}
           >
             ← Back
           </button>
-          <h1 style={{ fontSize: 24, fontWeight: 800, color: '#f1f1f5' }}>
+          <h1 style={{ fontSize: 24, fontWeight: 800, color: '#0f172a' }}>
             ⚡ Campus Captain Dashboard
           </h1>
         </div>
@@ -238,12 +239,12 @@ export default function CampusCaptainPage() {
       <div style={{ textAlign: 'center', marginBottom: 32 }}>
         <div style={{ fontSize: 48, marginBottom: 16 }}>⚡</div>
         <h1 style={{
-          fontSize: 30, fontWeight: 900, color: '#f1f1f5',
+          fontSize: 30, fontWeight: 900, color: '#0f172a',
           letterSpacing: '-0.02em', marginBottom: 12,
         }}>
           Become a Campus Captain
         </h1>
-        <p style={{ color: 'rgba(241,241,245,0.55)', fontSize: 15, lineHeight: 1.6, maxWidth: 420, margin: '0 auto' }}>
+        <p style={{ color: '#475569', fontSize: 15, lineHeight: 1.6, maxWidth: 420, margin: '0 auto' }}>
           Lead your campus in the AI60 campaign. Get a tracked link, dashboard, and milestone progress tracker.
         </p>
       </div>
@@ -256,45 +257,45 @@ export default function CampusCaptainPage() {
           { emoji: '🔗', title: 'Unique Link', desc: 'Shareable URL for WhatsApp and social media' },
           { emoji: '🏆', title: 'Milestones', desc: 'Progress toward registration targets' },
         ].map(item => (
-          <div key={item.title} className="card" style={{ padding: 16 }}>
+          <div key={item.title} className="card" style={{ padding: 16, background: '#ffffff', border: '1px solid #cbd5e1' }}>
             <div style={{ fontSize: 24, marginBottom: 8 }}>{item.emoji}</div>
-            <p style={{ fontWeight: 700, color: '#f1f1f5', fontSize: 13, marginBottom: 4 }}>{item.title}</p>
-            <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.5)' }}>{item.desc}</p>
+            <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 14, marginBottom: 4 }}>{item.title}</p>
+            <p style={{ fontSize: 12, color: '#475569', margin: 0 }}>{item.desc}</p>
           </div>
         ))}
       </div>
 
       {/* Form */}
       <form onSubmit={handleJoin}>
-        <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-          <h3 style={{ fontWeight: 700, color: '#f1f1f5', fontSize: 16 }}>Join as Campus Captain</h3>
+        <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: 18, background: '#ffffff', border: '1px solid #cbd5e1' }}>
+          <h3 style={{ fontWeight: 800, color: '#0f172a', fontSize: 16, margin: 0 }}>Join as Campus Captain</h3>
 
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: 'rgba(241,241,245,0.8)', marginBottom: 6 }}>Full Name *</label>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>Full Name *</label>
             <input id="captain-name" type="text" className="input-base" placeholder="Your full name" value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} />
-            {errors.name && <p style={{ color: '#fca5a5', fontSize: 12, marginTop: 4 }}>{errors.name}</p>}
+            {errors.name && <p style={{ color: '#dc2626', fontSize: 12, marginTop: 4 }}>{errors.name}</p>}
           </div>
 
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: 'rgba(241,241,245,0.8)', marginBottom: 6 }}>Email *</label>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>Email *</label>
             <input id="captain-email" type="email" className="input-base" placeholder="you@college.edu" value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} />
-            {errors.email && <p style={{ color: '#fca5a5', fontSize: 12, marginTop: 4 }}>{errors.email}</p>}
+            {errors.email && <p style={{ color: '#dc2626', fontSize: 12, marginTop: 4 }}>{errors.email}</p>}
           </div>
 
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: 'rgba(241,241,245,0.8)', marginBottom: 6 }}>College *</label>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>College *</label>
             <input id="captain-college" type="text" className="input-base" placeholder="e.g. Amrita University" value={form.college} onChange={e => setForm(f => ({ ...f, college: e.target.value }))} />
-            {errors.college && <p style={{ color: '#fca5a5', fontSize: 12, marginTop: 4 }}>{errors.college}</p>}
+            {errors.college && <p style={{ color: '#dc2626', fontSize: 12, marginTop: 4 }}>{errors.college}</p>}
           </div>
 
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: 'rgba(241,241,245,0.8)', marginBottom: 6 }}>WhatsApp Number *</label>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>WhatsApp Number *</label>
             <input id="captain-whatsapp" type="tel" className="input-base" placeholder="+91 98xxx xxxxx" value={form.whatsapp} onChange={e => setForm(f => ({ ...f, whatsapp: e.target.value }))} />
-            {errors.whatsapp && <p style={{ color: '#fca5a5', fontSize: 12, marginTop: 4 }}>{errors.whatsapp}</p>}
+            {errors.whatsapp && <p style={{ color: '#dc2626', fontSize: 12, marginTop: 4 }}>{errors.whatsapp}</p>}
           </div>
 
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: 'rgba(241,241,245,0.8)', marginBottom: 6 }}>Campus Code *</label>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>Campus Code *</label>
             <select
               id="captain-campus-code"
               className="input-base"
@@ -315,7 +316,7 @@ export default function CampusCaptainPage() {
                 value={customCode} onChange={e => setCustomCode(e.target.value.toUpperCase().replace(/[^A-Z]/g, ''))}
               />
             )}
-            {errors.campusCode && <p style={{ color: '#fca5a5', fontSize: 12, marginTop: 4 }}>{errors.campusCode}</p>}
+            {errors.campusCode && <p style={{ color: '#dc2626', fontSize: 12, marginTop: 4 }}>{errors.campusCode}</p>}
           </div>
 
           <button
@@ -328,7 +329,7 @@ export default function CampusCaptainPage() {
             {loading ? '⟳ Setting up...' : '⚡ Become Campus Captain'}
           </button>
 
-          <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.3)', textAlign: 'center' }}>
+          <p style={{ fontSize: 11, color: '#64748b', textAlign: 'center', margin: 0 }}>
             No commitment required. This is a volunteer campaign role.
             Physical rewards are not guaranteed unless explicitly communicated by NxtWave.
           </p>
@@ -340,10 +341,10 @@ export default function CampusCaptainPage() {
         <div style={{ marginTop: 36 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8, marginBottom: 14 }}>
             <div>
-              <h3 style={{ fontSize: 16, fontWeight: 800, color: '#f1f1f5', margin: 0 }}>
+              <h3 style={{ fontSize: 16, fontWeight: 800, color: '#0f172a', margin: 0 }}>
                 ⚡ Campus Captain Quality &amp; Conversion
               </h3>
-              <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.5)', margin: '2px 0 0' }}>
+              <p style={{ fontSize: 12, color: '#64748b', margin: '2px 0 0' }}>
                 Which captains are producing qualified registrations efficiently?
               </p>
             </div>
@@ -369,44 +370,45 @@ export default function CampusCaptainPage() {
                     alignItems: 'center',
                     flexWrap: 'wrap',
                     gap: 12,
-                    background: 'rgba(255,255,255,0.02)',
+                    background: '#ffffff',
+                    border: '1px solid #cbd5e1',
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                     <div style={{
                       width: 28, height: 28, borderRadius: 6,
-                      background: 'rgba(99,102,241,0.15)',
+                      background: '#eef2ff',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontWeight: 800, fontSize: 12, color: '#818cf8',
+                      fontWeight: 800, fontSize: 12, color: '#4338ca',
                     }}>
                       #{idx + 1}
                     </div>
                     <div>
-                      <p style={{ fontWeight: 700, color: '#f1f1f5', fontSize: 14, margin: 0 }}>
+                      <p style={{ fontWeight: 700, color: '#0f172a', fontSize: 14, margin: 0 }}>
                         {cap.name}
                       </p>
-                      <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.5)', margin: 0 }}>
-                        {cap.college} · <span className="mono" style={{ color: '#818cf8' }}>{cap.campusCode}</span>
+                      <p style={{ fontSize: 12, color: '#64748b', margin: 0 }}>
+                        {cap.college} · <span className="mono" style={{ color: '#4338ca', fontWeight: 600 }}>{cap.campusCode}</span>
                       </p>
                     </div>
                   </div>
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: 18, flexWrap: 'wrap' }}>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', textTransform: 'uppercase', margin: 0 }}>Total Regs</p>
-                      <p className="mono" style={{ fontSize: 14, fontWeight: 700, color: '#f1f1f5', margin: 0 }}>{cap.registrations}</p>
+                      <p style={{ fontSize: 10, color: '#64748b', textTransform: 'uppercase', margin: 0, fontWeight: 700 }}>Total Regs</p>
+                      <p className="mono" style={{ fontSize: 14, fontWeight: 700, color: '#0f172a', margin: 0 }}>{cap.registrations}</p>
                     </div>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: 10, color: '#34d399', textTransform: 'uppercase', margin: 0 }}>Qualified</p>
-                      <p className="mono" style={{ fontSize: 14, fontWeight: 800, color: '#34d399', margin: 0 }}>{qualified}</p>
+                      <p style={{ fontSize: 10, color: '#047857', textTransform: 'uppercase', margin: 0, fontWeight: 700 }}>Qualified</p>
+                      <p className="mono" style={{ fontSize: 14, fontWeight: 800, color: '#047857', margin: 0 }}>{qualified}</p>
                     </div>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: 10, color: '#818cf8', textTransform: 'uppercase', margin: 0 }}>Qualified %</p>
-                      <p className="mono" style={{ fontSize: 14, fontWeight: 700, color: '#818cf8', margin: 0 }}>{conversion}%</p>
+                      <p style={{ fontSize: 10, color: '#4338ca', textTransform: 'uppercase', margin: 0, fontWeight: 700 }}>Qualified %</p>
+                      <p className="mono" style={{ fontSize: 14, fontWeight: 700, color: '#4338ca', margin: 0 }}>{conversion}%</p>
                     </div>
                     <div style={{ minWidth: 100, textAlign: 'right' }}>
-                      <p style={{ fontSize: 10, color: '#fcd34d', textTransform: 'uppercase', margin: 0 }}>50 Milestone</p>
-                      <p className="mono" style={{ fontSize: 12, fontWeight: 700, color: '#fcd34d', margin: 0 }}>{milestonePercent}% reached</p>
+                      <p style={{ fontSize: 10, color: '#b45309', textTransform: 'uppercase', margin: 0, fontWeight: 700 }}>50 Milestone</p>
+                      <p className="mono" style={{ fontSize: 12, fontWeight: 700, color: '#b45309', margin: 0 }}>{milestonePercent}% reached</p>
                     </div>
                   </div>
                 </div>

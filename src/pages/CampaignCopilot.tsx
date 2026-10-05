@@ -37,50 +37,50 @@ export default function CampaignCopilot() {
   }
 
   const variantColors = ['#6366f1', '#10b981', '#f59e0b'];
-  const variantBg = ['rgba(99,102,241,0.08)', 'rgba(16,185,129,0.08)', 'rgba(245,158,11,0.08)'];
-  const variantBorder = ['rgba(99,102,241,0.25)', 'rgba(16,185,129,0.25)', 'rgba(245,158,11,0.25)'];
+  const variantBg = ['#eef2ff', '#ecfdf5', '#fffbeb'];
+  const variantBorder = ['#c7d2fe', '#a7f3d0', '#fde68a'];
 
   return (
     <div style={{ maxWidth: 840, margin: '0 auto', padding: '40px 24px' }}>
       {/* Header */}
       <div style={{ marginBottom: 32 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8, flexWrap: 'wrap' }}>
-          <h1 style={{ fontSize: 28, fontWeight: 900, color: '#f1f1f5', letterSpacing: '-0.02em' }}>
+          <h1 style={{ fontSize: 28, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em' }}>
             🤖 AI Growth Hypothesis Generator
           </h1>
           <span className={`chip ${hasApiKey ? 'chip-green' : 'chip-amber'}`}>
             {hasApiKey ? '✓ OpenAI Connected' : '⚡ Deterministic Mode'}
           </span>
         </div>
-        <p style={{ color: 'rgba(241,241,245,0.65)', fontSize: 14, lineHeight: 1.6 }}>
+        <p style={{ color: '#475569', fontSize: 14, lineHeight: 1.6 }}>
           Generate 3 testable growth angles: <strong>Career Angle</strong>, <strong>Project Angle</strong>, and <strong>Community Angle</strong>.
         </p>
 
         {/* Operating Mantra Banner */}
         <div style={{
           marginTop: 16,
-          background: 'linear-gradient(135deg, rgba(99,102,241,0.12), rgba(16,185,129,0.08))',
-          border: '1px solid rgba(99,102,241,0.25)',
+          background: '#eef2ff',
+          border: '1px solid #c7d2fe',
           borderRadius: 10, padding: '12px 18px',
           display: 'flex', alignItems: 'center', gap: 12,
         }}>
           <span style={{ fontSize: 18 }}>💡</span>
-          <p style={{ fontSize: 13, fontWeight: 700, color: '#c7d2fe', margin: 0, letterSpacing: '0.01em' }}>
+          <p style={{ fontSize: 13, fontWeight: 700, color: '#312e81', margin: 0, letterSpacing: '0.01em' }}>
             "AI proposes. Experiments measure. I decide."
           </p>
         </div>
       </div>
 
       {/* Config card */}
-      <div className="card" style={{ marginBottom: 24 }}>
-        <p style={{ fontWeight: 700, color: '#f1f1f5', fontSize: 15, marginBottom: 20 }}>
+      <div className="card" style={{ marginBottom: 24, background: '#ffffff', border: '1px solid #cbd5e1' }}>
+        <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 15, marginBottom: 20 }}>
           Campaign Configuration
         </p>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 20 }}>
           {/* Audience */}
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: 'rgba(241,241,245,0.8)', marginBottom: 8 }}>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 8 }}>
               Target Audience
             </label>
             <select
@@ -144,7 +144,7 @@ export default function CampaignCopilot() {
         <button
           id="generate-variants-btn"
           className="btn-primary"
-          style={{ marginTop: 20, padding: '12px 28px' }}
+          style={{ marginTop: 20, padding: '12px 28px', fontWeight: 700 }}
           onClick={handleGenerate}
           disabled={loading}
         >
@@ -156,7 +156,7 @@ export default function CampaignCopilot() {
         </button>
 
         {!hasApiKey && (
-          <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.35)', marginTop: 10 }}>
+          <p style={{ fontSize: 12, color: '#64748b', marginTop: 10, margin: '10px 0 0' }}>
             No OpenAI key detected — using curated deterministic variants optimized for engineering student audiences.
           </p>
         )}
@@ -165,15 +165,15 @@ export default function CampaignCopilot() {
       {/* Generated Growth Hypotheses */}
       {generated && hypotheses.length > 0 && (
         <div style={{ animation: 'fadeInUp 0.4s ease forwards' }}>
-          <p style={{ fontSize: 14, fontWeight: 700, color: '#f1f1f5', marginBottom: 16 }}>
+          <p style={{ fontSize: 14, fontWeight: 800, color: '#0f172a', marginBottom: 16 }}>
             3 Growth Hypotheses — {channel} · {audience}
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             {hypotheses.map((h, i) => (
               <div key={i} style={{
-                background: variantBg[i] || 'rgba(255,255,255,0.04)',
-                border: `1px solid ${variantBorder[i] || 'rgba(255,255,255,0.08)'}`,
+                background: variantBg[i] || '#f8fafc',
+                border: `1px solid ${variantBorder[i] || '#cbd5e1'}`,
                 borderRadius: 14, padding: '20px 24px',
               }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, marginBottom: 12 }}>
@@ -189,9 +189,9 @@ export default function CampaignCopilot() {
                     id={`copy-hypothesis-${i}`}
                     onClick={() => copyVariant(i, `${h.headline}\n\n${h.body}`)}
                     style={{
-                      padding: '5px 12px', borderRadius: 8, fontSize: 12, fontWeight: 600, cursor: 'pointer',
-                      border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.05)',
-                      color: 'rgba(241,241,245,0.7)',
+                      padding: '5px 12px', borderRadius: 8, fontSize: 12, fontWeight: 700, cursor: 'pointer',
+                      border: '1px solid #cbd5e1', background: '#ffffff',
+                      color: '#4338ca',
                     }}
                   >
                     {copiedIdx === i ? '✓ Copied' : '📋 Copy Copy'}
@@ -200,24 +200,24 @@ export default function CampaignCopilot() {
 
                 {/* Growth Hypothesis */}
                 <div style={{ marginBottom: 12 }}>
-                  <p className="section-label" style={{ color: variantColors[i], marginBottom: 4 }}>💡 Testable Growth Hypothesis</p>
-                  <p style={{ fontSize: 13, color: '#f1f1f5', fontStyle: 'italic', margin: 0, lineHeight: 1.5 }}>
+                  <p className="section-label" style={{ color: variantColors[i], marginBottom: 4, fontWeight: 800 }}>💡 Testable Growth Hypothesis</p>
+                  <p style={{ fontSize: 13, color: '#0f172a', fontStyle: 'italic', margin: 0, lineHeight: 1.5, fontWeight: 600 }}>
                     "{h.hypothesis}"
                   </p>
                 </div>
 
-                <div style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 8, padding: '12px 14px', marginBottom: 12 }}>
-                  <p style={{ fontSize: 15, fontWeight: 800, color: '#f1f1f5', marginBottom: 6, lineHeight: 1.4 }}>
+                <div style={{ background: '#ffffff', borderRadius: 8, padding: '12px 14px', marginBottom: 12, border: '1px solid rgba(0,0,0,0.06)' }}>
+                  <p style={{ fontSize: 15, fontWeight: 800, color: '#0f172a', marginBottom: 6, lineHeight: 1.4 }}>
                     "{h.headline}"
                   </p>
-                  <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.75)', lineHeight: 1.6, margin: 0 }}>
+                  <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.6, margin: 0 }}>
                     {h.body}
                   </p>
                 </div>
 
                 {/* Behavioral Rationale */}
-                <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.5)', margin: 0 }}>
-                  <strong>Strategic Rationale:</strong> {h.rationale}
+                <p style={{ fontSize: 12, color: '#64748b', margin: 0 }}>
+                  <strong style={{ color: '#0f172a' }}>Strategic Rationale:</strong> {h.rationale}
                 </p>
               </div>
             ))}
@@ -229,15 +229,15 @@ export default function CampaignCopilot() {
       {!generated && !loading && (
         <div style={{
           textAlign: 'center', padding: '48px 24px',
-          background: 'rgba(255,255,255,0.02)',
-          border: '1px dashed rgba(255,255,255,0.08)',
+          background: '#f8fafc',
+          border: '1px dashed #cbd5e1',
           borderRadius: 16,
         }}>
           <div style={{ fontSize: 48, marginBottom: 16 }}>✨</div>
-          <p style={{ fontWeight: 700, color: '#f1f1f5', fontSize: 16, marginBottom: 8 }}>
+          <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 16, marginBottom: 8 }}>
             Configure and generate your campaign variants
           </p>
-          <p style={{ color: 'rgba(241,241,245,0.45)', fontSize: 14 }}>
+          <p style={{ color: '#64748b', fontSize: 14, margin: 0 }}>
             Set your audience, channel and goal above, then click Generate.
           </p>
         </div>

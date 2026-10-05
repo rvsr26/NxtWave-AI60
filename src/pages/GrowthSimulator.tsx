@@ -78,15 +78,15 @@ export default function GrowthSimulator() {
       {/* Header */}
       <div style={{ marginBottom: 28 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8, flexWrap: 'wrap' }}>
-          <h1 style={{ fontSize: 28, fontWeight: 900, color: '#f1f1f5', letterSpacing: '-0.02em', margin: 0 }}>
+          <h1 style={{ fontSize: 28, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>
             📐 500-Registration Scenario Planner
           </h1>
           <span className="chip chip-amber">PLANNING ASSUMPTION — NOT ACTUAL CAMPAIGN RESULTS</span>
         </div>
-        <p style={{ color: 'rgba(241,241,245,0.7)', fontSize: 14, lineHeight: 1.6, margin: '0 0 10px' }}>
+        <p style={{ color: '#475569', fontSize: 14, lineHeight: 1.6, margin: '0 0 10px' }}>
           Interactive growth modeling tool to test channel sensitivity, budget allocations, and risk boundaries against the 500-registration goal under the ₹2,000 budget constraint.
         </p>
-        <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.5)', margin: 0, fontStyle: 'italic' }}>
+        <p style={{ fontSize: 12, color: '#64748b', margin: 0, fontStyle: 'italic' }}>
           500-registration target model — planning assumptions, not campaign results. Levers model channel distribution, not guaranteed acquisition.
         </p>
       </div>
@@ -95,15 +95,15 @@ export default function GrowthSimulator() {
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 24 }}>
         {isTargetUnmet && (
           <div style={{
-            background: 'rgba(245,158,11,0.12)', border: '1px solid rgba(245,158,11,0.35)',
+            background: '#fffbeb', border: '1px solid #fde68a',
             borderRadius: 10, padding: '12px 16px', display: 'flex', alignItems: 'center', gap: 12,
           }}>
             <span style={{ fontSize: 20 }}>⚠️</span>
             <div>
-              <p style={{ fontSize: 13, fontWeight: 800, color: '#fcd34d', margin: 0 }}>
+              <p style={{ fontSize: 13, fontWeight: 800, color: '#92400e', margin: 0 }}>
                 Target gap — increase distribution or improve conversion.
               </p>
-              <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.6)', margin: '2px 0 0' }}>
+              <p style={{ fontSize: 12, color: '#78350f', margin: '2px 0 0' }}>
                 Projected registrations: {totalRegistrations} / 500 ({regGap} registration gap). Increase Campus Captains, Referral Engine, or Creator Challenge to reach target.
               </p>
             </div>
@@ -112,15 +112,15 @@ export default function GrowthSimulator() {
 
         {isBudgetExceeded && (
           <div style={{
-            background: 'rgba(239,68,68,0.12)', border: '1px solid rgba(239,68,68,0.35)',
+            background: '#fef2f2', border: '1px solid #fecaca',
             borderRadius: 10, padding: '12px 16px', display: 'flex', alignItems: 'center', gap: 12,
           }}>
             <span style={{ fontSize: 20 }}>🚨</span>
             <div>
-              <p style={{ fontSize: 13, fontWeight: 800, color: '#fca5a5', margin: 0 }}>
+              <p style={{ fontSize: 13, fontWeight: 800, color: '#991b1b', margin: 0 }}>
                 Budget constraint exceeded.
               </p>
-              <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.6)', margin: '2px 0 0' }}>
+              <p style={{ fontSize: 12, color: '#7f1d1d', margin: '2px 0 0' }}>
                 ₹{totalAllocatedBudget} allocated exceeds ₹2,000 hard ceiling by ₹{totalAllocatedBudget - TOTAL_BUDGET_CAP}. Reduce creator challenge prize or referral/competition allocations.
               </p>
             </div>
@@ -129,11 +129,11 @@ export default function GrowthSimulator() {
 
         {!isTargetUnmet && !isBudgetExceeded && (
           <div style={{
-            background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.25)',
+            background: '#ecfdf5', border: '1px solid #a7f3d0',
             borderRadius: 10, padding: '10px 16px', display: 'flex', alignItems: 'center', gap: 10,
           }}>
             <span style={{ fontSize: 18 }}>✅</span>
-            <p style={{ fontSize: 13, color: '#34d399', fontWeight: 600, margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#065f46', fontWeight: 600, margin: 0 }}>
               Viable Growth Scenario: 500-student target reached ({totalRegistrations} projected) within the ₹2,000 budget constraint (₹{remainingBudget} contingency remaining).
             </p>
           </div>
@@ -144,16 +144,16 @@ export default function GrowthSimulator() {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginBottom: 32 }}>
         
         {/* Levers Card */}
-        <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+        <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: 20, background: '#ffffff', border: '1px solid #cbd5e1' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
-            <p style={{ fontWeight: 800, color: '#f1f1f5', fontSize: 15, margin: 0 }}>
+            <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 15, margin: 0 }}>
               🎛 Growth Model Levers
             </p>
             <button
               onClick={resetToDefaults}
               style={{
-                fontSize: 11, color: '#818cf8', background: 'rgba(99,102,241,0.1)',
-                border: '1px solid rgba(99,102,241,0.25)', borderRadius: 6, padding: '3px 8px', cursor: 'pointer',
+                fontSize: 11, color: '#4338ca', background: '#eef2ff',
+                border: '1px solid #c7d2fe', borderRadius: 6, padding: '4px 10px', cursor: 'pointer', fontWeight: 700
               }}
             >
               Reset to 500 Baseline
@@ -162,7 +162,7 @@ export default function GrowthSimulator() {
 
           {/* Acquisition Levers */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            <p style={{ fontSize: 11, fontWeight: 700, color: 'rgba(241,241,245,0.4)', textTransform: 'uppercase', margin: 0 }}>
+            <p style={{ fontSize: 11, fontWeight: 800, color: '#64748b', textTransform: 'uppercase', margin: 0, letterSpacing: '0.04em' }}>
               Acquisition Channels
             </p>
 
@@ -185,11 +185,11 @@ export default function GrowthSimulator() {
               onChange={v => setSim(s => ({ ...s, organicSocialRegistrations: v }))} />
           </div>
 
-          <div className="divider" style={{ margin: '4px 0' }} />
+          <div className="divider" style={{ margin: '4px 0', borderColor: '#e2e8f0' }} />
 
           {/* Budget Levers */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            <p style={{ fontSize: 11, fontWeight: 700, color: 'rgba(241,241,245,0.4)', textTransform: 'uppercase', margin: 0 }}>
+            <p style={{ fontSize: 11, fontWeight: 800, color: '#64748b', textTransform: 'uppercase', margin: 0, letterSpacing: '0.04em' }}>
               Budget Allocations (Limit: ₹2,000)
             </p>
 
@@ -208,51 +208,49 @@ export default function GrowthSimulator() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
           {/* Main Number Block */}
           <div style={{
-            background: totalRegistrations >= target
-              ? 'linear-gradient(135deg, rgba(16,185,129,0.15), rgba(16,185,129,0.06))'
-              : 'linear-gradient(135deg, rgba(99,102,241,0.15), rgba(99,102,241,0.06))',
-            border: `1px solid ${totalRegistrations >= target ? 'rgba(16,185,129,0.3)' : 'rgba(99,102,241,0.3)'}`,
+            background: totalRegistrations >= target ? '#ecfdf5' : '#eef2ff',
+            border: `1px solid ${totalRegistrations >= target ? '#a7f3d0' : '#c7d2fe'}`,
             borderRadius: 16, padding: '24px', textAlign: 'center',
           }}>
-            <p className="section-label" style={{ marginBottom: 4 }}>PROJECTED REGISTRATIONS</p>
+            <p className="section-label" style={{ marginBottom: 4, color: '#475569' }}>PROJECTED REGISTRATIONS</p>
             <p style={{
               fontSize: 56, fontWeight: 900, lineHeight: 1, letterSpacing: '-0.04em',
-              color: totalRegistrations >= target ? '#34d399' : '#818cf8', margin: 0,
+              color: totalRegistrations >= target ? '#047857' : '#4338ca', margin: 0,
             }}>
               {totalRegistrations}
             </p>
-            <p style={{ fontSize: 14, color: 'rgba(241,241,245,0.5)', marginTop: 4 }}>
+            <p style={{ fontSize: 14, color: '#475569', marginTop: 4, fontWeight: 600 }}>
               of {target} target ({((totalRegistrations / target) * 100).toFixed(0)}%)
             </p>
 
-            <div className="progress-bar" style={{ height: 10, marginTop: 14 }}>
+            <div className="progress-bar" style={{ height: 10, marginTop: 14, background: '#cbd5e1' }}>
               <div style={{
                 height: '100%', borderRadius: 999,
                 width: `${Math.min((totalRegistrations / target) * 100, 100)}%`,
                 background: totalRegistrations >= target
-                  ? 'linear-gradient(90deg, #10b981, #34d399)'
-                  : 'linear-gradient(90deg, #6366f1, #818cf8)',
+                  ? 'linear-gradient(90deg, #059669, #10b981)'
+                  : 'linear-gradient(90deg, #4f46e5, #6366f1)',
                 transition: 'width 0.3s ease',
               }} />
             </div>
 
             {/* Financial Grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, marginTop: 16, paddingTop: 14, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, marginTop: 16, paddingTop: 14, borderTop: '1px solid rgba(0,0,0,0.06)' }}>
               <div>
-                <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', fontWeight: 700, margin: 0 }}>ALLOCATED</p>
-                <p style={{ fontSize: 16, fontWeight: 800, color: isBudgetExceeded ? '#ef4444' : '#f1f1f5', margin: '4px 0 0' }}>
+                <p style={{ fontSize: 10, color: '#64748b', fontWeight: 700, margin: 0 }}>ALLOCATED</p>
+                <p style={{ fontSize: 16, fontWeight: 800, color: isBudgetExceeded ? '#dc2626' : '#0f172a', margin: '4px 0 0' }}>
                   ₹{totalAllocatedBudget}
                 </p>
               </div>
               <div>
-                <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', fontWeight: 700, margin: 0 }}>REMAINING BUFFER</p>
-                <p style={{ fontSize: 16, fontWeight: 800, color: remainingBudget >= 0 ? '#34d399' : '#ef4444', margin: '4px 0 0' }}>
+                <p style={{ fontSize: 10, color: '#64748b', fontWeight: 700, margin: 0 }}>REMAINING BUFFER</p>
+                <p style={{ fontSize: 16, fontWeight: 800, color: remainingBudget >= 0 ? '#047857' : '#dc2626', margin: '4px 0 0' }}>
                   {remainingBudget >= 0 ? `₹${remainingBudget}` : `-₹${Math.abs(remainingBudget)}`}
                 </p>
               </div>
               <div>
-                <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', fontWeight: 700, margin: 0 }}>TARGET STATUS</p>
-                <p style={{ fontSize: 15, fontWeight: 800, color: totalRegistrations >= target ? '#34d399' : '#fcd34d', margin: '4px 0 0' }}>
+                <p style={{ fontSize: 10, color: '#64748b', fontWeight: 700, margin: 0 }}>TARGET STATUS</p>
+                <p style={{ fontSize: 15, fontWeight: 800, color: totalRegistrations >= target ? '#047857' : '#b45309', margin: '4px 0 0' }}>
                   {totalRegistrations >= target ? `+${regSurplus} surplus` : `-${regGap} to go`}
                 </p>
               </div>
@@ -260,53 +258,53 @@ export default function GrowthSimulator() {
           </div>
 
           {/* Channel Contribution Breakdown */}
-          <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-            <p style={{ fontWeight: 700, color: '#f1f1f5', fontSize: 14, margin: '0 0 4px' }}>Channel Contribution Model</p>
+          <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: 12, background: '#ffffff', border: '1px solid #cbd5e1' }}>
+            <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 14, margin: '0 0 4px' }}>Channel Contribution Model</p>
             {channels.map(ch => (
               <div key={ch.label}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-                  <span style={{ fontSize: 13, fontWeight: 600, color: '#f1f1f5' }}>{ch.label}</span>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: '#0f172a' }}>{ch.label}</span>
                   <span style={{ fontSize: 14, fontWeight: 800, color: ch.color }}>{ch.value}</span>
                 </div>
-                <div style={{ height: 6, background: 'rgba(255,255,255,0.06)', borderRadius: 999, overflow: 'hidden', marginBottom: 4 }}>
+                <div style={{ height: 6, background: '#f1f5f9', borderRadius: 999, overflow: 'hidden', marginBottom: 4 }}>
                   <div style={{
                     height: '100%', width: `${totalRegistrations > 0 ? (ch.value / totalRegistrations) * 100 : 0}%`,
                     background: ch.color, borderRadius: 999, transition: 'width 0.3s ease',
                   }} />
                 </div>
-                <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.35)', margin: 0 }}>{ch.formula}</p>
+                <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>{ch.formula}</p>
               </div>
             ))}
           </div>
 
           {/* Baseline Planning Model Comparison */}
-          <div className="card" style={{ background: 'rgba(99,102,241,0.04)', border: '1px solid rgba(99,102,241,0.2)' }}>
-            <p style={{ fontWeight: 700, color: '#818cf8', fontSize: 13, marginBottom: 8 }}>
+          <div className="card" style={{ background: '#f8fafc', border: '1px solid #cbd5e1' }}>
+            <p style={{ fontWeight: 800, color: '#4338ca', fontSize: 13, marginBottom: 8 }}>
               📋 500-Registration Target Model (Planning Assumptions)
             </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6, fontSize: 12, color: 'rgba(241,241,245,0.7)' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 6, fontSize: 12, color: '#334155' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>• Campus Captains + College Communities:</span>
-                <strong style={{ color: '#f1f1f5' }}>200 (40%)</strong>
+                <strong style={{ color: '#0f172a' }}>200 (40%)</strong>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>• Student Referral Engine:</span>
-                <strong style={{ color: '#f1f1f5' }}>150 (30%)</strong>
+                <strong style={{ color: '#0f172a' }}>150 (30%)</strong>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>• Student Creator Challenge:</span>
-                <strong style={{ color: '#f1f1f5' }}>50 (10%)</strong>
+                <strong style={{ color: '#0f172a' }}>50 (10%)</strong>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span>• Organic Social + Communities:</span>
-                <strong style={{ color: '#f1f1f5' }}>100 (20%)</strong>
+                <strong style={{ color: '#0f172a' }}>100 (20%)</strong>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 6, marginTop: 4 }}>
-                <strong style={{ color: '#818cf8' }}>TOTAL TARGET MODEL:</strong>
-                <strong style={{ color: '#34d399' }}>500 (100%)</strong>
+              <div style={{ display: 'flex', justifyContent: 'space-between', borderTop: '1px solid #e2e8f0', paddingTop: 6, marginTop: 4 }}>
+                <strong style={{ color: '#4338ca' }}>TOTAL TARGET MODEL:</strong>
+                <strong style={{ color: '#047857' }}>500 (100%)</strong>
               </div>
             </div>
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', marginTop: 8, marginBottom: 0, fontStyle: 'italic' }}>
+            <p style={{ fontSize: 11, color: '#64748b', marginTop: 8, marginBottom: 0, fontStyle: 'italic' }}>
               500-registration target model — planning assumptions, not campaign results.
             </p>
           </div>
@@ -314,65 +312,65 @@ export default function GrowthSimulator() {
       </div>
 
       {/* Downside Sensitivity Analysis */}
-      <div className="card" style={{ marginBottom: 28, background: 'rgba(239,68,68,0.04)', border: '1px solid rgba(239,68,68,0.2)' }}>
+      <div className="card" style={{ marginBottom: 28, background: '#fef2f2', border: '1px solid #fecaca' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12, flexWrap: 'wrap', gap: 8 }}>
-          <p style={{ fontWeight: 800, color: '#fca5a5', fontSize: 14, margin: 0 }}>
+          <p style={{ fontWeight: 800, color: '#991b1b', fontSize: 14, margin: 0 }}>
             📉 Downside Sensitivity Testing (Stress-Testing Key Assumptions)
           </p>
           <span className="chip chip-amber" style={{ fontSize: 10 }}>Planning Guardrail</span>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 14, fontSize: 12 }}>
-          <div style={{ background: 'rgba(0,0,0,0.25)', padding: '14px', borderRadius: 10, border: '1px solid rgba(239,68,68,0.2)' }}>
-            <p style={{ fontWeight: 800, color: '#f1f1f5', margin: '0 0 6px' }}>Scenario A: Captain Productivity Halves</p>
+          <div style={{ background: '#ffffff', padding: '14px', borderRadius: 10, border: '1px solid #fecaca' }}>
+            <p style={{ fontWeight: 800, color: '#0f172a', margin: '0 0 6px' }}>Scenario A: Captain Productivity Halves</p>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-              <span style={{ color: 'rgba(241,241,245,0.6)' }}>Captain Productivity:</span>
-              <strong style={{ color: '#fca5a5' }}>8 → 4 registrations</strong>
+              <span style={{ color: '#64748b' }}>Captain Productivity:</span>
+              <strong style={{ color: '#dc2626' }}>8 → 4 registrations</strong>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-              <span style={{ color: 'rgba(241,241,245,0.6)' }}>Projected Total:</span>
-              <strong style={{ color: '#fca5a5' }}>500 → 400</strong>
+              <span style={{ color: '#64748b' }}>Projected Total:</span>
+              <strong style={{ color: '#dc2626' }}>500 → 400</strong>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
-              <span style={{ color: 'rgba(241,241,245,0.6)' }}>Registration Gap:</span>
-              <strong className="mono" style={{ color: '#ef4444' }}>-100 (-20%)</strong>
+              <span style={{ color: '#64748b' }}>Registration Gap:</span>
+              <strong className="mono" style={{ color: '#dc2626' }}>-100 (-20%)</strong>
             </div>
-            <p style={{ color: 'rgba(241,241,245,0.75)', margin: 0, lineHeight: 1.4, fontSize: 11, borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 6 }}>
+            <p style={{ color: '#334155', margin: 0, lineHeight: 1.4, fontSize: 11, borderTop: '1px solid #f1f5f9', paddingTop: 6 }}>
               💡 <em>&ldquo;Captain activation is a high-sensitivity lever and should be validated early during Day 1–2 pilot sprints.&rdquo;</em>
             </p>
           </div>
-          <div style={{ background: 'rgba(0,0,0,0.25)', padding: '14px', borderRadius: 10, border: '1px solid rgba(255,255,255,0.06)' }}>
-            <p style={{ fontWeight: 800, color: '#f1f1f5', margin: '0 0 6px' }}>Scenario B: Referral Viral Loop Halves</p>
+          <div style={{ background: '#ffffff', padding: '14px', borderRadius: 10, border: '1px solid #e2e8f0' }}>
+            <p style={{ fontWeight: 800, color: '#0f172a', margin: '0 0 6px' }}>Scenario B: Referral Viral Loop Halves</p>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-              <span style={{ color: 'rgba(241,241,245,0.6)' }}>K-Factor Efficiency:</span>
-              <strong style={{ color: '#fca5a5' }}>0.30 → 0.15</strong>
+              <span style={{ color: '#64748b' }}>K-Factor Efficiency:</span>
+              <strong style={{ color: '#dc2626' }}>0.30 → 0.15</strong>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-              <span style={{ color: 'rgba(241,241,245,0.6)' }}>Projected Referrals:</span>
-              <strong style={{ color: '#fca5a5' }}>150 → 75</strong>
+              <span style={{ color: '#64748b' }}>Projected Referrals:</span>
+              <strong style={{ color: '#dc2626' }}>150 → 75</strong>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
-              <span style={{ color: 'rgba(241,241,245,0.6)' }}>Registration Gap:</span>
-              <strong className="mono" style={{ color: '#ef4444' }}>-75 (-15%)</strong>
+              <span style={{ color: '#64748b' }}>Registration Gap:</span>
+              <strong className="mono" style={{ color: '#dc2626' }}>-75 (-15%)</strong>
             </div>
-            <p style={{ color: 'rgba(241,241,245,0.75)', margin: 0, lineHeight: 1.4, fontSize: 11, borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 6 }}>
+            <p style={{ color: '#334155', margin: 0, lineHeight: 1.4, fontSize: 11, borderTop: '1px solid #f1f5f9', paddingTop: 6 }}>
               💡 <em>&ldquo;Emphasizes importance of anti-fraud verification and featuring unlocked project repos immediately on 2nd referral.&rdquo;</em>
             </p>
           </div>
-          <div style={{ background: 'rgba(0,0,0,0.25)', padding: '14px', borderRadius: 10, border: '1px solid rgba(255,255,255,0.06)' }}>
-            <p style={{ fontWeight: 800, color: '#f1f1f5', margin: '0 0 6px' }}>Scenario C: Creator Content Underperforms</p>
+          <div style={{ background: '#ffffff', padding: '14px', borderRadius: 10, border: '1px solid #e2e8f0' }}>
+            <p style={{ fontWeight: 800, color: '#0f172a', margin: '0 0 6px' }}>Scenario C: Creator Content Underperforms</p>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-              <span style={{ color: 'rgba(241,241,245,0.6)' }}>Creator Yield:</span>
-              <strong style={{ color: '#fca5a5' }}>50 → 20 regs</strong>
+              <span style={{ color: '#64748b' }}>Creator Yield:</span>
+              <strong style={{ color: '#b45309' }}>50 → 20 regs</strong>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-              <span style={{ color: 'rgba(241,241,245,0.6)' }}>Budget Impact:</span>
-              <strong style={{ color: '#34d399' }}>₹0 extra cost</strong>
+              <span style={{ color: '#64748b' }}>Budget Impact:</span>
+              <strong style={{ color: '#047857' }}>₹0 extra cost</strong>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
-              <span style={{ color: 'rgba(241,241,245,0.6)' }}>Registration Gap:</span>
-              <strong className="mono" style={{ color: '#ef4444' }}>-30 (-6%)</strong>
+              <span style={{ color: '#64748b' }}>Registration Gap:</span>
+              <strong className="mono" style={{ color: '#dc2626' }}>-30 (-6%)</strong>
             </div>
-            <p style={{ color: 'rgba(241,241,245,0.75)', margin: 0, lineHeight: 1.4, fontSize: 11, borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 6 }}>
+            <p style={{ color: '#334155', margin: 0, lineHeight: 1.4, fontSize: 11, borderTop: '1px solid #f1f5f9', paddingTop: 6 }}>
               💡 <em>&ldquo;Prize of ₹300 is a fixed bounty reward. Low yield doesn&apos;t inflate budget; operator scales winning Creator B angle.&rdquo;</em>
             </p>
           </div>
@@ -380,46 +378,46 @@ export default function GrowthSimulator() {
       </div>
 
       {/* Budget Phasing Table */}
-      <div className="card">
-        <p style={{ fontWeight: 800, color: '#f1f1f5', fontSize: 15, marginBottom: 12 }}>
+      <div className="card" style={{ background: '#ffffff', border: '1px solid #cbd5e1' }}>
+        <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 15, marginBottom: 12 }}>
           💰 Recommended Budget Allocation (₹2,000 Total)
         </p>
         <div style={{ overflowX: 'auto' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
             <thead>
-              <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.08)', textAlign: 'left' }}>
-                <th style={{ padding: '8px 12px', color: 'rgba(241,241,245,0.5)' }}>Allocation</th>
-                <th style={{ padding: '8px 12px', color: 'rgba(241,241,245,0.5)' }}>Purpose</th>
-                <th style={{ padding: '8px 12px', color: 'rgba(241,241,245,0.5)', textAlign: 'right' }}>Amount</th>
+              <tr style={{ borderBottom: '1px solid #e2e8f0', textAlign: 'left' }}>
+                <th style={{ padding: '8px 12px', color: '#64748b', fontWeight: 700 }}>Allocation</th>
+                <th style={{ padding: '8px 12px', color: '#64748b', fontWeight: 700 }}>Purpose</th>
+                <th style={{ padding: '8px 12px', color: '#64748b', fontWeight: 700, textAlign: 'right' }}>Amount</th>
               </tr>
             </thead>
             <tbody>
-              <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
-                <td style={{ padding: '10px 12px', fontWeight: 600, color: '#ec4899' }}>Student Creator Challenge</td>
-                <td style={{ padding: '10px 12px', color: 'rgba(241,241,245,0.6)' }}>Prize for top promotional content creator (qualified regs + CTR + score)</td>
-                <td style={{ padding: '10px 12px', fontWeight: 700, color: '#f1f1f5', textAlign: 'right' }}>₹{sim.creatorPrizeBudget}</td>
+              <tr style={{ borderBottom: '1px solid #f1f5f9' }}>
+                <td style={{ padding: '10px 12px', fontWeight: 700, color: '#be185d' }}>Student Creator Challenge</td>
+                <td style={{ padding: '10px 12px', color: '#475569' }}>Prize for top promotional content creator (qualified regs + CTR + score)</td>
+                <td style={{ padding: '10px 12px', fontWeight: 800, color: '#0f172a', textAlign: 'right' }}>₹{sim.creatorPrizeBudget}</td>
               </tr>
-              <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
-                <td style={{ padding: '10px 12px', fontWeight: 600, color: '#10b981' }}>Referral Rewards</td>
-                <td style={{ padding: '10px 12px', color: 'rgba(241,241,245,0.6)' }}>Top 3 verified referrers (🥇 ₹250 / 🥈 ₹150 / 🥉 ₹100)</td>
-                <td style={{ padding: '10px 12px', fontWeight: 700, color: '#f1f1f5', textAlign: 'right' }}>₹{sim.referralRewardBudget}</td>
+              <tr style={{ borderBottom: '1px solid #f1f5f9' }}>
+                <td style={{ padding: '10px 12px', fontWeight: 700, color: '#047857' }}>Referral Rewards</td>
+                <td style={{ padding: '10px 12px', color: '#475569' }}>Top 3 verified referrers (🥇 ₹250 / 🥈 ₹150 / 🥉 ₹100)</td>
+                <td style={{ padding: '10px 12px', fontWeight: 800, color: '#0f172a', textAlign: 'right' }}>₹{sim.referralRewardBudget}</td>
               </tr>
-              <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
-                <td style={{ padding: '10px 12px', fontWeight: 600, color: '#818cf8' }}>AI Project Competition</td>
-                <td style={{ padding: '10px 12px', color: 'rgba(241,241,245,0.6)' }}>Post-workshop AI project awards (🥇 ₹400 / 🥈 ₹300 / 🥉 ₹200) — post-workshop incentive</td>
-                <td style={{ padding: '10px 12px', fontWeight: 700, color: '#f1f1f5', textAlign: 'right' }}>₹{sim.competitionRewardBudget}</td>
+              <tr style={{ borderBottom: '1px solid #f1f5f9' }}>
+                <td style={{ padding: '10px 12px', fontWeight: 700, color: '#4338ca' }}>AI Project Competition</td>
+                <td style={{ padding: '10px 12px', color: '#475569' }}>Post-workshop AI project awards (🥇 ₹400 / 🥈 ₹300 / 🥉 ₹200) — post-workshop incentive</td>
+                <td style={{ padding: '10px 12px', fontWeight: 800, color: '#0f172a', textAlign: 'right' }}>₹{sim.competitionRewardBudget}</td>
               </tr>
-              <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-                <td style={{ padding: '10px 12px', fontWeight: 600, color: '#f59e0b' }}>Contingency</td>
-                <td style={{ padding: '10px 12px', color: 'rgba(241,241,245,0.6)' }}>Unallocated reserve buffer</td>
-                <td style={{ padding: '10px 12px', fontWeight: 700, color: '#f1f1f5', textAlign: 'right' }}>
+              <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
+                <td style={{ padding: '10px 12px', fontWeight: 700, color: '#b45309' }}>Contingency</td>
+                <td style={{ padding: '10px 12px', color: '#475569' }}>Unallocated reserve buffer</td>
+                <td style={{ padding: '10px 12px', fontWeight: 800, color: '#0f172a', textAlign: 'right' }}>
                   ₹{Math.max(0, TOTAL_BUDGET_CAP - (sim.creatorPrizeBudget + sim.referralRewardBudget + sim.competitionRewardBudget))}
                 </td>
               </tr>
-              <tr style={{ background: 'rgba(99,102,241,0.08)' }}>
-                <td style={{ padding: '12px', fontWeight: 900, color: '#818cf8' }}>TOTAL</td>
-                <td style={{ padding: '12px', color: 'rgba(241,241,245,0.6)' }}>Hard budget ceiling</td>
-                <td style={{ padding: '12px', fontWeight: 900, color: isBudgetExceeded ? '#ef4444' : '#34d399', textAlign: 'right' }}>
+              <tr style={{ background: '#f8fafc' }}>
+                <td style={{ padding: '12px', fontWeight: 900, color: '#4338ca' }}>TOTAL</td>
+                <td style={{ padding: '12px', color: '#475569', fontWeight: 600 }}>Hard budget ceiling</td>
+                <td style={{ padding: '12px', fontWeight: 900, color: isBudgetExceeded ? '#dc2626' : '#047857', textAlign: 'right' }}>
                   ₹{totalAllocatedBudget + Math.max(0, TOTAL_BUDGET_CAP - totalAllocatedBudget)} / ₹{TOTAL_BUDGET_CAP}
                 </td>
               </tr>

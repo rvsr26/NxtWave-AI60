@@ -165,25 +165,25 @@ export default function GrowthDashboard() {
         gap: 14, marginBottom: 28,
       }}>
         {[
-          { label: 'Total Registrations', value: totalRegs.toString(), sub: `Target: ${TARGET}`, color: '#818cf8' },
-          { label: 'Qualified Registrations', value: qualifiedRegs.toString(), sub: 'Verified unique students', color: '#10b981' },
-          { label: 'Referral Registrations', value: referralRegs.toString(), sub: 'via batchmate link', color: '#34d399' },
-          { label: 'Campus Captain Regs', value: campusRegs.toString(), sub: `${campuses.length} colleges active`, color: '#f9a8d4' },
-          { label: 'Creator Challenge Regs', value: totalCreatorQualified.toString(), sub: 'Target: 50 | 3 creators', color: '#f59e0b' },
-          { label: 'Creator Top Score', value: `${topCreator.totalScore}/100`, sub: `${topCreator.creatorName} (🏆 Leader)`, color: '#34d399' },
+          { label: 'Total Registrations', value: totalRegs.toString(), sub: `Target: ${TARGET}`, color: '#4338ca' },
+          { label: 'Qualified Registrations', value: qualifiedRegs.toString(), sub: 'Verified unique students', color: '#047857' },
+          { label: 'Referral Registrations', value: referralRegs.toString(), sub: 'via batchmate link', color: '#059669' },
+          { label: 'Campus Captain Regs', value: campusRegs.toString(), sub: `${campuses.length} colleges active`, color: '#be185d' },
+          { label: 'Creator Challenge Regs', value: totalCreatorQualified.toString(), sub: 'Target: 50 | 3 creators', color: '#b45309' },
+          { label: 'Creator Top Score', value: `${topCreator.totalScore}/100`, sub: `${topCreator.creatorName} (🏆 Leader)`, color: '#047857' },
         ].map(kpi => (
-          <div key={kpi.label} className="card" style={{ padding: '16px 18px' }}>
+          <div key={kpi.label} className="card" style={{ padding: '16px 18px', background: '#ffffff', border: '1px solid #cbd5e1' }}>
             <p style={{ fontSize: 24, fontWeight: 800, color: kpi.color, lineHeight: 1, letterSpacing: '-0.02em', margin: '0 0 6px' }}>
               {kpi.value}
             </p>
-            <p style={{ fontSize: 13, fontWeight: 700, color: '#f1f1f5', margin: '0 0 2px' }}>{kpi.label}</p>
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', margin: 0 }}>{kpi.sub}</p>
+            <p style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '0 0 2px' }}>{kpi.label}</p>
+            <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>{kpi.sub}</p>
           </div>
         ))}
       </div>
 
       {/* Tabs */}
-      <div style={{ display: 'flex', gap: 4, marginBottom: 24, borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: 0, flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', gap: 4, marginBottom: 24, borderBottom: '1px solid #e2e8f0', paddingBottom: 0, flexWrap: 'wrap' }}>
         {[
           { id: 'overview', label: 'Overview' },
           { id: 'funnel', label: '8-Step Campaign Funnel' },
@@ -214,27 +214,27 @@ export default function GrowthDashboard() {
       {activeTab === 'overview' && (
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
           {/* Recent registrations */}
-          <div className="card" style={{ gridColumn: 'span 2' }}>
+          <div className="card" style={{ gridColumn: 'span 2', background: '#ffffff', border: '1px solid #cbd5e1' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
-              <p style={{ fontWeight: 700, color: '#f1f1f5', fontSize: 15, margin: 0 }}>
+              <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 15, margin: 0 }}>
                 Recent Student Registrations
               </p>
               <span className="chip chip-brand" style={{ fontSize: 11 }}>Class of 2027</span>
             </div>
             {regs.length === 0 ? (
-              <p style={{ color: 'rgba(241,241,245,0.4)', fontSize: 14 }}>No registrations yet.</p>
+              <p style={{ color: '#64748b', fontSize: 14 }}>No registrations yet.</p>
             ) : (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                 {[...regs].reverse().slice(0, 7).map(reg => (
                   <div key={reg.id} style={{
                     display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                    padding: '10px 14px', background: 'rgba(255,255,255,0.03)',
-                    borderRadius: 8, border: '1px solid rgba(255,255,255,0.05)',
+                    padding: '10px 14px', background: '#f8fafc',
+                    borderRadius: 8, border: '1px solid #e2e8f0',
                     flexWrap: 'wrap', gap: 8,
                   }}>
                     <div>
-                      <span style={{ fontWeight: 600, color: '#f1f1f5', fontSize: 14 }}>{reg.name}</span>
-                      <span style={{ fontSize: 12, color: 'rgba(241,241,245,0.4)', marginLeft: 8 }}>
+                      <span style={{ fontWeight: 700, color: '#0f172a', fontSize: 14 }}>{reg.name}</span>
+                      <span style={{ fontSize: 12, color: '#64748b', marginLeft: 8 }}>
                         {reg.college} · {reg.branch}
                       </span>
                     </div>
@@ -248,7 +248,7 @@ export default function GrowthDashboard() {
                       {reg.isQualified !== false && (
                         <span className="chip chip-green" style={{ fontSize: 10 }}>Verified Unique</span>
                       )}
-                      <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.35)' }}>
+                      <span style={{ fontSize: 11, color: '#94a3b8' }}>
                         {new Date(reg.registeredAt).toLocaleDateString()}
                       </span>
                     </div>
@@ -259,9 +259,9 @@ export default function GrowthDashboard() {
           </div>
 
           {/* Student Creator Challenge Preview Widget */}
-          <div className="card">
+          <div className="card" style={{ background: '#ffffff', border: '1px solid #cbd5e1' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-              <p style={{ fontWeight: 700, color: '#f1f1f5', fontSize: 14, margin: 0 }}>
+              <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 14, margin: 0 }}>
                 🎬 Student Creator Growth Challenge (₹300 Prize)
               </p>
               <span className="chip chip-demo" style={{ fontSize: 10 }}>SIMULATION</span>
@@ -270,19 +270,19 @@ export default function GrowthDashboard() {
               {creators.map(c => (
                 <div key={c.id} style={{
                   padding: '10px 12px', borderRadius: 8,
-                  background: c.isWinner ? 'rgba(16,185,129,0.08)' : 'rgba(255,255,255,0.03)',
-                  border: c.isWinner ? '1px solid rgba(16,185,129,0.3)' : '1px solid rgba(255,255,255,0.05)',
+                  background: c.isWinner ? '#ecfdf5' : '#f8fafc',
+                  border: c.isWinner ? '1px solid #a7f3d0' : '1px solid #e2e8f0',
                 }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontSize: 12, fontWeight: 700, color: c.isWinner ? '#34d399' : '#f1f1f5' }}>
+                    <span style={{ fontSize: 13, fontWeight: 700, color: c.isWinner ? '#047857' : '#0f172a' }}>
                       {c.creatorName} {c.isWinner && '🏆 CURRENT LEADER'}
                     </span>
-                    <span style={{ fontSize: 11, fontWeight: 800, color: c.isWinner ? '#34d399' : '#fcd34d' }}>
+                    <span style={{ fontSize: 12, fontWeight: 800, color: c.isWinner ? '#047857' : '#b45309' }}>
                       Score: {c.totalScore} ({c.action})
                     </span>
                   </div>
-                  <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.6)', margin: '4px 0 0' }}>
-                    {c.format} · Reach: {c.reach.toLocaleString()} · Clicks: {c.clicks} · <strong style={{ color: '#34d399' }}>{c.qualifiedRegistrations} qualified</strong>
+                  <p style={{ fontSize: 12, color: '#475569', margin: '4px 0 0' }}>
+                    {c.format} · Reach: {c.reach.toLocaleString()} · Clicks: {c.clicks} · <strong style={{ color: '#047857' }}>{c.qualifiedRegistrations} qualified</strong>
                   </p>
                 </div>
               ))}
@@ -290,9 +290,9 @@ export default function GrowthDashboard() {
           </div>
 
           {/* Referral Leaderboard Preview Widget */}
-          <div className="card">
+          <div className="card" style={{ background: '#ffffff', border: '1px solid #cbd5e1' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-              <p style={{ fontWeight: 700, color: '#f1f1f5', fontSize: 14, margin: 0 }}>
+              <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 14, margin: 0 }}>
                 🏆 Campus Referral Leaderboard
               </p>
               <span className="chip chip-amber" style={{ fontSize: 10 }}>₹500 Prizes</span>
@@ -301,14 +301,14 @@ export default function GrowthDashboard() {
               {DEMO_REFERRAL_LEADERBOARD.slice(0, 3).map(entry => (
                 <div key={entry.name} style={{
                   display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                  padding: '8px 12px', borderRadius: 8, background: 'rgba(255,255,255,0.03)',
+                  padding: '8px 12px', borderRadius: 8, background: '#f8fafc', border: '1px solid #e2e8f0',
                 }}>
-                  <span style={{ fontSize: 12, color: '#f1f1f5' }}>
+                  <span style={{ fontSize: 13, color: '#0f172a' }}>
                     {entry.rank === 1 ? '🥇' : entry.rank === 2 ? '🥈' : '🥉'} <strong>{entry.name}</strong> ({entry.college.split(' ')[0]})
                   </span>
                   <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-                    <span style={{ fontSize: 12, fontWeight: 700, color: '#34d399' }}>{entry.qualifiedReferrals} qualified</span>
-                    <span style={{ fontSize: 11, fontWeight: 800, color: '#fbbf24' }}>₹{entry.reward}</span>
+                    <span style={{ fontSize: 12, fontWeight: 700, color: '#047857' }}>{entry.qualifiedReferrals} qualified</span>
+                    <span style={{ fontSize: 11, fontWeight: 800, color: '#b45309' }}>₹{entry.reward}</span>
                   </div>
                 </div>
               ))}
@@ -325,23 +325,23 @@ export default function GrowthDashboard() {
             <span>SIMULATION DATA — Illustrative drop-off model across the 8-step growth funnel</span>
           </div>
 
-          <div className="card" style={{ marginBottom: 24 }}>
+          <div className="card" style={{ marginBottom: 24, background: '#ffffff', border: '1px solid #cbd5e1' }}>
             <div style={{ marginBottom: 14 }}>
-              <h2 style={{ fontSize: 18, fontWeight: 800, color: '#f1f1f5', margin: 0 }}>
+              <h2 style={{ fontSize: 18, fontWeight: 800, color: '#0f172a', margin: 0 }}>
                 Campaign Funnel: From Discovery to Project Competition
               </h2>
-              <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.55)', margin: '4px 0 0' }}>
+              <p style={{ fontSize: 13, color: '#64748b', margin: '4px 0 0' }}>
                 DISCOVERY &rarr; PROJECT PASSPORT &rarr; REGISTRATION &rarr; REFERRAL &rarr; QUALIFIED REGISTRATION &rarr; WORKSHOP ATTENDANCE &rarr; AI PROJECT SUBMISSION &rarr; PROJECT COMPETITION
               </p>
             </div>
 
             {/* Strategic Annotation */}
             <div style={{
-              background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.25)',
+              background: '#eef2ff', border: '1px solid #c7d2fe',
               borderRadius: 10, padding: '10px 14px', marginBottom: 18, display: 'flex', alignItems: 'center', gap: 10,
             }}>
               <span style={{ fontSize: 16 }}>💡</span>
-              <p style={{ fontSize: 12, color: '#a5b4fc', margin: 0 }}>
+              <p style={{ fontSize: 12, color: '#312e81', margin: 0 }}>
                 <strong>Strategic Pipeline Note:</strong> Creator Challenge and Campus Captains feed the discovery/registration stages. Registrants then become distribution channels through verified peer referrals.
               </p>
             </div>
@@ -355,7 +355,7 @@ export default function GrowthDashboard() {
                 return (
                   <div key={step.label}>
                     {idx > 0 && (
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '2px 0 2px 200px', fontSize: 11, color: '#818cf8' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '2px 0 2px 200px', fontSize: 11, color: '#4338ca', fontWeight: 600 }}>
                         <span>↓</span>
                         <span>{convRate}% conversion from {funnelSteps[idx - 1].label}</span>
                       </div>
@@ -363,14 +363,14 @@ export default function GrowthDashboard() {
                     <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
                       <div style={{ width: 190, flexShrink: 0 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                          <span style={{ fontSize: 11, fontWeight: 800, color: '#818cf8', width: 18 }}>{step.step}.</span>
-                          <p style={{ fontSize: 12, fontWeight: 700, color: '#f1f1f5', margin: 0 }}>{step.label}</p>
+                          <span style={{ fontSize: 11, fontWeight: 800, color: '#4338ca', width: 18 }}>{step.step}.</span>
+                          <p style={{ fontSize: 12, fontWeight: 700, color: '#0f172a', margin: 0 }}>{step.label}</p>
                         </div>
-                        <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', margin: '2px 0 0 24px' }}>{step.note}</p>
+                        <p style={{ fontSize: 10, color: '#64748b', margin: '2px 0 0 24px' }}>{step.note}</p>
                       </div>
 
                       <div style={{ flex: 1 }}>
-                        <div style={{ height: 26, background: 'rgba(255,255,255,0.06)', borderRadius: 6, overflow: 'hidden' }}>
+                        <div style={{ height: 26, background: '#f1f5f9', borderRadius: 6, overflow: 'hidden' }}>
                           <div style={{
                             height: '100%',
                             width: `${Math.max(width, 6)}%`,
@@ -602,47 +602,47 @@ export default function GrowthDashboard() {
           </div>
 
           {/* Section 1: Acquisition */}
-          <div className="card">
-            <h3 style={{ fontSize: 16, fontWeight: 800, color: '#818cf8', marginBottom: 12 }}>
+          <div className="card" style={{ background: '#ffffff', border: '1px solid #cbd5e1' }}>
+            <h3 style={{ fontSize: 16, fontWeight: 800, color: '#4338ca', marginBottom: 12 }}>
               1. Acquisition Metrics
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 12 }}>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>TOTAL REGISTRATIONS</span>
-                <strong style={{ fontSize: 22, color: '#f1f1f5' }}>{totalRegs}</strong>
+              <div style={{ background: '#f8fafc', padding: '12px', borderRadius: 8, border: '1px solid #e2e8f0' }}>
+                <span style={{ fontSize: 11, color: '#64748b', display: 'block', fontWeight: 700 }}>TOTAL REGISTRATIONS</span>
+                <strong style={{ fontSize: 22, color: '#0f172a' }}>{totalRegs}</strong>
               </div>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>QUALIFIED REGISTRATIONS</span>
-                <strong style={{ fontSize: 22, color: '#34d399' }}>{qualifiedRegs}</strong>
+              <div style={{ background: '#ecfdf5', padding: '12px', borderRadius: 8, border: '1px solid #a7f3d0' }}>
+                <span style={{ fontSize: 11, color: '#047857', display: 'block', fontWeight: 700 }}>QUALIFIED REGISTRATIONS</span>
+                <strong style={{ fontSize: 22, color: '#047857' }}>{qualifiedRegs}</strong>
               </div>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>REGISTRATION TARGET</span>
-                <strong style={{ fontSize: 22, color: '#818cf8' }}>500</strong>
+              <div style={{ background: '#eef2ff', padding: '12px', borderRadius: 8, border: '1px solid #c7d2fe' }}>
+                <span style={{ fontSize: 11, color: '#4338ca', display: 'block', fontWeight: 700 }}>REGISTRATION TARGET</span>
+                <strong style={{ fontSize: 22, color: '#4338ca' }}>500</strong>
               </div>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>PROGRESS TOWARD 500</span>
-                <strong style={{ fontSize: 22, color: '#fcd34d' }}>{((totalRegs / 500) * 100).toFixed(1)}%</strong>
+              <div style={{ background: '#fffbeb', padding: '12px', borderRadius: 8, border: '1px solid #fde68a' }}>
+                <span style={{ fontSize: 11, color: '#b45309', display: 'block', fontWeight: 700 }}>PROGRESS TOWARD 500</span>
+                <strong style={{ fontSize: 22, color: '#b45309' }}>{((totalRegs / 500) * 100).toFixed(1)}%</strong>
               </div>
             </div>
           </div>
 
           {/* Section 2: Sources */}
-          <div className="card">
-            <h3 style={{ fontSize: 16, fontWeight: 800, color: '#818cf8', marginBottom: 12 }}>
+          <div className="card" style={{ background: '#ffffff', border: '1px solid #cbd5e1' }}>
+            <h3 style={{ fontSize: 16, fontWeight: 800, color: '#4338ca', marginBottom: 12 }}>
               2. Source Breakdown (500-Model Hypotheses)
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 10, fontSize: 13 }}>
               {[
-                { name: 'Campus Captains', planned: 200, color: '#6366f1' },
-                { name: 'Student Referrals', planned: 150, color: '#10b981' },
-                { name: 'Student Creator Challenge', planned: 50, color: '#f59e0b' },
-                { name: 'Organic Social + Communities', planned: 100, color: '#25d366' },
+                { name: 'Campus Captains', planned: 200, color: '#4338ca' },
+                { name: 'Student Referrals', planned: 150, color: '#047857' },
+                { name: 'Student Creator Challenge', planned: 50, color: '#b45309' },
+                { name: 'Organic Social + Communities', planned: 100, color: '#059669' },
               ].map(s => (
-                <div key={s.name} style={{ background: 'rgba(255,255,255,0.03)', padding: '10px 14px', borderRadius: 8 }}>
+                <div key={s.name} style={{ background: '#f8fafc', padding: '10px 14px', borderRadius: 8, border: '1px solid #e2e8f0' }}>
                   <span style={{ color: s.color, fontWeight: 700 }}>{s.name}</span>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 4 }}>
-                    <span style={{ color: 'rgba(241,241,245,0.4)', fontSize: 11 }}>Planned Target:</span>
-                    <strong style={{ color: '#f1f1f5' }}>{s.planned}</strong>
+                    <span style={{ color: '#64748b', fontSize: 11 }}>Planned Target:</span>
+                    <strong style={{ color: '#0f172a' }}>{s.planned}</strong>
                   </div>
                 </div>
               ))}
@@ -650,76 +650,76 @@ export default function GrowthDashboard() {
           </div>
 
           {/* Section 3: Referral */}
-          <div className="card">
-            <h3 style={{ fontSize: 16, fontWeight: 800, color: '#10b981', marginBottom: 12 }}>
+          <div className="card" style={{ background: '#ffffff', border: '1px solid #cbd5e1' }}>
+            <h3 style={{ fontSize: 16, fontWeight: 800, color: '#047857', marginBottom: 12 }}>
               3. Referral System Analytics
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12, marginBottom: 14 }}>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>TOTAL REFERRALS</span>
-                <strong style={{ fontSize: 18, color: '#f1f1f5' }}>{Math.max(referrals.length, 120)}</strong>
+              <div style={{ background: '#f8fafc', padding: '10px 12px', borderRadius: 8, border: '1px solid #e2e8f0' }}>
+                <span style={{ fontSize: 11, color: '#64748b', display: 'block', fontWeight: 700 }}>TOTAL REFERRALS</span>
+                <strong style={{ fontSize: 18, color: '#0f172a' }}>{Math.max(referrals.length, 120)}</strong>
               </div>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>QUALIFIED REFERRALS</span>
-                <strong style={{ fontSize: 18, color: '#34d399' }}>{Math.max(referralRegs, 85)}</strong>
+              <div style={{ background: '#ecfdf5', padding: '10px 12px', borderRadius: 8, border: '1px solid #a7f3d0' }}>
+                <span style={{ fontSize: 11, color: '#047857', display: 'block', fontWeight: 700 }}>QUALIFIED REFERRALS</span>
+                <strong style={{ fontSize: 18, color: '#047857' }}>{Math.max(referralRegs, 85)}</strong>
               </div>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>TOP REFERRER</span>
-                <strong style={{ fontSize: 16, color: '#fbbf24' }}>Rahul (34 qualified)</strong>
+              <div style={{ background: '#fffbeb', padding: '10px 12px', borderRadius: 8, border: '1px solid #fde68a' }}>
+                <span style={{ fontSize: 11, color: '#b45309', display: 'block', fontWeight: 700 }}>TOP REFERRER</span>
+                <strong style={{ fontSize: 16, color: '#b45309' }}>Rahul (34 qualified)</strong>
               </div>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>CONVERSION RATE</span>
-                <strong style={{ fontSize: 18, color: '#818cf8' }}>24.2%</strong>
+              <div style={{ background: '#eef2ff', padding: '10px 12px', borderRadius: 8, border: '1px solid #c7d2fe' }}>
+                <span style={{ fontSize: 11, color: '#4338ca', display: 'block', fontWeight: 700 }}>CONVERSION RATE</span>
+                <strong style={{ fontSize: 18, color: '#4338ca' }}>24.2%</strong>
               </div>
             </div>
           </div>
 
           {/* Section 4: Creator Challenge */}
-          <div className="card">
-            <h3 style={{ fontSize: 16, fontWeight: 800, color: '#f59e0b', marginBottom: 12 }}>
+          <div className="card" style={{ background: '#ffffff', border: '1px solid #cbd5e1' }}>
+            <h3 style={{ fontSize: 16, fontWeight: 800, color: '#b45309', marginBottom: 12 }}>
               4. Student Creator Challenge Analytics (₹300 Winner Prize)
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12 }}>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>PRIZE POOL ALLOCATED</span>
-                <strong style={{ fontSize: 18, color: '#f1f1f5' }}>₹300</strong>
+              <div style={{ background: '#f8fafc', padding: '10px 12px', borderRadius: 8, border: '1px solid #e2e8f0' }}>
+                <span style={{ fontSize: 11, color: '#64748b', display: 'block', fontWeight: 700 }}>PRIZE POOL ALLOCATED</span>
+                <strong style={{ fontSize: 18, color: '#0f172a' }}>₹300</strong>
               </div>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>TOTAL CREATOR REACH</span>
-                <strong style={{ fontSize: 18, color: '#818cf8' }}>{totalCreatorReach.toLocaleString()}</strong>
+              <div style={{ background: '#eef2ff', padding: '10px 12px', borderRadius: 8, border: '1px solid #c7d2fe' }}>
+                <span style={{ fontSize: 11, color: '#4338ca', display: 'block', fontWeight: 700 }}>TOTAL CREATOR REACH</span>
+                <strong style={{ fontSize: 18, color: '#4338ca' }}>{totalCreatorReach.toLocaleString()}</strong>
               </div>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>TOTAL CLICKS (BLENDED CTR)</span>
-                <strong style={{ fontSize: 16, color: '#fcd34d' }}>{totalCreatorClicks} (7.3%)</strong>
+              <div style={{ background: '#fffbeb', padding: '10px 12px', borderRadius: 8, border: '1px solid #fde68a' }}>
+                <span style={{ fontSize: 11, color: '#b45309', display: 'block', fontWeight: 700 }}>TOTAL CLICKS (BLENDED CTR)</span>
+                <strong style={{ fontSize: 16, color: '#b45309' }}>{totalCreatorClicks} (7.3%)</strong>
               </div>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>QUALIFIED REGS (WINNER)</span>
-                <strong style={{ fontSize: 16, color: '#34d399' }}>{totalCreatorQualified} (Creator B: 31)</strong>
+              <div style={{ background: '#ecfdf5', padding: '10px 12px', borderRadius: 8, border: '1px solid #a7f3d0' }}>
+                <span style={{ fontSize: 11, color: '#047857', display: 'block', fontWeight: 700 }}>QUALIFIED REGS (WINNER)</span>
+                <strong style={{ fontSize: 16, color: '#047857' }}>{totalCreatorQualified} (Creator B: 31)</strong>
               </div>
             </div>
           </div>
 
           {/* Section 5: Workshop */}
-          <div className="card">
-            <h3 style={{ fontSize: 16, fontWeight: 800, color: '#f59e0b', marginBottom: 12 }}>
+          <div className="card" style={{ background: '#ffffff', border: '1px solid #cbd5e1' }}>
+            <h3 style={{ fontSize: 16, fontWeight: 800, color: '#0f172a', marginBottom: 12 }}>
               5. Workshop & Project Competition Analytics
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12 }}>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>REGISTERED FOR WORKSHOP</span>
-                <strong style={{ fontSize: 18, color: '#f1f1f5' }}>500</strong>
+              <div style={{ background: '#f8fafc', padding: '10px 12px', borderRadius: 8, border: '1px solid #e2e8f0' }}>
+                <span style={{ fontSize: 11, color: '#64748b', display: 'block', fontWeight: 700 }}>REGISTERED FOR WORKSHOP</span>
+                <strong style={{ fontSize: 18, color: '#0f172a' }}>500</strong>
               </div>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>ATTENDED LIVE SPRINT</span>
-                <strong style={{ fontSize: 18, color: '#34d399' }}>380 (76%)</strong>
+              <div style={{ background: '#ecfdf5', padding: '10px 12px', borderRadius: 8, border: '1px solid #a7f3d0' }}>
+                <span style={{ fontSize: 11, color: '#047857', display: 'block', fontWeight: 700 }}>ATTENDED LIVE SPRINT</span>
+                <strong style={{ fontSize: 18, color: '#047857' }}>380 (76%)</strong>
               </div>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>PROJECTS SUBMITTED</span>
-                <strong style={{ fontSize: 18, color: '#818cf8' }}>142</strong>
+              <div style={{ background: '#eef2ff', padding: '10px 12px', borderRadius: 8, border: '1px solid #c7d2fe' }}>
+                <span style={{ fontSize: 11, color: '#4338ca', display: 'block', fontWeight: 700 }}>PROJECTS SUBMITTED</span>
+                <strong style={{ fontSize: 18, color: '#4338ca' }}>142</strong>
               </div>
-              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: 8 }}>
-                <span style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', display: 'block' }}>COMPETITION ENTRIES</span>
-                <strong style={{ fontSize: 18, color: '#fbbf24' }}>45 qualified</strong>
+              <div style={{ background: '#fffbeb', padding: '10px 12px', borderRadius: 8, border: '1px solid #fde68a' }}>
+                <span style={{ fontSize: 11, color: '#b45309', display: 'block', fontWeight: 700 }}>COMPETITION ENTRIES</span>
+                <strong style={{ fontSize: 18, color: '#b45309' }}>45 qualified</strong>
               </div>
             </div>
           </div>
@@ -735,8 +735,8 @@ export default function GrowthDashboard() {
               <span>Source data includes simulation — not actual campaign results</span>
             </div>
           )}
-          <div className="card">
-            <p style={{ fontWeight: 700, color: '#f1f1f5', fontSize: 15, marginBottom: 24 }}>
+          <div className="card" style={{ background: '#ffffff', border: '1px solid #cbd5e1' }}>
+            <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 15, marginBottom: 24 }}>
               Registrations by Source
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -750,16 +750,16 @@ export default function GrowthDashboard() {
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                         <div style={{ width: 10, height: 10, borderRadius: '50%', background: color }} />
-                        <span style={{ fontSize: 14, fontWeight: 600, color: '#f1f1f5' }}>{label}</span>
+                        <span style={{ fontSize: 14, fontWeight: 700, color: '#0f172a' }}>{label}</span>
                       </div>
                       <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-                        <span style={{ fontSize: 13, color: 'rgba(241,241,245,0.5)' }}>{percentage}%</span>
+                        <span style={{ fontSize: 13, color: '#64748b' }}>{percentage}%</span>
                         <span style={{ fontSize: 16, fontWeight: 800, color }}>
                           {count}
                         </span>
                       </div>
                     </div>
-                    <div style={{ height: 8, background: 'rgba(255,255,255,0.06)', borderRadius: 999, overflow: 'hidden' }}>
+                    <div style={{ height: 8, background: '#f1f5f9', borderRadius: 999, overflow: 'hidden' }}>
                       <div style={{
                         height: '100%',
                         width: `${(count / maxSource) * 100}%`,
@@ -771,7 +771,7 @@ export default function GrowthDashboard() {
                   </div>
                 );
               }) : (
-                <p style={{ color: 'rgba(241,241,245,0.4)', fontSize: 14 }}>No source data yet.</p>
+                <p style={{ color: '#64748b', fontSize: 14 }}>No source data yet.</p>
               )}
             </div>
           </div>

@@ -43,8 +43,8 @@ export default function CampusLeague() {
             <span className="chip chip-demo">Illustrative Simulation</span>
           )}
         </div>
-        <p style={{ color: '#475569', fontSize: 14, lineHeight: 1.6 }}>
-          College-level competition designed to tap collegiate peer affinity. Proposed reward: Top campus cohorts unlock the <strong>AI Placement Starter Kit &amp; VIP live Q&amp;A session</strong>.
+        <p style={{ color: '#334155', fontSize: 14, lineHeight: 1.6 }}>
+          College-level competition designed to tap collegiate peer affinity. Proposed reward: Top campus cohorts unlock the <strong style={{ color: '#0f172a' }}>AI Placement Starter Kit &amp; VIP live Q&amp;A session</strong>.
         </p>
 
         {/* Institutional Governance Disclaimer */}
@@ -52,12 +52,12 @@ export default function CampusLeague() {
           marginTop: 12,
           padding: '10px 14px',
           background: '#f8fafc',
-          border: '1px solid #e2e8f0',
+          border: '1px solid #cbd5e1',
           borderRadius: 8,
           fontSize: 12,
-          color: '#64748b',
+          color: '#475569',
         }}>
-          💡 <em>Note: College cohorts (Amrita, VIT, SRM, BITS, MIT, NIT) are illustrative examples modeling the proposed inter-college competition structure. They do not imply official institutional partnerships or endorsements from these colleges.</em>
+          💡 <em style={{ color: '#334155' }}>Note: College cohorts (Amrita, VIT, SRM, BITS, MIT, NIT) are illustrative examples modeling the proposed inter-college competition structure. They do not imply official institutional partnerships or endorsements from these colleges.</em>
         </div>
       </div>
 

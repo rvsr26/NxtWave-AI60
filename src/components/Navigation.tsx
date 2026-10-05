@@ -257,9 +257,9 @@ export function TopBar({ currentPage, onNavigate }: NavigationProps) {
           boxShadow: '0 12px 28px rgba(15,23,42,0.12)',
         }}>
           <NavSection items={studentItems} label="Student Challenge" currentPage={currentPage} onItemClick={(p) => { onNavigate(p); setMobileOpen(false); }} />
-          <div style={{ height: 1, background: '#f1f1f5', margin: '8px 12px' }} />
+          <div style={{ height: 1, background: '#e2e8f0', margin: '8px 12px' }} />
           <NavSection items={growthItems} label="Growth OS" currentPage={currentPage} onItemClick={(p) => { onNavigate(p); setMobileOpen(false); }} />
-          <div style={{ height: 1, background: '#f1f1f5', margin: '8px 12px' }} />
+          <div style={{ height: 1, background: '#e2e8f0', margin: '8px 12px' }} />
           <NavSection items={adminItems} currentPage={currentPage} onItemClick={(p) => { onNavigate(p); setMobileOpen(false); }} />
         </div>
       )}

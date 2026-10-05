@@ -137,7 +137,7 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
       {/* Header */}
       <div style={{ marginBottom: 28 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 8 }}>
-          <h1 style={{ fontSize: 28, fontWeight: 900, color: '#f1f1f5', letterSpacing: '-0.02em', margin: 0 }}>
+          <h1 style={{ fontSize: 28, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>
             👥 Campus Referral Dashboard
           </h1>
           <span className="chip chip-green">Active Referral Loop</span>
@@ -145,42 +145,43 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
             {sharer.isRegistered ? 'Registered Student' : 'Instant Sharer (No Signup Required)'}
           </span>
         </div>
-        <p style={{ color: 'rgba(241,241,245,0.65)', fontSize: 14, lineHeight: 1.6, margin: 0 }}>
+        <p style={{ color: '#475569', fontSize: 14, lineHeight: 1.6, margin: 0 }}>
           Turn every student into an organic distribution channel. Share your link directly — no login or signup needed to start sharing and tracking genuine referrals in your browser.
         </p>
       </div>
 
       {testNotice && (
         <div style={{
-          background: 'rgba(16,185,129,0.15)',
-          border: '1px solid rgba(16,185,129,0.4)',
+          background: '#ecfdf5',
+          border: '1px solid #a7f3d0',
           borderRadius: 12, padding: '12px 18px',
-          marginBottom: 20, color: '#34d399', fontWeight: 700, fontSize: 13,
+          marginBottom: 20, color: '#065f46', fontWeight: 700, fontSize: 13,
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         }}>
           <span>{testNotice}</span>
-          <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)' }}>Recorded in browser storage</span>
+          <span style={{ fontSize: 11, color: '#047857' }}>Recorded in browser storage</span>
         </div>
       )}
 
       {/* Main Student / Sharer Card */}
       <div className="card" style={{
-        background: 'linear-gradient(135deg, rgba(99,102,241,0.12), rgba(16,185,129,0.08))',
-        border: '1px solid rgba(99,102,241,0.3)',
+        background: '#ffffff',
+        border: '1px solid #cbd5e1',
         borderRadius: 16, padding: '24px', marginBottom: 32,
+        boxShadow: '0 4px 14px rgba(15,23,42,0.04)',
       }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 16, marginBottom: 20 }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <span className="section-label" style={{ color: '#818cf8', margin: 0 }}>
+              <span className="section-label" style={{ color: '#4338ca', margin: 0, fontWeight: 800 }}>
                 {sharer.isRegistered ? 'Verified Student Profile' : 'Browser Sharer Profile'}
               </span>
               {!sharer.isRegistered && (
                 <button
                   onClick={() => setIsEditingProfile(!isEditingProfile)}
                   style={{
-                    background: 'transparent', border: 'none', color: '#818cf8',
-                    fontSize: 12, cursor: 'pointer', textDecoration: 'underline', padding: 0
+                    background: 'transparent', border: 'none', color: '#4f46e5',
+                    fontSize: 12, cursor: 'pointer', textDecoration: 'underline', padding: 0, fontWeight: 700
                   }}
                 >
                   {isEditingProfile ? 'Cancel' : '✏️ Edit Name & College'}
@@ -188,11 +189,11 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
               )}
             </div>
 
-            <h2 style={{ fontSize: 22, fontWeight: 800, color: '#f1f1f5', margin: '4px 0' }}>
+            <h2 style={{ fontSize: 22, fontWeight: 800, color: '#0f172a', margin: '4px 0' }}>
               {studentName} · {college}
             </h2>
-            <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.5)', margin: 0 }}>
-              Referral Code: <strong style={{ color: '#818cf8', letterSpacing: '0.05em' }}>{referralCode}</strong>
+            <p style={{ fontSize: 13, color: '#475569', margin: 0 }}>
+              Referral Code: <strong style={{ color: '#4338ca', letterSpacing: '0.05em' }}>{referralCode}</strong>
               {!sharer.isRegistered && ' · (Stored in this browser)'}
             </p>
           </div>
@@ -201,7 +202,7 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
             <span className="chip chip-amber" style={{ fontSize: 12, padding: '4px 10px' }}>
               Rank: #{rank}
             </span>
-            <p style={{ fontSize: 12, color: '#34d399', fontWeight: 700, marginTop: 6, margin: '6px 0 0' }}>
+            <p style={{ fontSize: 12, color: '#047857', fontWeight: 700, marginTop: 6, margin: '6px 0 0' }}>
               {rewardStatus}
             </p>
           </div>
@@ -210,15 +211,15 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
         {/* Profile Customizer (No Signup Required) */}
         {isEditingProfile && !sharer.isRegistered && (
           <form onSubmit={handleSaveProfile} style={{
-            background: 'rgba(0,0,0,0.25)', border: '1px solid rgba(99,102,241,0.25)',
+            background: '#f8fafc', border: '1px solid #cbd5e1',
             borderRadius: 12, padding: '16px', marginBottom: 20,
           }}>
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#f1f1f5', margin: '0 0 10px' }}>
+            <p style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '0 0 10px' }}>
               Customize Who is Sharing (Saved in your browser):
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 12 }}>
               <div>
-                <label style={{ fontSize: 11, color: 'rgba(241,241,245,0.6)', display: 'block', marginBottom: 4 }}>Your Full Name</label>
+                <label style={{ fontSize: 12, fontWeight: 600, color: '#334155', display: 'block', marginBottom: 4 }}>Your Full Name</label>
                 <input
                   type="text"
                   className="input"
@@ -229,7 +230,7 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
                 />
               </div>
               <div>
-                <label style={{ fontSize: 11, color: 'rgba(241,241,245,0.6)', display: 'block', marginBottom: 4 }}>Your College / Campus</label>
+                <label style={{ fontSize: 12, fontWeight: 600, color: '#334155', display: 'block', marginBottom: 4 }}>Your College / Campus</label>
                 <input
                   type="text"
                   className="input"
@@ -258,8 +259,8 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
 
         {/* Anti-Fraud & Quality Assurance Banner */}
         <div style={{
-          background: 'rgba(99,102,241,0.06)',
-          border: '1px solid rgba(99,102,241,0.25)',
+          background: '#eef2ff',
+          border: '1px solid #c7d2fe',
           borderRadius: 12,
           padding: '12px 18px',
           marginBottom: 20,
@@ -269,10 +270,10 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
         }}>
           <span style={{ fontSize: 20 }}>🛡️</span>
           <div>
-            <p style={{ fontSize: 12, fontWeight: 800, color: '#818cf8', margin: 0, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+            <p style={{ fontSize: 12, fontWeight: 800, color: '#3730a3', margin: 0, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               REFERRAL COUNT = GENUINE VERIFIED ACQUISITION
             </p>
-            <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.8)', margin: '2px 0 0', lineHeight: 1.4 }}>
+            <p style={{ fontSize: 12, color: '#334155', margin: '2px 0 0', lineHeight: 1.4 }}>
               Anti-fraud verification blocks self-referrals and duplicate emails. Only genuine batchmates who register with your referral link advance your standing and unlock prize rewards.
             </p>
           </div>
@@ -280,44 +281,44 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
 
         {/* 4-Tier Funnel Metrics Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: 12, marginBottom: 20 }}>
-          <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 10, padding: '14px' }}>
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', fontWeight: 700, margin: 0 }}>REFERRAL CLICKS</p>
-            <p className="mono" style={{ fontSize: 22, fontWeight: 900, color: '#818cf8', margin: '4px 0 0' }}>{totalClicksEstimated}</p>
-            <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', margin: 0 }}>Estimated link impressions</p>
+          <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 10, padding: '14px' }}>
+            <p style={{ fontSize: 11, color: '#64748b', fontWeight: 800, margin: 0 }}>REFERRAL CLICKS</p>
+            <p className="mono" style={{ fontSize: 22, fontWeight: 900, color: '#4338ca', margin: '4px 0 0' }}>{totalClicksEstimated}</p>
+            <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>Estimated link impressions</p>
           </div>
-          <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 10, padding: '14px' }}>
-            <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', fontWeight: 700, margin: 0 }}>GENUINE REGISTRATIONS</p>
-            <p className="mono" style={{ fontSize: 22, fontWeight: 900, color: '#34d399', margin: '4px 0 0' }}>{genuineCount}</p>
-            <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', margin: 0 }}>Real registered users</p>
+          <div style={{ background: '#ecfdf5', border: '1px solid #a7f3d0', borderRadius: 10, padding: '14px' }}>
+            <p style={{ fontSize: 11, color: '#065f46', fontWeight: 800, margin: 0 }}>GENUINE REGISTRATIONS</p>
+            <p className="mono" style={{ fontSize: 22, fontWeight: 900, color: '#047857', margin: '4px 0 0' }}>{genuineCount}</p>
+            <p style={{ fontSize: 11, color: '#047857', margin: 0 }}>Real registered users</p>
           </div>
-          <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 10, padding: '14px' }}>
-            <p style={{ fontSize: 11, color: '#34d399', fontWeight: 700, margin: 0 }}>VERIFIED STATUS</p>
-            <p className="mono" style={{ fontSize: 16, fontWeight: 900, color: '#34d399', margin: '6px 0 0' }}>
+          <div style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: 10, padding: '14px' }}>
+            <p style={{ fontSize: 11, color: '#166534', fontWeight: 800, margin: 0 }}>VERIFIED STATUS</p>
+            <p className="mono" style={{ fontSize: 16, fontWeight: 900, color: '#15803d', margin: '6px 0 0' }}>
               {genuineCount > 0 ? '100% Verified' : 'Awaiting 1st User'}
             </p>
-            <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', margin: 0 }}>Anti-fraud passed</p>
+            <p style={{ fontSize: 11, color: '#166534', margin: 0 }}>Anti-fraud passed</p>
           </div>
-          <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 10, padding: '14px' }}>
-            <p style={{ fontSize: 11, color: '#a78bfa', fontWeight: 700, margin: 0 }}>REWARD STATUS</p>
-            <p style={{ fontSize: 13, fontWeight: 800, color: '#a78bfa', margin: '6px 0 0', lineHeight: 1.3 }}>{rewardStatus}</p>
-            <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', margin: '4px 0 0' }}>Leaderboard Rank #{rank}</p>
+          <div style={{ background: '#faf5ff', border: '1px solid #e9d5ff', borderRadius: 10, padding: '14px' }}>
+            <p style={{ fontSize: 11, color: '#7e22ce', fontWeight: 800, margin: 0 }}>REWARD STATUS</p>
+            <p style={{ fontSize: 13, fontWeight: 800, color: '#6b21a8', margin: '6px 0 0', lineHeight: 1.3 }}>{rewardStatus}</p>
+            <p style={{ fontSize: 11, color: '#7e22ce', margin: '4px 0 0' }}>Leaderboard Rank #{rank}</p>
           </div>
         </div>
 
         {/* Share Link Box & WhatsApp Button */}
         <div style={{
           display: 'flex', alignItems: 'center', gap: 10,
-          background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
+          background: '#f8fafc', border: '1px solid #cbd5e1',
           borderRadius: 10, padding: '10px 14px', marginBottom: 14, overflow: 'hidden', flexWrap: 'wrap',
         }}>
-          <span className="mono" style={{ flex: 1, minWidth: 200, fontSize: 12, color: '#818cf8', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+          <span className="mono" style={{ flex: 1, minWidth: 200, fontSize: 13, color: '#4338ca', fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
             {referralUrl}
           </span>
           <div style={{ display: 'flex', gap: 8 }}>
             <button
               id="copy-referral-btn"
               className="btn-secondary"
-              style={{ padding: '8px 16px', fontSize: 12 }}
+              style={{ padding: '8px 16px', fontSize: 12, fontWeight: 700 }}
               onClick={copyLink}
             >
               {copied ? '✓ Copied' : '📋 Copy URL'}
@@ -335,14 +336,14 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
 
         {/* WhatsApp Pre-filled message preview */}
         <div style={{
-          background: 'rgba(37,211,102,0.06)', border: '1px solid rgba(37,211,102,0.2)',
+          background: '#f0fdf4', border: '1px solid #bbf7d0',
           borderRadius: 10, padding: '12px 16px',
         }}>
-          <p style={{ fontSize: 11, color: '#34d399', fontWeight: 700, margin: '0 0 4px' }}>
+          <p style={{ fontSize: 11, color: '#166534', fontWeight: 800, margin: '0 0 4px', letterSpacing: '0.04em' }}>
             PRE-FILLED WHATSAPP MESSAGE PREVIEW
           </p>
           <pre style={{
-            fontSize: 12, color: 'rgba(241,241,245,0.8)', whiteSpace: 'pre-wrap',
+            fontSize: 12, color: '#1e293b', whiteSpace: 'pre-wrap',
             fontFamily: 'var(--font-sans)', margin: 0, lineHeight: 1.5,
           }}>
             {rawShareMessage}
@@ -351,26 +352,26 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
       </div>
 
       {/* 🌟 GENUINE USER REFERRALS LIST */}
-      <div className="card" style={{ marginBottom: 32 }}>
+      <div className="card" style={{ marginBottom: 32, background: '#ffffff', border: '1px solid #cbd5e1' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16, flexWrap: 'wrap', gap: 10 }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <h2 style={{ fontSize: 20, fontWeight: 800, color: '#f1f1f5', margin: 0 }}>
+              <h2 style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', margin: 0 }}>
                 🌟 Genuine User Referrals ({genuineCount})
               </h2>
               <span className="chip chip-green" style={{ fontSize: 11 }}>
                 Live Browser Verified
               </span>
             </div>
-            <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.5)', margin: '4px 0 0' }}>
-              Real batchmates who registered using your referral code (<strong style={{ color: '#818cf8' }}>{referralCode}</strong>).
+            <p style={{ fontSize: 13, color: '#475569', margin: '4px 0 0' }}>
+              Real batchmates who registered using your referral code (<strong style={{ color: '#4338ca' }}>{referralCode}</strong>).
             </p>
           </div>
 
           <button
             onClick={handleSimulateFriendRegister}
             className="btn-secondary"
-            style={{ padding: '6px 14px', fontSize: 12, borderColor: 'rgba(99,102,241,0.4)', color: '#818cf8' }}
+            style={{ padding: '6px 14px', fontSize: 12, borderColor: '#cbd5e1', color: '#4338ca', fontWeight: 700 }}
           >
             🧪 Test Friend Registration
           </button>
@@ -379,14 +380,14 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
         {genuineCount === 0 ? (
           <div style={{
             textAlign: 'center', padding: '36px 20px',
-            background: 'rgba(255,255,255,0.02)', borderRadius: 12, border: '1px dashed rgba(255,255,255,0.1)'
+            background: '#f8fafc', borderRadius: 12, border: '1px dashed #cbd5e1'
           }}>
             <p style={{ fontSize: 32, margin: '0 0 10px' }}>🌱</p>
-            <h3 style={{ fontSize: 16, fontWeight: 700, color: '#f1f1f5', margin: '0 0 6px' }}>
+            <h3 style={{ fontSize: 16, fontWeight: 800, color: '#0f172a', margin: '0 0 6px' }}>
               No genuine registrations recorded yet for {referralCode}
             </h3>
-            <p style={{ fontSize: 13, color: 'rgba(241,241,245,0.5)', maxWidth: 500, margin: '0 auto 18px', lineHeight: 1.5 }}>
-              Share your link (<span className="mono" style={{ color: '#818cf8' }}>{referralUrl}</span>) with friends. Whenever someone completes registration, they will be saved in the browser and displayed here instantly.
+            <p style={{ fontSize: 13, color: '#475569', maxWidth: 500, margin: '0 auto 18px', lineHeight: 1.5 }}>
+              Share your link (<span className="mono" style={{ color: '#4338ca', fontWeight: 700 }}>{referralUrl}</span>) with friends. Whenever someone completes registration, they will be saved in the browser and displayed here instantly.
             </p>
             <button
               onClick={handleSimulateFriendRegister}
@@ -404,15 +405,15 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
                 style={{
                   display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                   padding: '12px 16px',
-                  background: 'rgba(16,185,129,0.06)',
-                  border: '1px solid rgba(16,185,129,0.25)',
+                  background: '#f0fdf4',
+                  border: '1px solid #bbf7d0',
                   borderRadius: 10, flexWrap: 'wrap', gap: 10,
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                   <span style={{
                     width: 32, height: 32, borderRadius: 8,
-                    background: 'rgba(16,185,129,0.15)', color: '#34d399',
+                    background: '#dcfce7', color: '#166534',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     fontWeight: 800, fontSize: 13
                   }}>
@@ -420,24 +421,24 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
                   </span>
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                      <span style={{ fontWeight: 800, color: '#f1f1f5', fontSize: 14 }}>
+                      <span style={{ fontWeight: 800, color: '#0f172a', fontSize: 14 }}>
                         {ref.referreeName || 'Registered Student'}
                       </span>
                       <span className="chip chip-green" style={{ fontSize: 10, padding: '2px 8px' }}>
                         ✓ Genuine Verified
                       </span>
                     </div>
-                    <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.5)', margin: '2px 0 0' }}>
+                    <p style={{ fontSize: 12, color: '#475569', margin: '2px 0 0' }}>
                       {ref.referreeCollege || college} · {ref.referreeEmail}
                     </p>
                   </div>
                 </div>
 
                 <div style={{ textAlign: 'right' }}>
-                  <p style={{ fontSize: 11, color: 'rgba(241,241,245,0.4)', margin: 0 }}>
+                  <p style={{ fontSize: 11, color: '#64748b', fontWeight: 600, margin: 0 }}>
                     Registered At
                   </p>
-                  <p className="mono" style={{ fontSize: 12, color: '#818cf8', margin: '2px 0 0' }}>
+                  <p className="mono" style={{ fontSize: 12, color: '#4338ca', fontWeight: 700, margin: '2px 0 0' }}>
                     {new Date(ref.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', month: 'short', day: 'numeric' })}
                   </p>
                 </div>
@@ -448,13 +449,13 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
       </div>
 
       {/* 🏆 CAMPUS REFERRAL LEADERBOARD */}
-      <div className="card" style={{ marginBottom: 32 }}>
+      <div className="card" style={{ marginBottom: 32, background: '#ffffff', border: '1px solid #cbd5e1' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16, flexWrap: 'wrap', gap: 10 }}>
           <div>
-            <h2 style={{ fontSize: 20, fontWeight: 800, color: '#f1f1f5', margin: 0 }}>
+            <h2 style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', margin: 0 }}>
               🏆 CAMPUS REFERRAL LEADERBOARD
             </h2>
-            <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.5)', margin: '4px 0 0' }}>
+            <p style={{ fontSize: 13, color: '#475569', margin: '4px 0 0' }}>
               Top referrers ranked by verified unique registrations. Rewards paid after campaign verification.
             </p>
           </div>
@@ -463,13 +464,13 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
 
         {/* Anti-fraud note badge */}
         <div style={{
-          background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.2)',
+          background: '#fef2f2', border: '1px solid #fecaca',
           borderRadius: 8, padding: '10px 14px', marginBottom: 16, display: 'flex', alignItems: 'center', gap: 10,
         }}>
-          <span style={{ fontSize: 16 }}>🛡</span>
-          <p style={{ fontSize: 12, color: '#fca5a5', margin: 0, lineHeight: 1.4 }}>
+          <span style={{ fontSize: 16 }}>🛡️</span>
+          <p style={{ fontSize: 12, color: '#991b1b', margin: 0, lineHeight: 1.4 }}>
             <strong>Anti-Fraud Rule:</strong> Only verified unique registrations count.
-            <span style={{ color: 'rgba(241,241,245,0.6)', marginLeft: 6 }}>
+            <span style={{ color: '#475569', marginLeft: 6 }}>
               Qualified Referral = unique student + valid registration + verification. Duplicate emails and self-referrals are automatically disqualified.
             </span>
           </p>
@@ -501,28 +502,28 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
                   style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                     padding: '12px 16px',
-                    background: entry.isCurrentStudent ? 'rgba(99,102,241,0.12)' : isTop3 ? 'rgba(255,255,255,0.04)' : 'rgba(255,255,255,0.02)',
-                    border: entry.isCurrentStudent ? '1px solid rgba(99,102,241,0.4)' : isTop3 ? '1px solid rgba(255,255,255,0.08)' : '1px solid rgba(255,255,255,0.04)',
+                    background: entry.isCurrentStudent ? '#eef2ff' : isTop3 ? '#fafafa' : '#ffffff',
+                    border: entry.isCurrentStudent ? '1px solid #c7d2fe' : isTop3 ? '1px solid #e2e8f0' : '1px solid #f1f5f9',
                     borderRadius: 10, flexWrap: 'wrap', gap: 10,
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
                     <span style={{
                       fontSize: isTop3 ? 20 : 14, fontWeight: 800, width: 28, textAlign: 'center',
-                      color: entry.rank === 1 ? '#fbbf24' : entry.rank === 2 ? '#9ca3af' : entry.rank === 3 ? '#d97706' : 'rgba(241,241,245,0.4)',
+                      color: entry.rank === 1 ? '#d97706' : entry.rank === 2 ? '#64748b' : entry.rank === 3 ? '#b45309' : '#64748b',
                     }}>
                       {rankEmoji}
                     </span>
                     <div>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                        <span style={{ fontWeight: 700, color: '#f1f1f5', fontSize: 14 }}>
+                        <span style={{ fontWeight: 700, color: '#0f172a', fontSize: 14 }}>
                           {entry.name}
                         </span>
                         {entry.isCurrentStudent && (
                           <span className="chip chip-brand" style={{ fontSize: 10 }}>You ({referralCode})</span>
                         )}
                       </div>
-                      <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.45)', margin: '2px 0 0' }}>
+                      <p style={{ fontSize: 12, color: '#64748b', margin: '2px 0 0' }}>
                         {entry.college}
                       </p>
                     </div>
@@ -530,22 +531,22 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: 16, fontWeight: 800, color: '#34d399', margin: 0 }}>
+                      <p style={{ fontSize: 16, fontWeight: 800, color: '#047857', margin: 0 }}>
                         {entry.isCurrentStudent ? genuineCount : entry.qualifiedReferrals}
                       </p>
-                      <p style={{ fontSize: 10, color: 'rgba(241,241,245,0.4)', margin: 0 }}>qualified</p>
+                      <p style={{ fontSize: 11, color: '#64748b', margin: 0, fontWeight: 600 }}>qualified</p>
                     </div>
                     <div style={{ minWidth: 70, textAlign: 'right' }}>
                       {entry.reward ? (
                         <span style={{
-                          fontSize: 13, fontWeight: 800, color: '#fbbf24',
-                          background: 'rgba(251,191,36,0.12)', border: '1px solid rgba(251,191,36,0.25)',
+                          fontSize: 13, fontWeight: 800, color: '#b45309',
+                          background: '#fef3c7', border: '1px solid #fde68a',
                           padding: '3px 8px', borderRadius: 6,
                         }}>
                           {rewardLabel}
                         </span>
                       ) : (
-                        <span style={{ fontSize: 12, color: 'rgba(241,241,245,0.3)' }}>Rank #{entry.rank}</span>
+                        <span style={{ fontSize: 12, color: '#94a3b8' }}>Rank #{entry.rank}</span>
                       )}
                     </div>
                   </div>
@@ -558,14 +559,14 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
 
       {/* Referral Program Summary */}
       <div style={{
-        background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)',
+        background: '#f8fafc', border: '1px solid #e2e8f0',
         borderRadius: 12, padding: '16px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12,
       }}>
         <div>
-          <p style={{ fontSize: 13, fontWeight: 700, color: '#f1f1f5', margin: '0 0 2px' }}>
+          <p style={{ fontSize: 14, fontWeight: 700, color: '#0f172a', margin: '0 0 2px' }}>
             Want to invite batchmates or host a study group?
           </p>
-          <p style={{ fontSize: 12, color: 'rgba(241,241,245,0.5)', margin: 0 }}>
+          <p style={{ fontSize: 13, color: '#475569', margin: 0 }}>
             Every qualified registration pushes your campus higher in the Campus League and advances your rank.
           </p>
         </div>

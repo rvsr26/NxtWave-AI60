@@ -69,15 +69,18 @@ export default function RewardsPage() {
             <div>
               <p className="section-label" style={{ color: '#b45309', marginBottom: 4 }}>CREATOR CONTENT COMPETITION</p>
               <h2 style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', margin: 0 }}>
-                🎬 1. Student Creator Growth Challenge (Total: ₹300)
+                🎬 1. Student Creator Growth Challenge (Prize: ₹300)
               </h2>
             </div>
-            <span className="chip chip-amber">🏆 Winner Prize: ₹300</span>
+            <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+              <span className="chip chip-brand" style={{ fontWeight: 700 }}>Budget: ₹300</span>
+              <span className="chip chip-demo" style={{ fontWeight: 700 }}>Status: SIMULATION</span>
+              <span className="chip chip-amber" style={{ fontWeight: 700 }}>🏆 WINNER PRIZE: ₹300</span>
+            </div>
           </div>
 
-          <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.6, marginBottom: 16 }}>
-            Students are invited to create promotional content (Instagram Reels, WhatsApp creatives, LinkedIn posts, X posts, short videos, or memes).
-            Each creator gets a unique tracking code (e.g. CREATOR01, CREATOR02, VISHNU26). The winner is determined by actual acquisition performance rather than mere vanity views.
+          <p style={{ fontSize: 14, color: '#334155', lineHeight: 1.6, marginBottom: 16 }}>
+            Instead of spending ₹300 on cold paid ads, ₹300 is awarded as a performance prize to the student creator who drives the best verified workshop acquisition. Content formats include Instagram Reels, WhatsApp creatives, LinkedIn posts, X threads, and short videos.
           </p>
 
           <div style={{
@@ -92,9 +95,14 @@ export default function RewardsPage() {
 
           {/* Scoring Model Rubric */}
           <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 10, padding: '16px', marginBottom: 14 }}>
-            <p style={{ fontSize: 13, fontWeight: 800, color: '#0f172a', marginBottom: 10 }}>
-              📐 Official Creator Scoring Model (100% Total)
-            </p>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10, flexWrap: 'wrap', gap: 8 }}>
+              <strong style={{ fontSize: 13, fontWeight: 800, color: '#0f172a' }}>
+                📐 Published Creator Scoring Model (100% Total)
+              </strong>
+              <span style={{ fontSize: 12, color: '#047857', fontWeight: 800 }}>
+                Focus on Actual Growth &gt; Vanity Views 🎯
+              </span>
+            </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 10 }}>
               <div style={{ background: '#eef2ff', border: '1px solid #c7d2fe', padding: '10px 12px', borderRadius: 8 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -142,7 +150,7 @@ export default function RewardsPage() {
             <span className="chip chip-green">Condition: Verified unique registrations</span>
           </div>
 
-          <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.6, marginBottom: 16 }}>
+          <p style={{ fontSize: 14, color: '#334155', lineHeight: 1.6, marginBottom: 16 }}>
             Top 3 student captains or batchmates who drive the highest volume of verified unique registrations during the 7-day campaign.
           </p>
 
@@ -204,9 +212,9 @@ export default function RewardsPage() {
             <span className="chip chip-brand">Post-Workshop Engagement</span>
           </div>
 
-          <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.6, marginBottom: 16 }}>
+          <p style={{ fontSize: 14, color: '#334155', lineHeight: 1.6, marginBottom: 16 }}>
             After workshop participation, students build and submit their AI project to demonstrate authentic skills.
-            This ₹900 pool is a <strong>post-workshop engagement incentive</strong>, not top-of-funnel acquisition spend.
+            This ₹900 pool is a <strong style={{ color: '#0f172a' }}>post-workshop engagement incentive</strong>, not top-of-funnel acquisition spend.
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 14, marginBottom: 20 }}>
