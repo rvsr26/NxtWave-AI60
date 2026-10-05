@@ -109,28 +109,28 @@ export default function RewardsPage() {
                   <span style={{ color: '#4338ca', fontWeight: 700 }}>Qualified Registrations</span>
                   <strong style={{ color: '#0f172a' }}>60%</strong>
                 </div>
-                <p style={{ fontSize: 11, color: '#64748b', margin: '2px 0 0' }}>Verified unique student signups</p>
+                <p style={{ fontSize: 11, color: '#0f172a', margin: '2px 0 0', fontWeight: 600 }}>Verified unique student signups</p>
               </div>
               <div style={{ background: '#ecfdf5', border: '1px solid #a7f3d0', padding: '10px 12px', borderRadius: 8 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span style={{ color: '#047857', fontWeight: 700 }}>Click-Through Rate (CTR)</span>
                   <strong style={{ color: '#0f172a' }}>20%</strong>
                 </div>
-                <p style={{ fontSize: 11, color: '#64748b', margin: '2px 0 0' }}>Clicks / Reach engagement</p>
+                <p style={{ fontSize: 11, color: '#0f172a', margin: '2px 0 0', fontWeight: 600 }}>Clicks / Reach engagement</p>
               </div>
               <div style={{ background: '#fffbeb', border: '1px solid #fde68a', padding: '10px 12px', borderRadius: 8 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span style={{ color: '#b45309', fontWeight: 700 }}>Engagement</span>
                   <strong style={{ color: '#0f172a' }}>10%</strong>
                 </div>
-                <p style={{ fontSize: 11, color: '#64748b', margin: '2px 0 0' }}>Saves, shares, comments</p>
+                <p style={{ fontSize: 11, color: '#0f172a', margin: '2px 0 0', fontWeight: 600 }}>Saves, shares, comments</p>
               </div>
               <div style={{ background: '#fdf2f8', border: '1px solid #fbcfe8', padding: '10px 12px', borderRadius: 8 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span style={{ color: '#be185d', fontWeight: 700 }}>Creativity</span>
                   <strong style={{ color: '#0f172a' }}>10%</strong>
                 </div>
-                <p style={{ fontSize: 11, color: '#64748b', margin: '2px 0 0' }}>Message clarity & hook</p>
+                <p style={{ fontSize: 11, color: '#0f172a', margin: '2px 0 0', fontWeight: 600 }}>Message clarity & hook</p>
               </div>
             </div>
           </div>
@@ -150,7 +150,7 @@ export default function RewardsPage() {
             <span className="chip chip-green">Condition: Verified unique registrations</span>
           </div>
 
-          <p style={{ fontSize: 14, color: '#334155', lineHeight: 1.6, marginBottom: 16 }}>
+          <p style={{ fontSize: 14, color: '#0f172a', lineHeight: 1.6, marginBottom: 16 }}>
             Top 3 student captains or batchmates who drive the highest volume of verified unique registrations during the 7-day campaign.
           </p>
 
@@ -170,9 +170,9 @@ export default function RewardsPage() {
               border: '1px solid #cbd5e1', borderRadius: 12, padding: '18px', textAlign: 'center',
             }}>
               <span style={{ fontSize: 32 }}>🥈</span>
-              <p style={{ fontSize: 26, fontWeight: 900, color: '#475569', margin: '8px 0 2px' }}>₹150</p>
+              <p style={{ fontSize: 26, fontWeight: 900, color: '#0f172a', margin: '8px 0 2px' }}>₹150</p>
               <p style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: 0 }}>#2 Referral Runner-Up</p>
-              <p style={{ fontSize: 11, color: '#64748b', marginTop: 4 }}>Second highest verified referrals</p>
+              <p style={{ fontSize: 11, color: '#0f172a', marginTop: 4, fontWeight: 600 }}>Second highest verified referrals</p>
             </div>
 
             <div style={{
@@ -212,7 +212,7 @@ export default function RewardsPage() {
             <span className="chip chip-brand">Post-Workshop Engagement</span>
           </div>
 
-          <p style={{ fontSize: 14, color: '#334155', lineHeight: 1.6, marginBottom: 16 }}>
+          <p style={{ fontSize: 14, color: '#0f172a', lineHeight: 1.6, marginBottom: 16 }}>
             After workshop participation, students build and submit their AI project to demonstrate authentic skills.
             This ₹900 pool is a <strong style={{ color: '#0f172a' }}>post-workshop engagement incentive</strong>, not top-of-funnel acquisition spend.
           </p>
@@ -225,7 +225,7 @@ export default function RewardsPage() {
               <span style={{ fontSize: 32 }}>🏆</span>
               <p style={{ fontSize: 26, fontWeight: 900, color: '#4338ca', margin: '8px 0 2px' }}>₹400</p>
               <p style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: 0 }}>#1 Best AI Project</p>
-              <p style={{ fontSize: 11, color: '#64748b', marginTop: 4 }}>Grand prize post-workshop winner</p>
+              <p style={{ fontSize: 11, color: '#0f172a', marginTop: 4, fontWeight: 600 }}>Grand prize post-workshop winner</p>
             </div>
 
             <div style={{
@@ -235,7 +235,7 @@ export default function RewardsPage() {
               <span style={{ fontSize: 32 }}>🥈</span>
               <p style={{ fontSize: 26, fontWeight: 900, color: '#047857', margin: '8px 0 2px' }}>₹300</p>
               <p style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: 0 }}>#2 Project Runner-Up</p>
-              <p style={{ fontSize: 11, color: '#64748b', marginTop: 4 }}>High-scoring functional implementation</p>
+              <p style={{ fontSize: 11, color: '#0f172a', marginTop: 4, fontWeight: 600 }}>High-scoring functional implementation</p>
             </div>
 
             <div style={{
@@ -245,7 +245,7 @@ export default function RewardsPage() {
               <span style={{ fontSize: 32 }}>🥉</span>
               <p style={{ fontSize: 26, fontWeight: 900, color: '#b45309', margin: '8px 0 2px' }}>₹200</p>
               <p style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: 0 }}>#3 Project Third Place</p>
-              <p style={{ fontSize: 11, color: '#64748b', marginTop: 4 }}>Strong creative or utility solution</p>
+              <p style={{ fontSize: 11, color: '#0f172a', marginTop: 4, fontWeight: 600 }}>Strong creative or utility solution</p>
             </div>
           </div>
 
@@ -264,7 +264,7 @@ export default function RewardsPage() {
                   <div className="progress-bar" style={{ height: 6, marginBottom: 4 }}>
                     <div style={{ width: `${item.weight * 3.33}%`, height: '100%', background: '#4f46e5', borderRadius: 999 }} />
                   </div>
-                  <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>{item.desc}</p>
+                  <p style={{ fontSize: 11, color: '#0f172a', margin: 0 }}>{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -272,7 +272,7 @@ export default function RewardsPage() {
 
           <div style={{
             background: '#eef2ff', border: '1px solid #c7d2fe',
-            borderRadius: 8, padding: '10px 14px', fontSize: 12, color: '#334155',
+            borderRadius: 8, padding: '10px 14px', fontSize: 12, color: '#0f172a',
           }}>
             <strong>Evaluation Protocol:</strong> AI assists evaluation; final awards are human-decided.
           </div>
@@ -297,40 +297,40 @@ export default function RewardsPage() {
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
               <thead>
                 <tr style={{ borderBottom: '1px solid #cbd5e1', textAlign: 'left' }}>
-                  <th style={{ padding: '10px 14px', color: '#475569', fontWeight: 700 }}>Allocation</th>
-                  <th style={{ padding: '10px 14px', color: '#475569', fontWeight: 700 }}>Strategic Mechanism</th>
-                  <th style={{ padding: '10px 14px', color: '#475569', fontWeight: 700, textAlign: 'right' }}>Amount</th>
-                  <th style={{ padding: '10px 14px', color: '#475569', fontWeight: 700, textAlign: 'right' }}>Share</th>
+                  <th style={{ padding: '10px 14px', color: '#0f172a', fontWeight: 800 }}>Allocation</th>
+                  <th style={{ padding: '10px 14px', color: '#0f172a', fontWeight: 800 }}>Strategic Mechanism</th>
+                  <th style={{ padding: '10px 14px', color: '#0f172a', fontWeight: 800, textAlign: 'right' }}>Amount</th>
+                  <th style={{ padding: '10px 14px', color: '#0f172a', fontWeight: 800, textAlign: 'right' }}>Share</th>
                 </tr>
               </thead>
               <tbody>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '12px 14px', fontWeight: 600, color: '#b45309' }}>Creator Challenge</td>
-                  <td style={{ padding: '12px 14px', color: '#334155' }}>Prize for top-performing student content creator (60% qualified regs)</td>
+                  <td style={{ padding: '12px 14px', color: '#0f172a' }}>Prize for top-performing student content creator (60% qualified regs)</td>
                   <td style={{ padding: '12px 14px', fontWeight: 700, color: '#0f172a', textAlign: 'right' }}>₹300</td>
-                  <td style={{ padding: '12px 14px', color: '#64748b', textAlign: 'right' }}>15%</td>
+                  <td style={{ padding: '12px 14px', color: '#0f172a', textAlign: 'right', fontWeight: 600 }}>15%</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '12px 14px', fontWeight: 600, color: '#047857' }}>Referral Rewards</td>
-                  <td style={{ padding: '12px 14px', color: '#334155' }}>Top 3 campus referrers (#1 ₹250, #2 ₹150, #3 ₹100)</td>
+                  <td style={{ padding: '12px 14px', color: '#0f172a' }}>Top 3 campus referrers (#1 ₹250, #2 ₹150, #3 ₹100)</td>
                   <td style={{ padding: '12px 14px', fontWeight: 700, color: '#0f172a', textAlign: 'right' }}>₹500</td>
-                  <td style={{ padding: '12px 14px', color: '#64748b', textAlign: 'right' }}>25%</td>
+                  <td style={{ padding: '12px 14px', color: '#0f172a', textAlign: 'right', fontWeight: 600 }}>25%</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #e2e8f0' }}>
                   <td style={{ padding: '12px 14px', fontWeight: 600, color: '#4338ca' }}>AI Project Competition</td>
-                  <td style={{ padding: '12px 14px', color: '#334155' }}>Post-workshop project showcase prizes (#1 ₹400, #2 ₹300, #3 ₹200)</td>
+                  <td style={{ padding: '12px 14px', color: '#0f172a' }}>Post-workshop project showcase prizes (#1 ₹400, #2 ₹300, #3 ₹200)</td>
                   <td style={{ padding: '12px 14px', fontWeight: 700, color: '#0f172a', textAlign: 'right' }}>₹900</td>
-                  <td style={{ padding: '12px 14px', color: '#64748b', textAlign: 'right' }}>45%</td>
+                  <td style={{ padding: '12px 14px', color: '#0f172a', textAlign: 'right', fontWeight: 600 }}>45%</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #cbd5e1' }}>
                   <td style={{ padding: '12px 14px', fontWeight: 600, color: '#b45309' }}>Contingency</td>
-                  <td style={{ padding: '12px 14px', color: '#334155' }}>Safety reserve buffer for unexpected campaign distribution costs</td>
+                  <td style={{ padding: '12px 14px', color: '#0f172a' }}>Safety reserve buffer for unexpected campaign distribution costs</td>
                   <td style={{ padding: '12px 14px', fontWeight: 700, color: '#0f172a', textAlign: 'right' }}>₹300</td>
-                  <td style={{ padding: '12px 14px', color: '#64748b', textAlign: 'right' }}>15%</td>
+                  <td style={{ padding: '12px 14px', color: '#0f172a', textAlign: 'right', fontWeight: 600 }}>15%</td>
                 </tr>
                 <tr style={{ background: '#eef2ff' }}>
                   <td style={{ padding: '14px', fontWeight: 900, color: '#4338ca' }}>TOTAL</td>
-                  <td style={{ padding: '14px', color: '#475569', fontStyle: 'italic' }}>
+                  <td style={{ padding: '14px', color: '#0f172a', fontStyle: 'italic', fontWeight: 600 }}>
                     Zero budget leak; disciplined growth resource allocation
                   </td>
                   <td style={{ padding: '14px', fontWeight: 900, color: '#047857', fontSize: 16, textAlign: 'right' }}>₹2,000</td>
@@ -342,7 +342,7 @@ export default function RewardsPage() {
 
           <div style={{
             background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 10, padding: '14px 16px',
-            fontSize: 12, color: '#334155', lineHeight: 1.6,
+            fontSize: 12, color: '#0f172a', lineHeight: 1.6,
           }}>
             <strong>Important Growth Architecture Note:</strong> The ₹900 project competition is a <strong>post-workshop engagement incentive</strong> designed to drive attendance-to-completion, not top-of-funnel acquisition spend. Top-of-funnel acquisition is driven by campus captains, verified student referrals, and the ₹300 Creator Challenge.
           </div>
@@ -364,9 +364,9 @@ export default function RewardsPage() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <span style={{ fontSize: 16 }}>{proj.rank === 1 ? '🥇' : proj.rank === 2 ? '🥈' : '🥉'}</span>
                   <span style={{ fontSize: 14, fontWeight: 700, color: '#0f172a' }}>{proj.projectName}</span>
-                  <span style={{ fontSize: 12, color: '#64748b' }}>by {proj.studentName} ({proj.college})</span>
+                  <span style={{ fontSize: 12, color: '#0f172a', fontWeight: 500 }}>by {proj.studentName} ({proj.college})</span>
                 </div>
-                <p style={{ fontSize: 12, color: '#475569', margin: '4px 0 0' }}>{proj.summary}</p>
+                <p style={{ fontSize: 12, color: '#0f172a', margin: '4px 0 0' }}>{proj.summary}</p>
               </div>
               <div style={{ textAlign: 'right' }}>
                 <span style={{ fontSize: 14, fontWeight: 800, color: '#047857' }}>{proj.totalScore}/100</span>

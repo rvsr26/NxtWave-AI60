@@ -71,7 +71,7 @@ export default function AdminPanel() {
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 10 }}>
             <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', padding: '10px 12px', borderRadius: 8 }}>
-              <span style={{ fontSize: 10, color: '#64748b', display: 'block', fontWeight: 700 }}>TOTAL REGS</span>
+              <span style={{ fontSize: 10, color: '#0f172a', display: 'block', fontWeight: 700 }}>TOTAL REGS</span>
               <strong style={{ fontSize: 18, color: '#0f172a' }}>{regs.length}</strong>
             </div>
             <div style={{ background: '#ecfdf5', border: '1px solid #a7f3d0', padding: '10px 12px', borderRadius: 8 }}>
@@ -103,7 +103,7 @@ export default function AdminPanel() {
             ].map(s => (
               <div key={s.name} style={{ background: '#f8fafc', border: '1px solid #e2e8f0', padding: '8px 10px', borderRadius: 6 }}>
                 <span style={{ color: s.color, fontWeight: 700 }}>{s.name}</span>
-                <p style={{ margin: '4px 0 0', color: '#0f172a', fontSize: 13, fontWeight: 800 }}>{s.planned} <span style={{ fontSize: 10, color: '#64748b', fontWeight: 500 }}>target</span></p>
+                <p style={{ margin: '4px 0 0', color: '#0f172a', fontSize: 13, fontWeight: 800 }}>{s.planned} <span style={{ fontSize: 10, color: '#0f172a', fontWeight: 600 }}>target</span></p>
               </div>
             ))}
           </div>
@@ -116,7 +116,7 @@ export default function AdminPanel() {
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 10 }}>
             <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', padding: '10px 12px', borderRadius: 8 }}>
-              <span style={{ fontSize: 10, color: '#64748b', display: 'block', fontWeight: 700 }}>TOTAL REFERRALS</span>
+              <span style={{ fontSize: 10, color: '#0f172a', display: 'block', fontWeight: 700 }}>TOTAL REFERRALS</span>
               <strong style={{ fontSize: 16, color: '#0f172a' }}>{state.referrals.length || 120}</strong>
             </div>
             <div style={{ background: '#ecfdf5', border: '1px solid #a7f3d0', padding: '10px 12px', borderRadius: 8 }}>
@@ -141,7 +141,7 @@ export default function AdminPanel() {
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 10 }}>
             <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', padding: '10px 12px', borderRadius: 8 }}>
-              <span style={{ fontSize: 10, color: '#64748b', display: 'block', fontWeight: 700 }}>CREATORS / ASSETS</span>
+              <span style={{ fontSize: 10, color: '#0f172a', display: 'block', fontWeight: 700 }}>CREATORS / ASSETS</span>
               <strong style={{ fontSize: 16, color: '#0f172a' }}>3 creators (3 assets)</strong>
             </div>
             <div style={{ background: '#eef2ff', border: '1px solid #c7d2fe', padding: '10px 12px', borderRadius: 8 }}>
@@ -166,7 +166,7 @@ export default function AdminPanel() {
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 10 }}>
             <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', padding: '10px 12px', borderRadius: 8 }}>
-              <span style={{ fontSize: 10, color: '#64748b', display: 'block', fontWeight: 700 }}>REGISTERED</span>
+              <span style={{ fontSize: 10, color: '#0f172a', display: 'block', fontWeight: 700 }}>REGISTERED</span>
               <strong style={{ fontSize: 16, color: '#0f172a' }}>500</strong>
             </div>
             <div style={{ background: '#ecfdf5', border: '1px solid #a7f3d0', padding: '10px 12px', borderRadius: 8 }}>
@@ -269,7 +269,7 @@ export default function AdminPanel() {
               }}>
                 {i + 1}
               </div>
-              <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.5, flex: 1, margin: 0 }}>{step}</p>
+              <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.5, flex: 1, margin: 0 }}>{step}</p>
             </div>
           ))}
         </div>
@@ -288,7 +288,7 @@ export default function AdminPanel() {
               display: 'flex', justifyContent: 'space-between', alignItems: 'center',
               padding: '10px 14px', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 8,
             }}>
-              <span style={{ fontSize: 13, color: '#334155', fontWeight: 600 }}>{item.label}</span>
+              <span style={{ fontSize: 13, color: '#0f172a', fontWeight: 600 }}>{item.label}</span>
               <span style={{
                 fontSize: 12, fontWeight: 700,
                 color: item.configured ? '#047857' : '#b45309',
@@ -298,7 +298,7 @@ export default function AdminPanel() {
             </div>
           ))}
         </div>
-        <p style={{ fontSize: 12, color: '#64748b', marginTop: 12, margin: '12px 0 0' }}>
+        <p style={{ fontSize: 12, color: '#0f172a', marginTop: 12, margin: '12px 0 0' }}>
           All features work without API keys. See .env.example for configuration.
         </p>
       </div>

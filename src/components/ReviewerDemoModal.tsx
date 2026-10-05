@@ -117,7 +117,7 @@ export default function ReviewerDemoModal({ currentStep, onSelectStep, onClose }
         <button
           onClick={onClose}
           style={{
-            background: 'none', border: 'none', color: '#64748b',
+            background: 'none', border: 'none', color: '#0f172a',
             cursor: 'pointer', fontSize: 18, padding: '2px 6px',
           }}
           title="Close review tour"
@@ -159,7 +159,7 @@ export default function ReviewerDemoModal({ currentStep, onSelectStep, onClose }
           </p>
         </div>
 
-        <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.5, margin: '6px 0 10px' }}>
+        <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.5, margin: '6px 0 10px' }}>
           {active.description}
         </p>
 
@@ -188,7 +188,7 @@ export default function ReviewerDemoModal({ currentStep, onSelectStep, onClose }
           ← Prev
         </button>
 
-        <span style={{ fontSize: 11, color: '#64748b' }}>
+        <span style={{ fontSize: 11, color: '#0f172a', fontWeight: 600 }}>
           Under 3-min walkthrough
         </span>
 

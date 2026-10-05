@@ -122,7 +122,7 @@ export default function CampusCaptainPage() {
               <p style={{ fontSize: 40, fontWeight: 900, color: '#0f172a', lineHeight: 1, letterSpacing: '-0.03em' }}>
                 #{rank}
               </p>
-              <p style={{ fontSize: 12, color: '#64748b', fontWeight: 700 }}>Campus Rank</p>
+              <p style={{ fontSize: 12, color: '#0f172a', fontWeight: 700 }}>Campus Rank</p>
             </div>
           </div>
 
@@ -139,7 +139,7 @@ export default function CampusCaptainPage() {
                 borderRadius: 10, padding: '14px 16px', textAlign: 'center',
               }}>
                 <p style={{ fontSize: 24, fontWeight: 800, color: s.color, lineHeight: 1 }}>{s.value}</p>
-                <p style={{ fontSize: 11, color: '#64748b', marginTop: 4, fontWeight: 700 }}>{s.label.toUpperCase()}</p>
+                <p style={{ fontSize: 11, color: '#0f172a', marginTop: 4, fontWeight: 700 }}>{s.label.toUpperCase()}</p>
               </div>
             ))}
           </div>
@@ -170,7 +170,7 @@ export default function CampusCaptainPage() {
           <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 15, marginBottom: 4 }}>
             📤 Campus Share Link
           </p>
-          <p style={{ fontSize: 13, color: '#475569', marginBottom: 14 }}>
+          <p style={{ fontSize: 13, color: '#0f172a', marginBottom: 14 }}>
             Every student who registers via this link is attributed to {captain.college}
           </p>
 
@@ -244,7 +244,7 @@ export default function CampusCaptainPage() {
         }}>
           Become a Campus Captain
         </h1>
-        <p style={{ color: '#475569', fontSize: 15, lineHeight: 1.6, maxWidth: 420, margin: '0 auto' }}>
+        <p style={{ color: '#0f172a', fontSize: 15, lineHeight: 1.6, maxWidth: 420, margin: '0 auto' }}>
           Lead your campus in the AI60 campaign. Get a tracked link, dashboard, and milestone progress tracker.
         </p>
       </div>
@@ -260,7 +260,7 @@ export default function CampusCaptainPage() {
           <div key={item.title} className="card" style={{ padding: 16, background: '#ffffff', border: '1px solid #cbd5e1' }}>
             <div style={{ fontSize: 24, marginBottom: 8 }}>{item.emoji}</div>
             <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 14, marginBottom: 4 }}>{item.title}</p>
-            <p style={{ fontSize: 12, color: '#475569', margin: 0 }}>{item.desc}</p>
+            <p style={{ fontSize: 12, color: '#0f172a', margin: 0 }}>{item.desc}</p>
           </div>
         ))}
       </div>
@@ -271,31 +271,31 @@ export default function CampusCaptainPage() {
           <h3 style={{ fontWeight: 800, color: '#0f172a', fontSize: 16, margin: 0 }}>Join as Campus Captain</h3>
 
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>Full Name *</label>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>Full Name *</label>
             <input id="captain-name" type="text" className="input-base" placeholder="Your full name" value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} />
             {errors.name && <p style={{ color: '#dc2626', fontSize: 12, marginTop: 4 }}>{errors.name}</p>}
           </div>
 
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>Email *</label>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>Email *</label>
             <input id="captain-email" type="email" className="input-base" placeholder="you@college.edu" value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} />
             {errors.email && <p style={{ color: '#dc2626', fontSize: 12, marginTop: 4 }}>{errors.email}</p>}
           </div>
 
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>College *</label>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>College *</label>
             <input id="captain-college" type="text" className="input-base" placeholder="e.g. Amrita University" value={form.college} onChange={e => setForm(f => ({ ...f, college: e.target.value }))} />
             {errors.college && <p style={{ color: '#dc2626', fontSize: 12, marginTop: 4 }}>{errors.college}</p>}
           </div>
 
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>WhatsApp Number *</label>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>WhatsApp Number *</label>
             <input id="captain-whatsapp" type="tel" className="input-base" placeholder="+91 98xxx xxxxx" value={form.whatsapp} onChange={e => setForm(f => ({ ...f, whatsapp: e.target.value }))} />
             {errors.whatsapp && <p style={{ color: '#dc2626', fontSize: 12, marginTop: 4 }}>{errors.whatsapp}</p>}
           </div>
 
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>Campus Code *</label>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>Campus Code *</label>
             <select
               id="captain-campus-code"
               className="input-base"
@@ -329,7 +329,7 @@ export default function CampusCaptainPage() {
             {loading ? '⟳ Setting up...' : '⚡ Become Campus Captain'}
           </button>
 
-          <p style={{ fontSize: 11, color: '#64748b', textAlign: 'center', margin: 0 }}>
+          <p style={{ fontSize: 11, color: '#0f172a', textAlign: 'center', margin: 0 }}>
             No commitment required. This is a volunteer campaign role.
             Physical rewards are not guaranteed unless explicitly communicated by NxtWave.
           </p>
@@ -344,7 +344,7 @@ export default function CampusCaptainPage() {
               <h3 style={{ fontSize: 16, fontWeight: 800, color: '#0f172a', margin: 0 }}>
                 ⚡ Campus Captain Quality &amp; Conversion
               </h3>
-              <p style={{ fontSize: 12, color: '#64748b', margin: '2px 0 0' }}>
+              <p style={{ fontSize: 12, color: '#0f172a', margin: '2px 0 0' }}>
                 Which captains are producing qualified registrations efficiently?
               </p>
             </div>
@@ -387,7 +387,7 @@ export default function CampusCaptainPage() {
                       <p style={{ fontWeight: 700, color: '#0f172a', fontSize: 14, margin: 0 }}>
                         {cap.name}
                       </p>
-                      <p style={{ fontSize: 12, color: '#64748b', margin: 0 }}>
+                      <p style={{ fontSize: 12, color: '#0f172a', margin: 0 }}>
                         {cap.college} · <span className="mono" style={{ color: '#4338ca', fontWeight: 600 }}>{cap.campusCode}</span>
                       </p>
                     </div>
@@ -395,7 +395,7 @@ export default function CampusCaptainPage() {
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: 18, flexWrap: 'wrap' }}>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: 10, color: '#64748b', textTransform: 'uppercase', margin: 0, fontWeight: 700 }}>Total Regs</p>
+                      <p style={{ fontSize: 10, color: '#0f172a', textTransform: 'uppercase', margin: 0, fontWeight: 700 }}>Total Regs</p>
                       <p className="mono" style={{ fontSize: 14, fontWeight: 700, color: '#0f172a', margin: 0 }}>{cap.registrations}</p>
                     </div>
                     <div style={{ textAlign: 'right' }}>

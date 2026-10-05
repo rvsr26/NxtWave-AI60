@@ -95,7 +95,7 @@ export default function RegistrationForm({ onSuccess }: Props) {
         }}>
           Reserve Your Free Workshop Seat
         </h2>
-        <p style={{ color: '#64748b', fontSize: 14, margin: 0 }}>
+        <p style={{ color: '#0f172a', fontSize: 14, margin: 0, fontWeight: 600 }}>
           Target: Final-Year Engineering Students — Class of 2027
         </p>
       </div>
@@ -113,7 +113,7 @@ export default function RegistrationForm({ onSuccess }: Props) {
 
           {/* 1. Name */}
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>
               Full Name *
             </label>
             <input
@@ -130,7 +130,7 @@ export default function RegistrationForm({ onSuccess }: Props) {
 
           {/* 2. Email */}
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>
               College Email Address *
             </label>
             <input
@@ -147,7 +147,7 @@ export default function RegistrationForm({ onSuccess }: Props) {
 
           {/* 3. College */}
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>
               College / University *
             </label>
             <input
@@ -163,7 +163,7 @@ export default function RegistrationForm({ onSuccess }: Props) {
 
           {/* 4. Engineering Branch */}
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>
               Engineering Branch *
             </label>
             <select
@@ -184,7 +184,7 @@ export default function RegistrationForm({ onSuccess }: Props) {
 
           {/* 5. Graduation Year: Class of 2027 */}
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>
               Graduation Year *
             </label>
             <div style={{
@@ -195,7 +195,7 @@ export default function RegistrationForm({ onSuccess }: Props) {
               <span style={{ fontSize: 18 }}>🎓</span>
               <div>
                 <span style={{ fontWeight: 800, color: '#4338ca', fontSize: 14 }}>Class of 2027 (Pre-final / Final-Year Placement Track)</span>
-                <p style={{ fontSize: 11, color: '#64748b', margin: '2px 0 0' }}>
+                <p style={{ fontSize: 11, color: '#0f172a', margin: '2px 0 0', fontWeight: 600 }}>
                   Curriculum and starter repositories calibrated for 2027 placement season.
                 </p>
               </div>
@@ -204,7 +204,7 @@ export default function RegistrationForm({ onSuccess }: Props) {
 
           {/* Interest */}
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>
               Primary Interest *
             </label>
             <select
@@ -222,8 +222,8 @@ export default function RegistrationForm({ onSuccess }: Props) {
           {/* Campus Code */}
           {campuses.length > 0 && (
             <div>
-              <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>
-                Campus Code <span style={{ fontWeight: 400, color: '#94a3b8' }}>(optional)</span>
+              <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>
+                Campus Code <span style={{ fontWeight: 600, color: '#0f172a' }}>(optional)</span>
               </label>
               <select
                 id="reg-campus"
@@ -243,8 +243,8 @@ export default function RegistrationForm({ onSuccess }: Props) {
 
           {/* Referral Code */}
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 6 }}>
-              Referral Code <span style={{ fontWeight: 400, color: '#94a3b8' }}>(optional)</span>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>
+              Referral Code <span style={{ fontWeight: 600, color: '#0f172a' }}>(optional)</span>
             </label>
             <input
               id="reg-referral"
@@ -271,7 +271,7 @@ export default function RegistrationForm({ onSuccess }: Props) {
             )}
           </button>
 
-          <p style={{ textAlign: 'center', fontSize: 12, color: '#64748b', margin: 0 }}>
+          <p style={{ textAlign: 'center', fontSize: 12, color: '#0f172a', margin: 0, fontWeight: 600 }}>
             Free workshop · No credit card · We don't spam
           </p>
         </div>

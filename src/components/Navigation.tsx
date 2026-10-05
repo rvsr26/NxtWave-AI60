@@ -53,7 +53,7 @@ function NavSection({
       {label && (
         <p style={{
           fontSize: 10, fontWeight: 800, letterSpacing: '0.08em',
-          color: '#64748b', textTransform: 'uppercase',
+          color: '#0f172a', textTransform: 'uppercase',
           padding: '12px 14px 6px', margin: 0,
         }}>
           {label}
@@ -71,8 +71,8 @@ function NavSection({
               width: '100%',
               textAlign: 'left',
               backgroundColor: isActive ? '#eef2ff' : 'transparent',
-              color: isActive ? '#4338ca' : '#475569',
-              fontWeight: isActive ? 700 : 500,
+              color: isActive ? '#4338ca' : '#0f172a',
+              fontWeight: isActive ? 700 : 600,
               borderLeft: isActive ? '3px solid #4f46e5' : '3px solid transparent',
               borderRadius: '6px',
               padding: '8px 12px',
@@ -138,7 +138,7 @@ export function Sidebar({ currentPage, onNavigate }: NavigationProps) {
                 <span style={{ fontSize: 9, fontWeight: 800, background: '#fef3c7', color: '#b45309', padding: '1px 5px', borderRadius: 4, letterSpacing: '0.04em' }}>LOCAL MODE</span>
               )}
             </div>
-            <p style={{ fontSize: 10, fontWeight: 700, color: '#64748b', lineHeight: 1, marginTop: 4, letterSpacing: '0.04em', margin: '4px 0 0' }}>GROWTH CHALLENGE</p>
+            <p style={{ fontSize: 10, fontWeight: 700, color: '#0f172a', lineHeight: 1, marginTop: 4, letterSpacing: '0.04em', margin: '4px 0 0' }}>GROWTH CHALLENGE</p>
           </div>
         </button>
       </div>
@@ -158,7 +158,7 @@ export function Sidebar({ currentPage, onNavigate }: NavigationProps) {
           <div className="progress-fill" style={{ width: `${Math.min((totalRegs / 500) * 100, 100)}%`, background: 'linear-gradient(90deg, #16a34a, #22c55e)' }} />
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 5 }}>
-          <span style={{ fontSize: 10, color: '#64748b', fontWeight: 500 }}>of 500 student target</span>
+          <span style={{ fontSize: 10, color: '#0f172a', fontWeight: 600 }}>of 500 student target</span>
           <span style={{ fontSize: 10, color: '#15803d', fontWeight: 700 }}>{Math.round((totalRegs / 500) * 100)}%</span>
         </div>
       </div>
@@ -174,7 +174,7 @@ export function Sidebar({ currentPage, onNavigate }: NavigationProps) {
 
       {/* Footer */}
       <div style={{ padding: '12px 16px', borderTop: '1px solid #f1f5f9', background: '#fafafa' }}>
-        <p style={{ fontSize: 10, color: '#64748b', lineHeight: 1.5, margin: 0, fontWeight: 500 }}>
+        <p style={{ fontSize: 10, color: '#0f172a', lineHeight: 1.5, margin: 0, fontWeight: 600 }}>
           AI60 Challenge · NxtWave Growth
         </p>
         <p style={{ fontSize: 10, color: '#b45309', marginTop: 3, margin: '3px 0 0', fontWeight: 600 }}>
@@ -218,7 +218,7 @@ export function TopBar({ currentPage, onNavigate }: NavigationProps) {
         }}>60</div>
         <div style={{ textAlign: 'left' }}>
           <span style={{ fontSize: 15, fontWeight: 900, color: '#0f172a' }}>AI60</span>
-          <span style={{ fontSize: 10, color: '#64748b', marginLeft: 6, fontWeight: 600 }}>CHALLENGE</span>
+          <span style={{ fontSize: 10, color: '#0f172a', marginLeft: 6, fontWeight: 700 }}>CHALLENGE</span>
         </div>
       </button>
 

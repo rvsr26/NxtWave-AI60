@@ -41,7 +41,7 @@ export default function ExperimentLab() {
           </h1>
           <span className="chip chip-demo">Illustrative Simulation</span>
         </div>
-        <p style={{ color: '#475569', fontSize: 15, lineHeight: 1.6 }}>
+        <p style={{ color: '#0f172a', fontSize: 15, lineHeight: 1.6, fontWeight: 500 }}>
           Growth experiments with defined hypotheses, metrics, and decisions.
           This demonstrates how A/B testing would work in the real campaign.
         </p>
@@ -59,7 +59,7 @@ export default function ExperimentLab() {
               borderRadius: 10, fontSize: 13, fontWeight: 600, cursor: 'pointer',
               border: selected === e.id ? '1.5px solid #4f46e5' : '1px solid #cbd5e1',
               background: selected === e.id ? '#eef2ff' : '#ffffff',
-              color: selected === e.id ? '#4338ca' : '#475569',
+              color: selected === e.id ? '#4338ca' : '#0f172a',
             }}
           >
             Exp #{e.number} — {e.title.split(' ').slice(0, 4).join(' ')}…
@@ -74,7 +74,7 @@ export default function ExperimentLab() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 16, flexWrap: 'wrap', marginBottom: 16 }}>
             <div style={{ flex: 1 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
-                <span className="mono" style={{ fontSize: 12, color: '#64748b', fontWeight: 600 }}>Experiment #{exp.number}</span>
+                <span className="mono" style={{ fontSize: 12, color: '#0f172a', fontWeight: 700 }}>Experiment #{exp.number}</span>
                 <span style={{
                   fontSize: 11, fontWeight: 700, padding: '3px 9px', borderRadius: 999,
                   background: `${statusColor}18`, color: statusColor,
@@ -116,19 +116,19 @@ export default function ExperimentLab() {
         }}>
           <div>
             <span style={{ color: '#4338ca', fontWeight: 800 }}>1. HYPOTHESIS</span>
-            <p style={{ margin: '2px 0 0', color: '#64748b', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>Defined value angle</p>
+            <p style={{ margin: '2px 0 0', color: '#0f172a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontWeight: 600 }}>Defined value angle</p>
           </div>
           <div>
             <span style={{ color: '#4338ca', fontWeight: 800 }}>2. TEST</span>
-            <p style={{ margin: '2px 0 0', color: '#64748b', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>50/50 Split A/B</p>
+            <p style={{ margin: '2px 0 0', color: '#0f172a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontWeight: 600 }}>50/50 Split A/B</p>
           </div>
           <div>
             <span style={{ color: '#4338ca', fontWeight: 800 }}>3. METRIC</span>
-            <p style={{ margin: '2px 0 0', color: '#64748b', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{exp.metric.split(' ')[0]}...</p>
+            <p style={{ margin: '2px 0 0', color: '#0f172a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontWeight: 600 }}>{exp.metric.split(' ')[0]}...</p>
           </div>
           <div>
             <span style={{ color: exp.status === 'completed' ? '#047857' : '#b45309', fontWeight: 800 }}>4. SIGNAL</span>
-            <p style={{ margin: '2px 0 0', color: '#64748b', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            <p style={{ margin: '2px 0 0', color: '#0f172a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontWeight: 600 }}>
               {exp.status === 'completed' ? 'Signal Achieved' : 'Awaiting Data'}
             </p>
           </div>
@@ -138,7 +138,7 @@ export default function ExperimentLab() {
           </div>
           <div>
             <span style={{ color: '#047857', fontWeight: 800 }}>6. NEXT ACTION</span>
-            <p style={{ margin: '2px 0 0', color: '#64748b', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            <p style={{ margin: '2px 0 0', color: '#0f172a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontWeight: 600 }}>
               {exp.action === 'SCALE' ? 'Scale Winner' : exp.action === 'KILL' ? 'Kill & Protect Budget' : 'Validate in Cohort'}
             </p>
           </div>
@@ -152,7 +152,7 @@ export default function ExperimentLab() {
             <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 15, marginBottom: 12, lineHeight: 1.4 }}>
               {exp.control.label}
             </p>
-            <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.6, marginBottom: 16 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.6, marginBottom: 16 }}>
               {exp.control.description}
             </p>
             <div className="divider" style={{ marginBottom: 16, borderColor: '#e2e8f0' }} />
@@ -161,7 +161,7 @@ export default function ExperimentLab() {
               textAlign: 'center', border: '1px solid #e2e8f0',
             }}>
               <span className="chip chip-amber" style={{ fontSize: 11 }}>Awaiting Live Traffic</span>
-              <p style={{ fontSize: 11, color: '#64748b', marginTop: 6, margin: 0 }}>
+              <p style={{ fontSize: 11, color: '#0f172a', marginTop: 6, margin: 0, fontWeight: 600 }}>
                 Sample allocation: 50%
               </p>
             </div>
@@ -173,7 +173,7 @@ export default function ExperimentLab() {
             <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 15, marginBottom: 12, lineHeight: 1.4 }}>
               {exp.variant.label}
             </p>
-            <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.6, marginBottom: 16 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.6, marginBottom: 16 }}>
               {exp.variant.description}
             </p>
             <div className="divider" style={{ marginBottom: 16, borderColor: '#e2e8f0' }} />
@@ -201,14 +201,14 @@ export default function ExperimentLab() {
               <p style={{ fontSize: 18, fontWeight: 800, color: '#0f172a', margin: 0 }}>
                 {exp.resultStatus || 'Awaiting data'}
               </p>
-              <p style={{ fontSize: 13, color: '#475569', marginTop: 4, margin: 0 }}>
+              <p style={{ fontSize: 13, color: '#0f172a', marginTop: 4, margin: 0 }}>
                 Primary Evaluated Metric: <strong style={{ color: '#0f172a' }}>{exp.metric}</strong>
               </p>
             </div>
 
             {/* Decision Framework Action */}
             <div style={{ textAlign: 'right' }}>
-              <p className="section-label" style={{ marginBottom: 4, color: '#64748b' }}>Framework Recommendation</p>
+              <p className="section-label" style={{ marginBottom: 4, color: '#0f172a', fontWeight: 700 }}>Framework Recommendation</p>
               <div style={{ display: 'flex', gap: 6, justifyContent: 'flex-end', marginTop: 4 }}>
                 {(['KILL', 'ITERATE', 'CONTINUE', 'SCALE'] as const).map(act => (
                   <span
@@ -217,8 +217,8 @@ export default function ExperimentLab() {
                       padding: '4px 10px', borderRadius: 6, fontSize: 11, fontWeight: 800,
                       letterSpacing: '0.05em',
                       background: exp.action === act ? '#4338ca' : '#f1f5f9',
-                      border: exp.action === act ? '1px solid #3730a3' : '1px solid #e2e8f0',
-                      color: exp.action === act ? '#ffffff' : '#94a3b8',
+                      border: exp.action === act ? '1px solid #3730a3' : '1px solid #cbd5e1',
+                      color: exp.action === act ? '#ffffff' : '#0f172a',
                     }}
                   >
                     {act}
@@ -264,21 +264,21 @@ export default function ExperimentLab() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               <div style={{ background: '#ffffff', padding: '12px 14px', borderRadius: 8, border: '1px solid #fecaca' }}>
                 <p className="section-label" style={{ color: '#dc2626', marginBottom: 4, fontWeight: 800 }}>🔍 WHAT HAPPENED?</p>
-                <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.6, margin: 0 }}>
                   {exp.autopsy.whatHappened}
                 </p>
               </div>
 
               <div style={{ background: '#ffffff', padding: '12px 14px', borderRadius: 8, border: '1px solid #fde68a' }}>
                 <p className="section-label" style={{ color: '#b45309', marginBottom: 4, fontWeight: 800 }}>💭 WHY IT MAY HAVE HAPPENED (Hypothesis / Possible Explanation)</p>
-                <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.6, margin: 0 }}>
                   {exp.autopsy.possibleInterpretation}
                 </p>
               </div>
 
               <div style={{ background: '#ffffff', padding: '12px 14px', borderRadius: 8, border: '1px solid #a7f3d0' }}>
                 <p className="section-label" style={{ color: '#047857', marginBottom: 4, fontWeight: 800 }}>🚀 WHAT I WOULD TEST NEXT</p>
-                <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.6, margin: 0 }}>
                   {exp.autopsy.whatToTestNext}
                 </p>
               </div>

@@ -26,7 +26,7 @@ export default function DecisionLogPage() {
           </h1>
           <span className="chip chip-demo">Illustrative</span>
         </div>
-        <p style={{ color: '#475569', fontSize: 15, lineHeight: 1.6, maxWidth: 600 }}>
+        <p style={{ color: '#0f172a', fontSize: 15, lineHeight: 1.6, maxWidth: 600, fontWeight: 500 }}>
           Every growth decision documented: observation → reasoning → action → outcome.
           This is what separates a growth operator from someone who just ships features.
         </p>
@@ -80,7 +80,7 @@ export default function DecisionLogPage() {
                     {status.label}
                   </div>
                 </div>
-                <span style={{ fontSize: 12, color: '#64748b', fontWeight: 600 }}>
+                <span style={{ fontSize: 12, color: '#0f172a', fontWeight: 700 }}>
                   {new Date(log.createdAt).toLocaleDateString('en-IN', {
                     day: 'numeric', month: 'short', year: 'numeric',
                   })}
@@ -89,7 +89,7 @@ export default function DecisionLogPage() {
 
               {/* Observation */}
               <div style={{ marginBottom: 14 }}>
-                <p className="section-label" style={{ marginBottom: 6, color: '#64748b', fontWeight: 700 }}>
+                <p className="section-label" style={{ marginBottom: 6, color: '#0f172a', fontWeight: 800 }}>
                   👀 Observation
                 </p>
                 <p style={{ fontSize: 14, color: '#0f172a', lineHeight: 1.7, margin: 0 }}>
@@ -109,7 +109,7 @@ export default function DecisionLogPage() {
                 </div>
                 <div>
                   <p className="section-label" style={{ marginBottom: 6, color: '#047857', fontWeight: 800 }}>💭 Reason</p>
-                  <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.6, margin: 0 }}>
+                  <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.6, margin: 0 }}>
                     {log.reason}
                   </p>
                 </div>
@@ -147,7 +147,7 @@ export default function DecisionLogPage() {
         <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 16, marginBottom: 12 }}>
           🚀 Growth Operating Principle
         </p>
-        <p style={{ fontSize: 14, color: '#334155', lineHeight: 1.8, margin: 0 }}>
+        <p style={{ fontSize: 14, color: '#0f172a', lineHeight: 1.8, margin: 0 }}>
           Every decision in this log represents the core growth loop in action:{' '}
           <strong style={{ color: '#4338ca' }}>Discover → Personalize → Register → Share → Attribute → Measure → Experiment → Learn → Scale.</strong>
           <br /><br />

@@ -34,7 +34,7 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
         }}>
           Your personalized project is ready
         </h2>
-        <p style={{ color: '#64748b', fontSize: 14, marginTop: 8 }}>
+        <p style={{ color: '#0f172a', fontSize: 14, marginTop: 8, fontWeight: 500 }}>
           This is an example project concept tailored to your interests — not a guaranteed workshop curriculum.
         </p>
       </div>
@@ -79,7 +79,7 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
                 </h3>
               </div>
             </div>
-            <p style={{ color: '#334155', fontSize: 14, lineHeight: 1.6 }}>
+            <p style={{ color: '#0f172a', fontSize: 14, lineHeight: 1.6 }}>
               {passport.description}
             </p>
           </div>
@@ -90,7 +90,7 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
         {/* Metadata row */}
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 20 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span style={{ fontSize: 12, color: '#64748b', fontWeight: 600 }}>Difficulty:</span>
+            <span style={{ fontSize: 12, color: '#0f172a', fontWeight: 700 }}>Difficulty:</span>
             <span style={{
               fontSize: 12, fontWeight: 700, color: difficultyColor,
               background: `${difficultyColor}14`,
@@ -99,7 +99,7 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
             }}>{passport.difficulty}</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span style={{ fontSize: 12, color: '#64748b', fontWeight: 600 }}>Area:</span>
+            <span style={{ fontSize: 12, color: '#0f172a', fontWeight: 700 }}>Area:</span>
             <span className="chip chip-brand" style={{ fontSize: 11 }}>{passport.interest}</span>
           </div>
         </div>
@@ -134,9 +134,9 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
             <span>💡</span> Why This Project Fits You
           </p>
           <div style={{
-            fontSize: 12, color: '#334155', marginBottom: 12,
+            fontSize: 12, color: '#0f172a', marginBottom: 12,
             background: '#ffffff', border: '1px solid #a7f3d0', padding: '6px 12px', borderRadius: 8, display: 'inline-block',
-            fontWeight: 500,
+            fontWeight: 600,
           }}>
             Selected: <strong style={{ color: '#4338ca' }}>{passport.interest}</strong> + <strong style={{ color: '#047857' }}>{passport.difficulty}</strong> + <span style={{ color: '#b45309', fontWeight: 700 }}>Class of 2027</span>
           </div>
@@ -188,7 +188,7 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
             <p style={{ fontSize: 13, color: '#1e1b4b', lineHeight: 1.6, fontStyle: 'italic', margin: 0, fontWeight: 500 }}>
               • {passport.resumeBullet}
             </p>
-            <p style={{ fontSize: 11, color: '#64748b', marginTop: 8, margin: '8px 0 0' }}>
+            <p style={{ fontSize: 11, color: '#0f172a', marginTop: 8, margin: '8px 0 0', fontWeight: 600 }}>
               Action-oriented technical bullet point tailored for 2027 campus placements.
             </p>
           </div>
@@ -206,7 +206,7 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
             <p style={{ fontSize: 13, color: '#064e3b', lineHeight: 1.6, margin: 0, fontWeight: 500 }}>
               {passport.interviewTalkingPoint}
             </p>
-            <p style={{ fontSize: 11, color: '#64748b', marginTop: 8, margin: '8px 0 0' }}>
+            <p style={{ fontSize: 11, color: '#0f172a', marginTop: 8, margin: '8px 0 0', fontWeight: 600 }}>
               Architectural defense statement for answering “Walk me through an AI project you've built.”
             </p>
           </div>
@@ -231,7 +231,7 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
                   }}>
                     {item.time}
                   </span>
-                  <span style={{ color: '#334155', lineHeight: 1.5 }}>
+                  <span style={{ color: '#0f172a', lineHeight: 1.5 }}>
                     {item.task}
                   </span>
                 </div>
@@ -264,7 +264,7 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
           <span style={{ fontSize: 16, flexShrink: 0, color: '#4f46e5' }}>→</span>
           <div>
             <p className="section-label" style={{ marginBottom: 4 }}>Next Step After Workshop</p>
-            <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.5, margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.5, margin: 0 }}>
               {passport.nextStep}
             </p>
           </div>
@@ -308,7 +308,7 @@ export default function PassportCard({ passport, onRegister, referralCode }: Pro
 
       <p style={{
         textAlign: 'center', fontSize: 12,
-        color: '#64748b', marginTop: 20,
+        color: '#0f172a', marginTop: 20, fontWeight: 500,
       }}>
         This is a personalized project concept, not a guaranteed workshop curriculum.
       </p>

@@ -73,7 +73,7 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
         }}>
           You're in, {reg.name.split(' ')[0]}!
         </h2>
-        <p style={{ color: '#475569', fontSize: 15, marginBottom: 32, lineHeight: 1.6 }}>
+        <p style={{ color: '#0f172a', fontSize: 15, marginBottom: 32, lineHeight: 1.6 }}>
           Your seat is reserved for <strong>Build Your First AI Project in 60 Minutes</strong>.<br />
           Now share your referral link and compete on the campus leaderboard!
         </p>
@@ -94,7 +94,7 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
               }}>🤖</div>
               <div>
                 <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 17, margin: 0 }}>{passport.projectName}</p>
-                <p style={{ fontSize: 13, color: '#64748b', marginTop: 2, margin: '2px 0 0' }}>
+                <p style={{ fontSize: 13, color: '#0f172a', marginTop: 2, margin: '2px 0 0', fontWeight: 600 }}>
                   {passport.difficulty} · {passport.interest} · {reg.branch}
                 </p>
               </div>
@@ -116,19 +116,19 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
           {/* 4 Stats Grid */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 10, marginBottom: 16 }}>
             <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 8, padding: '10px 12px' }}>
-              <p style={{ fontSize: 10, color: '#64748b', fontWeight: 700, margin: 0 }}>REFERRAL CODE</p>
+              <p style={{ fontSize: 10, color: '#0f172a', fontWeight: 800, margin: 0 }}>REFERRAL CODE</p>
               <p className="mono" style={{ fontSize: 16, fontWeight: 900, color: '#4338ca', margin: '4px 0 0' }}>{reg.referralCode}</p>
             </div>
             <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 8, padding: '10px 12px' }}>
-              <p style={{ fontSize: 10, color: '#64748b', fontWeight: 700, margin: 0 }}>QUALIFIED REFERRALS</p>
+              <p style={{ fontSize: 10, color: '#0f172a', fontWeight: 800, margin: 0 }}>QUALIFIED REFERRALS</p>
               <p style={{ fontSize: 18, fontWeight: 900, color: '#047857', margin: '4px 0 0' }}>{qualifiedCount}</p>
             </div>
             <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 8, padding: '10px 12px' }}>
-              <p style={{ fontSize: 10, color: '#64748b', fontWeight: 700, margin: 0 }}>CURRENT RANK</p>
+              <p style={{ fontSize: 10, color: '#0f172a', fontWeight: 800, margin: 0 }}>CURRENT RANK</p>
               <p style={{ fontSize: 18, fontWeight: 900, color: '#b45309', margin: '4px 0 0' }}>#{currentRank}</p>
             </div>
             <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 8, padding: '10px 12px' }}>
-              <p style={{ fontSize: 10, color: '#64748b', fontWeight: 700, margin: 0 }}>REWARD STATUS</p>
+              <p style={{ fontSize: 10, color: '#0f172a', fontWeight: 800, margin: 0 }}>REWARD STATUS</p>
               <p style={{ fontSize: 11, fontWeight: 800, color: '#047857', margin: '4px 0 0', lineHeight: 1.3 }}>{rewardStatusText}</p>
             </div>
           </div>
@@ -142,7 +142,7 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
             <p style={{ fontSize: 13, fontWeight: 700, color: qualifiedCount >= 3 ? '#047857' : '#4338ca', marginBottom: 4, margin: '0 0 4px' }}>
               🏆 Top 3 Referral Rewards: #1 ₹250 · #2 ₹150 · #3 ₹100
             </p>
-            <p style={{ fontSize: 12, color: '#475569', margin: 0, lineHeight: 1.5 }}>
+            <p style={{ fontSize: 12, color: '#0f172a', margin: 0, lineHeight: 1.5, fontWeight: 500 }}>
               Referrals qualify only after verified registration. Anti-fraud checks prevent duplicate signups and self-referrals.
             </p>
           </div>
@@ -196,7 +196,7 @@ Bring your friends and compete on the referral leaderboard! 🏆`;
             <p style={{ fontSize: 13, fontWeight: 700, color: '#b45309', marginBottom: 4, margin: '0 0 4px' }}>
               🏫 Campus Code: {reg.campus}
             </p>
-            <p style={{ fontSize: 13, color: '#64748b', margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', margin: 0, fontWeight: 500 }}>
               Your registration counts toward your campus score in the AI60 Campus League!
             </p>
           </div>

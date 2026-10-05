@@ -94,7 +94,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
           <h3 style={{ fontSize: 20, fontWeight: 700, color: '#0f172a', marginBottom: 8 }}>
             Generating your project…
           </h3>
-          <p style={{ color: '#64748b', fontSize: 14 }}>
+          <p style={{ color: '#0f172a', fontSize: 14, fontWeight: 600 }}>
             Personalizing based on your interest and experience
           </p>
           <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
@@ -148,7 +148,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
 
         <p style={{
           fontSize: 18,
-          color: '#475569',
+          color: '#0f172a',
           maxWidth: 580,
           margin: '0 auto 28px',
           lineHeight: 1.6,
@@ -184,7 +184,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
         <div style={{
           display: 'inline-flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: 6,
           background: '#ffffff', border: '1px solid #e2e8f0',
-          borderRadius: 999, padding: '6px 16px', marginBottom: 28, fontSize: 11, color: '#64748b',
+          borderRadius: 999, padding: '6px 16px', marginBottom: 28, fontSize: 11, color: '#0f172a',
           boxShadow: '0 1px 3px rgba(15,23,42,0.05)',
         }}>
           <span style={{ color: '#4338ca', fontWeight: 700 }}>Discover</span>
@@ -216,7 +216,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
             </div>
           ))}
         </div>
-        <p style={{ fontSize: 12, color: '#64748b' }}>Answer a few quick questions</p>
+        <p style={{ fontSize: 12, color: '#0f172a', fontWeight: 600 }}>Answer a few quick questions</p>
       </div>
 
       {/* Form */}
@@ -231,7 +231,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
             }}>
               1. What is your Engineering Branch?
             </label>
-            <p style={{ fontSize: 13, color: '#64748b', marginBottom: 12 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', marginBottom: 12, fontWeight: 600 }}>
               Calibrated for Class of 2027 placement domains
             </p>
             <div style={{
@@ -259,7 +259,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
                     background: branch === b
                       ? '#eef2ff'
                       : '#ffffff',
-                    color: branch === b ? '#4338ca' : '#334155',
+                    color: branch === b ? '#4338ca' : '#0f172a',
                     textAlign: 'left',
                   }}
                 >
@@ -277,7 +277,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
             }}>
               2. What is your current AI / Coding skill level?
             </label>
-            <p style={{ fontSize: 13, color: '#64748b', marginBottom: 12 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', marginBottom: 12, fontWeight: 600 }}>
               Ensures your 60-minute build plan is practical and achievable
             </p>
             <div style={{ display: 'flex', gap: 10 }}>
@@ -302,7 +302,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
                     background: experience === exp
                       ? '#eef2ff'
                       : '#ffffff',
-                    color: experience === exp ? '#4338ca' : '#334155',
+                    color: experience === exp ? '#4338ca' : '#0f172a',
                   }}
                 >
                   {exp}
@@ -319,7 +319,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
             }}>
               3. What area of technology interests you most?
             </label>
-            <p style={{ fontSize: 13, color: '#64748b', marginBottom: 12 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', marginBottom: 12, fontWeight: 600 }}>
               Choose your target project medium
             </p>
             <div style={{
@@ -347,7 +347,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
                     background: interest === opt
                       ? '#eef2ff'
                       : '#ffffff',
-                    color: interest === opt ? '#4338ca' : '#334155',
+                    color: interest === opt ? '#4338ca' : '#0f172a',
                   }}
                 >
                   {opt}
@@ -364,7 +364,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
             }}>
               4. Preferred AI Domain / Career Track
             </label>
-            <p style={{ fontSize: 13, color: '#64748b', marginBottom: 12 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', marginBottom: 12, fontWeight: 600 }}>
               Tailors interview talking points to specific hiring tracks
             </p>
             <div style={{
@@ -392,7 +392,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
                     background: domain === d
                       ? '#ecfdf5'
                       : '#ffffff',
-                    color: domain === d ? '#047857' : '#334155',
+                    color: domain === d ? '#047857' : '#0f172a',
                     textAlign: 'left',
                   }}
                 >
@@ -410,7 +410,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
             }}>
               5. What do you want to build or achieve?
             </label>
-            <p style={{ fontSize: 13, color: '#64748b', marginBottom: 12 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', marginBottom: 12, fontWeight: 600 }}>
               Describe your project idea, career goal, or interview focus in a few words
             </p>
             <textarea
@@ -422,7 +422,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
               onChange={e => setGoal(e.target.value)}
               maxLength={300}
             />
-            <p style={{ fontSize: 11, color: '#94a3b8', marginTop: 4, textAlign: 'right' }}>
+            <p style={{ fontSize: 11, color: '#0f172a', marginTop: 4, textAlign: 'right', fontWeight: 600 }}>
               {goal.length}/300
             </p>
           </div>
@@ -450,7 +450,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
             Generate My Project
           </button>
 
-          <p style={{ textAlign: 'center', fontSize: 12, color: '#64748b' }}>
+          <p style={{ textAlign: 'center', fontSize: 12, color: '#0f172a', fontWeight: 600 }}>
             Free workshop · No credit card · Takes 60 seconds
           </p>
         </div>
@@ -460,7 +460,7 @@ export default function PassportGenerator({ onPassportGenerated, onRegister, onS
           marginTop: 28, textAlign: 'center',
           display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6,
         }}>
-          <p style={{ fontSize: 13, color: '#64748b' }}>
+          <p style={{ fontSize: 13, color: '#0f172a' }}>
             Designed for <strong>2027 graduating batch</strong> engineering students preparing for placements.
           </p>
           <div className="sim-banner" style={{ display: 'inline-flex', padding: '6px 14px' }}>

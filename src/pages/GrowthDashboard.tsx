@@ -84,7 +84,7 @@ export default function GrowthDashboard() {
           <span className="chip chip-brand">7-Day Campaign System</span>
           <span className="chip chip-demo">Includes Simulation Data</span>
         </div>
-        <p style={{ color: '#475569', fontSize: 14, margin: 0, lineHeight: 1.6 }}>
+        <p style={{ color: '#0f172a', fontSize: 14, margin: 0, lineHeight: 1.6, fontWeight: 500 }}>
           Measurable growth system tracking 500 registrations across organic communities, campus captains, verified referrals, and ₹300 Student Creator Growth Challenge.
         </p>
       </div>
@@ -103,15 +103,15 @@ export default function GrowthDashboard() {
               <span style={{ fontSize: 50, fontWeight: 900, color: '#0f172a', lineHeight: 1, letterSpacing: '-0.04em' }}>
                 {totalRegs}
               </span>
-              <span style={{ fontSize: 20, color: '#64748b', fontWeight: 700 }}>/ {TARGET}</span>
+              <span style={{ fontSize: 20, color: '#0f172a', fontWeight: 700 }}>/ {TARGET}</span>
             </div>
-            <p style={{ fontSize: 13, color: '#64748b', marginTop: 4 }}>verified & demo registrations</p>
+            <p style={{ fontSize: 13, color: '#0f172a', marginTop: 4, fontWeight: 600 }}>verified & demo registrations</p>
           </div>
           <div style={{ textAlign: 'right' }}>
             <p style={{ fontSize: 36, fontWeight: 900, color: '#4338ca', lineHeight: 1, letterSpacing: '-0.02em', margin: 0 }}>
               {((totalRegs / TARGET) * 100).toFixed(1)}%
             </p>
-            <p style={{ fontSize: 12, color: '#64748b', margin: '4px 0 0' }}>of 500 target reached</p>
+            <p style={{ fontSize: 12, color: '#0f172a', margin: '4px 0 0', fontWeight: 600 }}>of 500 target reached</p>
             {TARGET - totalRegs > 0 && (
               <p style={{ fontSize: 12, color: '#b45309', fontWeight: 700, marginTop: 4, margin: '4px 0 0' }}>
                 {TARGET - totalRegs} to go in 7-day model
@@ -138,21 +138,21 @@ export default function GrowthDashboard() {
             <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#059669' }} />
             <div>
               <p style={{ fontSize: 11, fontWeight: 700, color: '#047857', margin: 0 }}>ACTUAL DEMO EVENTS</p>
-              <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>{regs.filter(r => !r.isSimulated).length} verified live registrations</p>
+              <p style={{ fontSize: 11, color: '#0f172a', margin: 0, fontWeight: 600 }}>{regs.filter(r => !r.isSimulated).length} verified live registrations</p>
             </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#d97706' }} />
             <div>
               <p style={{ fontSize: 11, fontWeight: 700, color: '#b45309', margin: 0 }}>SIMULATION DATA</p>
-              <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>{simRegs} illustrative student records</p>
+              <p style={{ fontSize: 11, color: '#0f172a', margin: 0, fontWeight: 600 }}>{simRegs} illustrative student records</p>
             </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#4f46e5' }} />
             <div>
               <p style={{ fontSize: 11, fontWeight: 700, color: '#4338ca', margin: 0 }}>PLANNING ASSUMPTIONS</p>
-              <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>500-student model / ₹2,000 budget</p>
+              <p style={{ fontSize: 11, color: '#0f172a', margin: 0, fontWeight: 600 }}>500-student model / ₹2,000 budget</p>
             </div>
           </div>
         </div>
@@ -177,7 +177,7 @@ export default function GrowthDashboard() {
               {kpi.value}
             </p>
             <p style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '0 0 2px' }}>{kpi.label}</p>
-            <p style={{ fontSize: 11, color: '#64748b', margin: 0 }}>{kpi.sub}</p>
+            <p style={{ fontSize: 11, color: '#0f172a', margin: 0, fontWeight: 600 }}>{kpi.sub}</p>
           </div>
         ))}
       </div>
@@ -201,7 +201,7 @@ export default function GrowthDashboard() {
               fontSize: 13, fontWeight: 600, cursor: 'pointer',
               border: 'none',
               background: activeTab === tab.id ? '#eef2ff' : 'transparent',
-              color: activeTab === tab.id ? '#4338ca' : '#64748b',
+              color: activeTab === tab.id ? '#4338ca' : '#0f172a',
               borderBottom: activeTab === tab.id ? '2px solid #4f46e5' : '2px solid transparent',
             }}
           >
@@ -222,7 +222,7 @@ export default function GrowthDashboard() {
               <span className="chip chip-brand" style={{ fontSize: 11 }}>Class of 2027</span>
             </div>
             {regs.length === 0 ? (
-              <p style={{ color: '#64748b', fontSize: 14 }}>No registrations yet.</p>
+              <p style={{ color: '#0f172a', fontSize: 14 }}>No registrations yet.</p>
             ) : (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                 {[...regs].reverse().slice(0, 7).map(reg => (
@@ -234,7 +234,7 @@ export default function GrowthDashboard() {
                   }}>
                     <div>
                       <span style={{ fontWeight: 700, color: '#0f172a', fontSize: 14 }}>{reg.name}</span>
-                      <span style={{ fontSize: 12, color: '#64748b', marginLeft: 8 }}>
+                      <span style={{ fontSize: 12, color: '#0f172a', marginLeft: 8, fontWeight: 500 }}>
                         {reg.college} · {reg.branch}
                       </span>
                     </div>
@@ -248,7 +248,7 @@ export default function GrowthDashboard() {
                       {reg.isQualified !== false && (
                         <span className="chip chip-green" style={{ fontSize: 10 }}>Verified Unique</span>
                       )}
-                      <span style={{ fontSize: 11, color: '#94a3b8' }}>
+                      <span style={{ fontSize: 11, color: '#0f172a', fontWeight: 600 }}>
                         {new Date(reg.registeredAt).toLocaleDateString()}
                       </span>
                     </div>
@@ -281,7 +281,7 @@ export default function GrowthDashboard() {
                       Score: {c.totalScore} ({c.action})
                     </span>
                   </div>
-                  <p style={{ fontSize: 12, color: '#475569', margin: '4px 0 0' }}>
+                  <p style={{ fontSize: 12, color: '#0f172a', margin: '4px 0 0', fontWeight: 500 }}>
                     {c.format} · Reach: {c.reach.toLocaleString()} · Clicks: {c.clicks} · <strong style={{ color: '#047857' }}>{c.qualifiedRegistrations} qualified</strong>
                   </p>
                 </div>
@@ -330,7 +330,7 @@ export default function GrowthDashboard() {
               <h2 style={{ fontSize: 18, fontWeight: 800, color: '#0f172a', margin: 0 }}>
                 Campaign Funnel: From Discovery to Project Competition
               </h2>
-              <p style={{ fontSize: 13, color: '#64748b', margin: '4px 0 0' }}>
+              <p style={{ fontSize: 13, color: '#0f172a', margin: '4px 0 0', fontWeight: 600 }}>
                 DISCOVERY &rarr; PROJECT PASSPORT &rarr; REGISTRATION &rarr; REFERRAL &rarr; QUALIFIED REGISTRATION &rarr; WORKSHOP ATTENDANCE &rarr; AI PROJECT SUBMISSION &rarr; PROJECT COMPETITION
               </p>
             </div>
@@ -366,7 +366,7 @@ export default function GrowthDashboard() {
                           <span style={{ fontSize: 11, fontWeight: 800, color: '#4338ca', width: 18 }}>{step.step}.</span>
                           <p style={{ fontSize: 12, fontWeight: 700, color: '#0f172a', margin: 0 }}>{step.label}</p>
                         </div>
-                        <p style={{ fontSize: 10, color: '#64748b', margin: '2px 0 0 24px' }}>{step.note}</p>
+                        <p style={{ fontSize: 10, color: '#0f172a', margin: '2px 0 0 24px', fontWeight: 600 }}>{step.note}</p>
                       </div>
 
                       <div style={{ flex: 1 }}>
@@ -417,7 +417,7 @@ export default function GrowthDashboard() {
               </div>
             </div>
 
-            <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.6, marginBottom: 20 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.6, marginBottom: 20 }}>
               Instead of spending ₹300 on cold paid ads, ₹300 is awarded as a performance prize to the student creator who drives the best verified workshop acquisition.
               Content formats include Instagram Reels, WhatsApp creatives, LinkedIn posts, X threads, and short videos.
             </p>
@@ -435,22 +435,22 @@ export default function GrowthDashboard() {
                 <div style={{ background: '#eef2ff', border: '1px solid #c7d2fe', borderRadius: 8, padding: '10px' }}>
                   <span style={{ fontSize: 11, color: '#4338ca', display: 'block', fontWeight: 700 }}>QUALIFIED REGS</span>
                   <strong style={{ fontSize: 18, color: '#0f172a' }}>60%</strong>
-                  <p style={{ fontSize: 10, color: '#64748b', margin: '2px 0 0' }}>Primary decision driver</p>
+                  <p style={{ fontSize: 10, color: '#0f172a', margin: '2px 0 0', fontWeight: 600 }}>Primary decision driver</p>
                 </div>
                 <div style={{ background: '#ecfdf5', border: '1px solid #a7f3d0', borderRadius: 8, padding: '10px' }}>
                   <span style={{ fontSize: 11, color: '#047857', display: 'block', fontWeight: 700 }}>CLICK-THROUGH (CTR)</span>
                   <strong style={{ fontSize: 18, color: '#0f172a' }}>20%</strong>
-                  <p style={{ fontSize: 10, color: '#64748b', margin: '2px 0 0' }}>Interest & hook quality</p>
+                  <p style={{ fontSize: 10, color: '#0f172a', margin: '2px 0 0', fontWeight: 600 }}>Interest & hook quality</p>
                 </div>
                 <div style={{ background: '#fffbeb', border: '1px solid #fde68a', borderRadius: 8, padding: '10px' }}>
                   <span style={{ fontSize: 11, color: '#b45309', display: 'block', fontWeight: 700 }}>ENGAGEMENT</span>
                   <strong style={{ fontSize: 18, color: '#0f172a' }}>10%</strong>
-                  <p style={{ fontSize: 10, color: '#64748b', margin: '2px 0 0' }}>Comments & shares</p>
+                  <p style={{ fontSize: 10, color: '#0f172a', margin: '2px 0 0', fontWeight: 600 }}>Comments & shares</p>
                 </div>
                 <div style={{ background: '#fdf2f8', border: '1px solid #fbcfe8', borderRadius: 8, padding: '10px' }}>
                   <span style={{ fontSize: 11, color: '#be185d', display: 'block', fontWeight: 700 }}>CREATIVITY</span>
                   <strong style={{ fontSize: 18, color: '#0f172a' }}>10%</strong>
-                  <p style={{ fontSize: 10, color: '#64748b', margin: '2px 0 0' }}>Originality of messaging</p>
+                  <p style={{ fontSize: 10, color: '#0f172a', margin: '2px 0 0', fontWeight: 600 }}>Originality of messaging</p>
                 </div>
               </div>
             </div>
@@ -475,22 +475,22 @@ export default function GrowthDashboard() {
                       {c.creatorName}
                     </p>
                     <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-                      <span style={{ fontSize: 11, color: '#64748b', fontFamily: 'var(--font-mono)' }}>Code: {c.creatorCode}</span>
+                      <span style={{ fontSize: 11, color: '#0f172a', fontFamily: 'var(--font-mono)', fontWeight: 600 }}>Code: {c.creatorCode}</span>
                       <span style={{ fontSize: 11, color: '#4338ca', fontWeight: 600 }}>• {c.format}</span>
                     </div>
                   </div>
 
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, fontSize: 12, marginBottom: 12 }}>
                     <div style={{ background: '#f8fafc', padding: '8px 10px', borderRadius: 6, border: '1px solid #e2e8f0' }}>
-                      <span style={{ color: '#64748b', display: 'block', fontSize: 10, fontWeight: 600 }}>REACH (VIEWS)</span>
+                      <span style={{ color: '#0f172a', display: 'block', fontSize: 10, fontWeight: 700 }}>REACH (VIEWS)</span>
                       <strong style={{ color: '#0f172a' }}>{c.reach.toLocaleString()}</strong>
                     </div>
                     <div style={{ background: '#f8fafc', padding: '8px 10px', borderRadius: 6, border: '1px solid #e2e8f0' }}>
-                      <span style={{ color: '#64748b', display: 'block', fontSize: 10, fontWeight: 600 }}>CLICKS</span>
+                      <span style={{ color: '#0f172a', display: 'block', fontSize: 10, fontWeight: 700 }}>CLICKS</span>
                       <strong style={{ color: '#0f172a' }}>{c.clicks}</strong>
                     </div>
                     <div style={{ background: '#f8fafc', padding: '8px 10px', borderRadius: 6, border: '1px solid #e2e8f0' }}>
-                      <span style={{ color: '#64748b', display: 'block', fontSize: 10, fontWeight: 600 }}>CTR</span>
+                      <span style={{ color: '#0f172a', display: 'block', fontSize: 10, fontWeight: 700 }}>CTR</span>
                       <strong style={{ color: '#b45309' }}>{c.ctr}%</strong>
                     </div>
                     <div style={{ background: '#ecfdf5', padding: '8px 10px', borderRadius: 6, border: '1px solid #a7f3d0' }}>
@@ -503,7 +503,7 @@ export default function GrowthDashboard() {
                     display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                     padding: '8px 12px', background: '#f8fafc', borderRadius: 8, border: '1px solid #e2e8f0',
                   }}>
-                    <span style={{ fontSize: 12, color: '#64748b', fontWeight: 600 }}>Composite Score:</span>
+                    <span style={{ fontSize: 12, color: '#0f172a', fontWeight: 700 }}>Composite Score:</span>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                       <strong style={{ fontSize: 16, color: c.isWinner ? '#15803d' : '#4338ca' }}>{c.totalScore} / 100</strong>
                       <span style={{
@@ -543,16 +543,16 @@ export default function GrowthDashboard() {
                     border: entry.isLeader ? '1px solid #86efac' : '1px solid #e2e8f0',
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                      <span style={{ fontWeight: 800, color: entry.isLeader ? '#d97706' : '#64748b', width: 24 }}>
+                      <span style={{ fontWeight: 800, color: entry.isLeader ? '#d97706' : '#0f172a', width: 24 }}>
                         #{entry.rank}
                       </span>
                       <strong style={{ color: '#0f172a', fontSize: 13 }}>{entry.name}</strong>
-                      <span style={{ fontSize: 11, color: entry.isLeader ? '#047857' : '#64748b', fontWeight: 600 }}>
+                      <span style={{ fontSize: 11, color: entry.isLeader ? '#047857' : '#0f172a', fontWeight: 600 }}>
                         ({entry.status})
                       </span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-                      <span style={{ fontSize: 12, color: '#475569' }}>
+                      <span style={{ fontSize: 12, color: '#0f172a' }}>
                         <strong style={{ color: '#047857' }}>{entry.regs}</strong> qualified regs
                       </span>
                       <span style={{ fontSize: 12, fontWeight: 800, color: entry.isLeader ? '#047857' : '#4338ca' }}>
@@ -567,7 +567,7 @@ export default function GrowthDashboard() {
                   </div>
                 ))}
               </div>
-              <p style={{ fontSize: 11, color: '#64748b', margin: '10px 0 0', fontStyle: 'italic' }}>
+              <p style={{ fontSize: 11, color: '#0f172a', margin: '10px 0 0', fontStyle: 'italic', fontWeight: 600 }}>
                 “Final winner determined after the campaign based on qualified registrations and the published scoring model.”
               </p>
             </div>
@@ -580,7 +580,7 @@ export default function GrowthDashboard() {
               <p style={{ fontSize: 13, fontWeight: 700, color: '#4338ca', margin: '0 0 4px' }}>
                 🧠 Growth Decision Framework (KILL · ITERATE · SCALE)
               </p>
-              <p style={{ fontSize: 12, color: '#334155', margin: '0 0 8px', lineHeight: 1.5 }}>
+              <p style={{ fontSize: 12, color: '#0f172a', margin: '0 0 8px', lineHeight: 1.5 }}>
                 • <strong>Creator B &rarr; SCALE:</strong> Highest qualified registrations (31) and highest CTR (8.3%). Awarded current ₹300 prize leadership.<br />
                 • <strong>Creator A &rarr; ITERATE:</strong> Solid conversion (24 qualified regs), but reach can expand via placement WhatsApp groups.<br />
                 • <strong>Creator C &rarr; KILL:</strong> High vanity reach (6,100) and clicks (410) but low qualified registrations (18). Vanity memes do not convert serious engineering students.
@@ -608,7 +608,7 @@ export default function GrowthDashboard() {
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 12 }}>
               <div style={{ background: '#f8fafc', padding: '12px', borderRadius: 8, border: '1px solid #e2e8f0' }}>
-                <span style={{ fontSize: 11, color: '#64748b', display: 'block', fontWeight: 700 }}>TOTAL REGISTRATIONS</span>
+                <span style={{ fontSize: 11, color: '#0f172a', display: 'block', fontWeight: 800 }}>TOTAL REGISTRATIONS</span>
                 <strong style={{ fontSize: 22, color: '#0f172a' }}>{totalRegs}</strong>
               </div>
               <div style={{ background: '#ecfdf5', padding: '12px', borderRadius: 8, border: '1px solid #a7f3d0' }}>
@@ -641,7 +641,7 @@ export default function GrowthDashboard() {
                 <div key={s.name} style={{ background: '#f8fafc', padding: '10px 14px', borderRadius: 8, border: '1px solid #e2e8f0' }}>
                   <span style={{ color: s.color, fontWeight: 700 }}>{s.name}</span>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 4 }}>
-                    <span style={{ color: '#64748b', fontSize: 11 }}>Planned Target:</span>
+                    <span style={{ color: '#0f172a', fontSize: 11, fontWeight: 600 }}>Planned Target:</span>
                     <strong style={{ color: '#0f172a' }}>{s.planned}</strong>
                   </div>
                 </div>
@@ -656,7 +656,7 @@ export default function GrowthDashboard() {
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12, marginBottom: 14 }}>
               <div style={{ background: '#f8fafc', padding: '10px 12px', borderRadius: 8, border: '1px solid #e2e8f0' }}>
-                <span style={{ fontSize: 11, color: '#64748b', display: 'block', fontWeight: 700 }}>TOTAL REFERRALS</span>
+                <span style={{ fontSize: 11, color: '#0f172a', display: 'block', fontWeight: 800 }}>TOTAL REFERRALS</span>
                 <strong style={{ fontSize: 18, color: '#0f172a' }}>{Math.max(referrals.length, 120)}</strong>
               </div>
               <div style={{ background: '#ecfdf5', padding: '10px 12px', borderRadius: 8, border: '1px solid #a7f3d0' }}>
@@ -681,7 +681,7 @@ export default function GrowthDashboard() {
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12 }}>
               <div style={{ background: '#f8fafc', padding: '10px 12px', borderRadius: 8, border: '1px solid #e2e8f0' }}>
-                <span style={{ fontSize: 11, color: '#64748b', display: 'block', fontWeight: 700 }}>PRIZE POOL ALLOCATED</span>
+                <span style={{ fontSize: 11, color: '#0f172a', display: 'block', fontWeight: 800 }}>PRIZE POOL ALLOCATED</span>
                 <strong style={{ fontSize: 18, color: '#0f172a' }}>₹300</strong>
               </div>
               <div style={{ background: '#eef2ff', padding: '10px 12px', borderRadius: 8, border: '1px solid #c7d2fe' }}>
@@ -706,7 +706,7 @@ export default function GrowthDashboard() {
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12 }}>
               <div style={{ background: '#f8fafc', padding: '10px 12px', borderRadius: 8, border: '1px solid #e2e8f0' }}>
-                <span style={{ fontSize: 11, color: '#64748b', display: 'block', fontWeight: 700 }}>REGISTERED FOR WORKSHOP</span>
+                <span style={{ fontSize: 11, color: '#0f172a', display: 'block', fontWeight: 800 }}>REGISTERED FOR WORKSHOP</span>
                 <strong style={{ fontSize: 18, color: '#0f172a' }}>500</strong>
               </div>
               <div style={{ background: '#ecfdf5', padding: '10px 12px', borderRadius: 8, border: '1px solid #a7f3d0' }}>
@@ -753,7 +753,7 @@ export default function GrowthDashboard() {
                         <span style={{ fontSize: 14, fontWeight: 700, color: '#0f172a' }}>{label}</span>
                       </div>
                       <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-                        <span style={{ fontSize: 13, color: '#64748b' }}>{percentage}%</span>
+                        <span style={{ fontSize: 13, color: '#0f172a', fontWeight: 700 }}>{percentage}%</span>
                         <span style={{ fontSize: 16, fontWeight: 800, color }}>
                           {count}
                         </span>
@@ -771,7 +771,7 @@ export default function GrowthDashboard() {
                   </div>
                 );
               }) : (
-                <p style={{ color: '#64748b', fontSize: 14 }}>No source data yet.</p>
+                <p style={{ color: '#0f172a', fontSize: 14 }}>No source data yet.</p>
               )}
             </div>
           </div>

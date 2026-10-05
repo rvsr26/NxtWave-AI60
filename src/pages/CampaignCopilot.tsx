@@ -123,7 +123,7 @@ export default function CampaignCopilot() {
 
           {/* Goal */}
           <div>
-            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#334155', marginBottom: 8 }}>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#0f172a', marginBottom: 8 }}>
               Campaign Goal
             </label>
             <select
@@ -156,7 +156,7 @@ export default function CampaignCopilot() {
         </button>
 
         {!hasApiKey && (
-          <p style={{ fontSize: 12, color: '#64748b', marginTop: 10, margin: '10px 0 0' }}>
+          <p style={{ fontSize: 12, color: '#0f172a', marginTop: 10, margin: '10px 0 0' }}>
             No OpenAI key detected — using curated deterministic variants optimized for engineering student audiences.
           </p>
         )}
@@ -210,13 +210,13 @@ export default function CampaignCopilot() {
                   <p style={{ fontSize: 15, fontWeight: 800, color: '#0f172a', marginBottom: 6, lineHeight: 1.4 }}>
                     "{h.headline}"
                   </p>
-                  <p style={{ fontSize: 13, color: '#334155', lineHeight: 1.6, margin: 0 }}>
+                  <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.6, margin: 0 }}>
                     {h.body}
                   </p>
                 </div>
 
                 {/* Behavioral Rationale */}
-                <p style={{ fontSize: 12, color: '#64748b', margin: 0 }}>
+                <p style={{ fontSize: 12, color: '#0f172a', margin: 0 }}>
                   <strong style={{ color: '#0f172a' }}>Strategic Rationale:</strong> {h.rationale}
                 </p>
               </div>
@@ -237,7 +237,7 @@ export default function CampaignCopilot() {
           <p style={{ fontWeight: 800, color: '#0f172a', fontSize: 16, marginBottom: 8 }}>
             Configure and generate your campaign variants
           </p>
-          <p style={{ color: '#64748b', fontSize: 14, margin: 0 }}>
+          <p style={{ color: '#0f172a', fontSize: 14, margin: 0 }}>
             Set your audience, channel and goal above, then click Generate.
           </p>
         </div>

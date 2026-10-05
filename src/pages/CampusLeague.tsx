@@ -78,7 +78,7 @@ export default function CampusLeague() {
             <p style={{ fontSize: 22, fontWeight: 800, color: '#0f172a', letterSpacing: '-0.02em' }}>
               {stat.value}
             </p>
-            <p style={{ fontSize: 11, color: '#64748b', marginTop: 4, fontWeight: 700 }}>
+            <p style={{ fontSize: 11, color: '#0f172a', marginTop: 4, fontWeight: 700 }}>
               {stat.label.toUpperCase()}
             </p>
           </div>
@@ -87,7 +87,7 @@ export default function CampusLeague() {
 
       {/* Sort controls */}
       <div style={{ display: 'flex', gap: 8, marginBottom: 20, flexWrap: 'wrap' }}>
-        <span style={{ fontSize: 13, color: '#64748b', alignSelf: 'center', fontWeight: 600 }}>Sort by:</span>
+        <span style={{ fontSize: 13, color: '#0f172a', alignSelf: 'center', fontWeight: 700 }}>Sort by:</span>
         {([
           ['registrations', '📊 Registrations'],
           ['growth', '📈 Growth'],
@@ -101,7 +101,7 @@ export default function CampusLeague() {
               padding: '6px 14px', borderRadius: 8, fontSize: 13, fontWeight: 600, cursor: 'pointer',
               border: sortBy === key ? '1.5px solid #4f46e5' : '1px solid #cbd5e1',
               background: sortBy === key ? '#eef2ff' : '#ffffff',
-              color: sortBy === key ? '#4338ca' : '#475569',
+              color: sortBy === key ? '#4338ca' : '#0f172a',
             }}
           >
             {label}
@@ -116,7 +116,7 @@ export default function CampusLeague() {
           const growth = campus.registrations - campus.yesterdayRegistrations;
           const maxRegs = campuses[0]?.registrations || 1;
           const barWidth = (campus.registrations / maxRegs) * 100;
-          const rankColor = rank === 1 ? '#d97706' : rank === 2 ? '#64748b' : rank === 3 ? '#b45309' : '#94a3b8';
+          const rankColor = rank === 1 ? '#d97706' : rank === 2 ? '#0f172a' : rank === 3 ? '#b45309' : '#0f172a';
           const rankEmoji = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : null;
 
           return (
@@ -146,7 +146,7 @@ export default function CampusLeague() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8, gap: 12 }}>
                   <div>
                     <p style={{ fontWeight: 700, color: '#0f172a', fontSize: 15 }}>{campus.name}</p>
-                    <p className="mono" style={{ fontSize: 11, color: '#64748b', marginTop: 2 }}>
+                    <p className="mono" style={{ fontSize: 11, color: '#0f172a', marginTop: 2, fontWeight: 600 }}>
                       {campus.code}
                     </p>
                   </div>
@@ -154,7 +154,7 @@ export default function CampusLeague() {
                     <p style={{ fontSize: 24, fontWeight: 800, color: rankColor, lineHeight: 1, letterSpacing: '-0.02em' }}>
                       {campus.registrations}
                     </p>
-                    <p style={{ fontSize: 11, color: '#64748b', fontWeight: 600, marginTop: 2 }}>
+                    <p style={{ fontSize: 11, color: '#0f172a', fontWeight: 700, marginTop: 2 }}>
                       registrations
                     </p>
                   </div>
@@ -166,13 +166,13 @@ export default function CampusLeague() {
 
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 8, flexWrap: 'wrap', gap: 8 }}>
                   <span style={{
-                    fontSize: 12, fontWeight: 600,
-                    color: growth > 0 ? '#047857' : '#64748b',
+                    fontSize: 12, fontWeight: 700,
+                    color: growth > 0 ? '#047857' : '#0f172a',
                   }}>
                     {growth > 0 ? `+${growth}` : growth === 0 ? '—' : growth} since yesterday
                   </span>
                   <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-                    <span style={{ fontSize: 12, color: '#64748b' }}>
+                    <span style={{ fontSize: 12, color: '#0f172a', fontWeight: 600 }}>
                       {campus.captains} captain{campus.captains !== 1 ? 's' : ''}
                     </span>
                     <button
@@ -197,7 +197,7 @@ export default function CampusLeague() {
         {campuses.length === 0 && (
           <div className="card" style={{ textAlign: 'center', padding: 48 }}>
             <p style={{ fontSize: 32, marginBottom: 12 }}>🏫</p>
-            <p style={{ color: '#64748b', fontSize: 15 }}>
+            <p style={{ color: '#0f172a', fontSize: 15 }}>
               No campuses yet. Register your campus to appear here!
             </p>
           </div>
@@ -211,7 +211,7 @@ export default function CampusLeague() {
             <h2 style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', margin: 0 }}>
               🏆 CAMPUS REFERRAL LEADERBOARD
             </h2>
-            <p style={{ fontSize: 12, color: '#64748b', margin: '4px 0 0' }}>
+            <p style={{ fontSize: 12, color: '#0f172a', margin: '4px 0 0', fontWeight: 600 }}>
               Top student referrers ranked by verified unique registrations.
             </p>
           </div>
@@ -249,13 +249,13 @@ export default function CampusLeague() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <span style={{
                   fontSize: 16, fontWeight: 800, width: 24, textAlign: 'center',
-                  color: entry.rank === 1 ? '#d97706' : entry.rank === 2 ? '#64748b' : entry.rank === 3 ? '#b45309' : '#94a3b8',
+                  color: entry.rank === 1 ? '#d97706' : entry.rank === 2 ? '#0f172a' : entry.rank === 3 ? '#b45309' : '#0f172a',
                 }}>
                   {entry.rank === 1 ? '🥇' : entry.rank === 2 ? '🥈' : entry.rank === 3 ? '🥉' : `#${entry.rank}`}
                 </span>
                 <div>
                   <span style={{ fontWeight: 700, color: '#0f172a', fontSize: 14 }}>{entry.name}</span>
-                  <span style={{ fontSize: 12, color: '#64748b', marginLeft: 8 }}>{entry.college}</span>
+                  <span style={{ fontSize: 12, color: '#0f172a', marginLeft: 8, fontWeight: 500 }}>{entry.college}</span>
                 </div>
               </div>
 
@@ -272,7 +272,7 @@ export default function CampusLeague() {
                     {entry.reward}
                   </span>
                 ) : (
-                  <span style={{ fontSize: 11, color: '#64748b' }}>Rank #{entry.rank}</span>
+                  <span style={{ fontSize: 11, color: '#0f172a', fontWeight: 600 }}>Rank #{entry.rank}</span>
                 )}
               </div>
             </div>

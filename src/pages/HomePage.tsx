@@ -128,7 +128,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
           <h3 style={{ fontSize: 22, fontWeight: 900, color: '#0f172a', marginBottom: 8, letterSpacing: '-0.02em' }}>
             Generating Your AI Project Passport…
           </h3>
-          <p style={{ color: '#475569', fontSize: 14, lineHeight: 1.6 }}>
+          <p style={{ color: '#0f172a', fontSize: 14, lineHeight: 1.6, fontWeight: 500 }}>
             Tailoring your 60-minute roadmap, tech stack, and placement resume bullet for the AI Challenge
           </p>
           <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
@@ -210,10 +210,11 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
           {/* Supporting Copy */}
           <p style={{
             fontSize: 16,
-            color: '#475569',
+            color: '#0f172a',
             maxWidth: 640,
             margin: '0 auto 36px',
             lineHeight: 1.65,
+            fontWeight: 500,
           }}>
             Build something real with AI, add it to your portfolio, compete with engineering students across colleges, and climb the live challenge leaderboard.
           </p>
@@ -241,7 +242,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
           {/* Trust / Value Indicator Strip */}
           <div style={{
             display: 'inline-flex', justifyContent: 'center', alignItems: 'center', gap: 18, flexWrap: 'wrap',
-            fontSize: 12, color: '#64748b', fontWeight: 600,
+            fontSize: 12, color: '#0f172a', fontWeight: 700,
             background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: 999, padding: '8px 20px',
             boxShadow: '0 1px 3px rgba(15,23,42,0.03)',
           }}>
@@ -276,7 +277,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
           <h2 style={{ fontSize: 28, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>
             WHAT'S IN IT FOR YOU?
           </h2>
-          <p style={{ fontSize: 14, color: '#64748b', marginTop: 8, margin: '8px 0 0' }}>
+          <p style={{ fontSize: 14, color: '#0f172a', marginTop: 8, margin: '8px 0 0', fontWeight: 600 }}>
             Gain verifiable career proof-of-work first, then participate in student distribution rewards.
           </p>
         </div>
@@ -294,7 +295,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <h3 style={{ fontSize: 17, fontWeight: 800, color: '#0f172a', margin: 0 }}>
               BUILD
             </h3>
-            <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.5, margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.5, margin: 0 }}>
               Build your first AI project in 60 minutes with step-by-step guidance.
             </p>
             <span style={{ fontSize: 11, fontWeight: 700, color: '#059669', marginTop: 'auto' }}>
@@ -308,7 +309,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <h3 style={{ fontSize: 17, fontWeight: 800, color: '#0f172a', margin: 0 }}>
               COMPETE
             </h3>
-            <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.5, margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.5, margin: 0 }}>
               Submit your project code post-workshop and compete for:
             </p>
             <p style={{ fontSize: 15, fontWeight: 800, color: '#4338ca', margin: 'auto 0 0' }}>
@@ -322,7 +323,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <h3 style={{ fontSize: 17, fontWeight: 800, color: '#0f172a', margin: 0 }}>
               REFER
             </h3>
-            <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.5, margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.5, margin: 0 }}>
               Bring classmates via your verified link and compete for:
             </p>
             <p style={{ fontSize: 15, fontWeight: 800, color: '#059669', margin: 'auto 0 0' }}>
@@ -336,7 +337,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <h3 style={{ fontSize: 17, fontWeight: 800, color: '#0f172a', margin: 0 }}>
               CREATE
             </h3>
-            <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.5, margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.5, margin: 0 }}>
               Create top workshop promotional content (Reel/meme/post) and win:
             </p>
             <p style={{ fontSize: 15, fontWeight: 800, color: '#be185d', margin: 'auto 0 0' }}>
@@ -366,7 +367,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
               </span>
               <span className="chip chip-amber" style={{ fontSize: 10 }}>SIMULATION STRATEGY</span>
             </div>
-            <p style={{ fontSize: 12, color: '#475569', margin: '4px 0 0' }}>
+            <p style={{ fontSize: 12, color: '#0f172a', margin: '4px 0 0', fontWeight: 600 }}>
               Allocated across ₹300 Creator Challenge + ₹500 Referral Rewards + ₹900 Project Prizes (₹300 reserve contingency not included).
             </p>
           </div>
@@ -399,7 +400,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
           <h2 style={{ fontSize: 28, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>
             WHAT DO YOU WANT FROM THE WORKSHOP?
           </h2>
-          <p style={{ fontSize: 14, color: '#64748b', marginTop: 8, margin: '8px 0 0' }}>
+          <p style={{ fontSize: 14, color: '#0f172a', marginTop: 8, margin: '8px 0 0', fontWeight: 600 }}>
             Select your primary objective to pre-calibrate your personal Project Passport.
           </p>
         </div>
@@ -427,7 +428,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <h3 style={{ fontSize: 18, fontWeight: 800, color: '#0f172a', margin: 0 }}>
               RESUME
             </h3>
-            <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.5, margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.5, margin: 0 }}>
               Build an AI project you can add to your portfolio and resume.
             </p>
             <button
@@ -458,7 +459,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <h3 style={{ fontSize: 18, fontWeight: 800, color: '#0f172a', margin: 0 }}>
               INTERVIEW
             </h3>
-            <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.5, margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.5, margin: 0 }}>
               Build something you can confidently explain in your next interview.
             </p>
             <button
@@ -489,7 +490,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <h3 style={{ fontSize: 18, fontWeight: 800, color: '#0f172a', margin: 0 }}>
               PROJECT IDEA
             </h3>
-            <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.5, margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.5, margin: 0 }}>
               Turn your idea into an AI-powered prototype.
             </p>
             <button
@@ -520,7 +521,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
           <h2 style={{ fontSize: 24, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>
             CHOOSE YOUR CHALLENGE
           </h2>
-          <p style={{ fontSize: 13, color: '#64748b', marginTop: 4, margin: '4px 0 0' }}>
+          <p style={{ fontSize: 13, color: '#0f172a', marginTop: 4, margin: '4px 0 0', fontWeight: 600 }}>
             Pick the framing that aligns with your placement urgency.
           </p>
         </div>
@@ -533,25 +534,25 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
         }}>
           <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: 12, padding: '18px', boxShadow: '0 1px 3px rgba(15,23,42,0.03)' }}>
             <p style={{ fontWeight: 800, color: '#4338ca', fontSize: 15, marginBottom: 4 }}>Resume Challenge</p>
-            <p style={{ fontSize: 13, color: '#475569', margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', margin: 0 }}>
               Build an AI project worth putting on your resume.
             </p>
           </div>
           <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: 12, padding: '18px', boxShadow: '0 1px 3px rgba(15,23,42,0.03)' }}>
             <p style={{ fontWeight: 800, color: '#047857', fontSize: 15, marginBottom: 4 }}>Interview Challenge</p>
-            <p style={{ fontSize: 13, color: '#475569', margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', margin: 0 }}>
               Build something you can explain in an interview.
             </p>
           </div>
           <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: 12, padding: '18px', boxShadow: '0 1px 3px rgba(15,23,42,0.03)' }}>
             <p style={{ fontWeight: 800, color: '#b45309', fontSize: 15, marginBottom: 4 }}>Project Rescue</p>
-            <p style={{ fontSize: 13, color: '#475569', margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', margin: 0 }}>
               Turn your existing project idea into an AI prototype.
             </p>
           </div>
         </div>
 
-        <p style={{ textAlign: 'center', fontSize: 12, color: '#94a3b8', fontStyle: 'italic', margin: 0 }}>
+        <p style={{ textAlign: 'center', fontSize: 12, color: '#0f172a', fontStyle: 'italic', margin: 0, fontWeight: 600 }}>
           Different paths. Same 60-minute build challenge.
         </p>
       </section>
@@ -574,7 +575,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
           <h2 style={{ fontSize: 28, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em', margin: '0 0 8px' }}>
             GET SOMETHING USEFUL BEFORE YOU REGISTER
           </h2>
-          <p style={{ fontSize: 15, color: '#475569', lineHeight: 1.6, maxWidth: 560, margin: '0 auto' }}>
+          <p style={{ fontSize: 15, color: '#0f172a', lineHeight: 1.6, maxWidth: 560, margin: '0 auto', fontWeight: 500 }}>
             Answer a few quick questions and get a personalized AI Project Passport.
           </p>
         </div>
@@ -590,7 +591,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
           <p style={{ fontSize: 12, fontWeight: 800, color: '#4338ca', textTransform: 'uppercase', marginBottom: 10, letterSpacing: '0.04em' }}>
             What you receive immediately:
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 10, fontSize: 13, color: '#334155' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 10, fontSize: 13, color: '#0f172a' }}>
             <div>💡 <strong>AI Project Idea</strong> (domain-calibrated)</div>
             <div>⏱️ <strong>60-Minute Roadmap</strong> (4 build phases)</div>
             <div>🛠️ <strong>Modern Tech Stack</strong> (APIs & UI)</div>
@@ -648,7 +649,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
               }&rdquo;
             </p>
           </div>
-          <span style={{ fontSize: 12, color: '#64748b', fontStyle: 'italic' }}>
+          <span style={{ fontSize: 12, color: '#0f172a', fontStyle: 'italic', fontWeight: 600 }}>
             CTA: {
               selectedIntent === 'resume'
                 ? 'Generate Resume Passport →'
@@ -668,7 +669,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <label style={{ display: 'block', fontSize: 14, fontWeight: 700, color: '#0f172a', marginBottom: 4 }}>
               1. What is your Engineering Branch?
             </label>
-            <p style={{ fontSize: 12, color: '#64748b', marginBottom: 10 }}>
+            <p style={{ fontSize: 12, color: '#0f172a', marginBottom: 10, fontWeight: 600 }}>
               Calibrated for Class of 2027 placement domains
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: 8 }}>
@@ -683,7 +684,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
                     padding: '9px 12px', borderRadius: 8, fontSize: 12, fontWeight: branch === b ? 700 : 500, cursor: 'pointer',
                     border: branch === b ? '2px solid #4f46e5' : '1px solid #cbd5e1',
                     background: branch === b ? '#eef2ff' : '#ffffff',
-                    color: branch === b ? '#4338ca' : '#334155',
+                    color: branch === b ? '#4338ca' : '#0f172a',
                     textAlign: 'left',
                     transition: 'all 0.15s ease',
                   }}
@@ -699,7 +700,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <label style={{ display: 'block', fontSize: 14, fontWeight: 700, color: '#0f172a', marginBottom: 4 }}>
               2. What is your current AI / Coding skill level?
             </label>
-            <p style={{ fontSize: 12, color: '#64748b', marginBottom: 10 }}>
+            <p style={{ fontSize: 12, color: '#0f172a', marginBottom: 10, fontWeight: 600 }}>
               Ensures your 60-minute build plan is practical and achievable
             </p>
             <div style={{ display: 'flex', gap: 10 }}>
@@ -714,7 +715,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
                     flex: 1, padding: '10px', borderRadius: 8, fontSize: 12, fontWeight: experience === exp ? 700 : 500, cursor: 'pointer',
                     border: experience === exp ? '2px solid #4f46e5' : '1px solid #cbd5e1',
                     background: experience === exp ? '#eef2ff' : '#ffffff',
-                    color: experience === exp ? '#4338ca' : '#334155',
+                    color: experience === exp ? '#4338ca' : '#0f172a',
                     transition: 'all 0.15s ease',
                   }}
                 >
@@ -729,7 +730,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <label style={{ display: 'block', fontSize: 14, fontWeight: 700, color: '#0f172a', marginBottom: 4 }}>
               3. What area of technology interests you most?
             </label>
-            <p style={{ fontSize: 12, color: '#64748b', marginBottom: 10 }}>
+            <p style={{ fontSize: 12, color: '#0f172a', marginBottom: 10, fontWeight: 600 }}>
               Choose your target project medium
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(110px, 1fr))', gap: 8 }}>
@@ -744,7 +745,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
                     padding: '9px 10px', borderRadius: 8, fontSize: 12, fontWeight: interest === opt ? 700 : 500, cursor: 'pointer',
                     border: interest === opt ? '2px solid #4f46e5' : '1px solid #cbd5e1',
                     background: interest === opt ? '#eef2ff' : '#ffffff',
-                    color: interest === opt ? '#4338ca' : '#334155',
+                    color: interest === opt ? '#4338ca' : '#0f172a',
                     transition: 'all 0.15s ease',
                   }}
                 >
@@ -759,7 +760,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <label style={{ display: 'block', fontSize: 14, fontWeight: 700, color: '#0f172a', marginBottom: 4 }}>
               4. Preferred AI Domain / Career Track
             </label>
-            <p style={{ fontSize: 12, color: '#64748b', marginBottom: 10 }}>
+            <p style={{ fontSize: 12, color: '#0f172a', marginBottom: 10, fontWeight: 600 }}>
               Tailors interview talking points to specific hiring tracks
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: 8 }}>
@@ -774,7 +775,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
                     padding: '9px 10px', borderRadius: 8, fontSize: 12, fontWeight: domain === d ? 700 : 500, cursor: 'pointer',
                     border: domain === d ? '2px solid #059669' : '1px solid #cbd5e1',
                     background: domain === d ? '#ecfdf5' : '#ffffff',
-                    color: domain === d ? '#047857' : '#334155',
+                    color: domain === d ? '#047857' : '#0f172a',
                     textAlign: 'left',
                     transition: 'all 0.15s ease',
                   }}
@@ -790,7 +791,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <label style={{ display: 'block', fontSize: 14, fontWeight: 700, color: '#0f172a', marginBottom: 4 }}>
               5. What do you want to build or achieve?
             </label>
-            <p style={{ fontSize: 12, color: '#64748b', marginBottom: 10 }}>
+            <p style={{ fontSize: 12, color: '#0f172a', marginBottom: 10, fontWeight: 600 }}>
               Describe your project idea, career goal, or interview focus in a few words
             </p>
             <textarea
@@ -802,7 +803,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
               onChange={e => setGoal(e.target.value)}
               maxLength={300}
             />
-            <p style={{ fontSize: 11, color: '#94a3b8', marginTop: 4, textAlign: 'right' }}>
+            <p style={{ fontSize: 11, color: '#0f172a', marginTop: 4, textAlign: 'right', fontWeight: 600 }}>
               {goal.length}/300
             </p>
           </div>
@@ -825,7 +826,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <span>🚀</span> Generate My Project
           </button>
 
-          <p style={{ textAlign: 'center', fontSize: 12, color: '#64748b', margin: 0 }}>
+          <p style={{ textAlign: 'center', fontSize: 12, color: '#0f172a', margin: 0, fontWeight: 600 }}>
             Free workshop · No credit card · Takes 60 seconds
           </p>
         </div>
@@ -877,7 +878,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
               <h3 style={{ fontSize: 16, fontWeight: 800, color: '#0f172a', margin: 0 }}>
                 {st.title}
               </h3>
-              <p style={{ fontSize: 13, color: '#64748b', lineHeight: 1.4, margin: 0 }}>
+              <p style={{ fontSize: 13, color: '#0f172a', lineHeight: 1.4, margin: 0 }}>
                 {st.desc}
               </p>
             </div>
@@ -902,7 +903,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
               </h2>
               <span className="chip chip-amber" style={{ fontSize: 10 }}>SIMULATION DATA</span>
             </div>
-            <p style={{ fontSize: 13, color: '#64748b', margin: 0 }}>
+            <p style={{ fontSize: 13, color: '#0f172a', margin: 0, fontWeight: 600 }}>
               Bring your classmates. Help your college climb the leaderboard.
             </p>
           </div>
@@ -926,7 +927,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
               <span style={{ fontSize: 20 }}>🥇</span>
               <div>
                 <p style={{ fontWeight: 800, color: '#0f172a', margin: 0, fontSize: 15 }}>VIT</p>
-                <span style={{ fontSize: 11, color: '#64748b' }}>Vellore Institute</span>
+                <span style={{ fontSize: 11, color: '#0f172a', fontWeight: 600 }}>Vellore Institute</span>
               </div>
             </div>
             <span style={{ fontSize: 18, fontWeight: 900, color: '#b45309' }}>87 regs</span>
@@ -937,10 +938,10 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
               <span style={{ fontSize: 20 }}>🥈</span>
               <div>
                 <p style={{ fontWeight: 800, color: '#0f172a', margin: 0, fontSize: 15 }}>Amrita</p>
-                <span style={{ fontSize: 11, color: '#64748b' }}>Amrita Vishwa</span>
+                <span style={{ fontSize: 11, color: '#0f172a', fontWeight: 600 }}>Amrita Vishwa</span>
               </div>
             </div>
-            <span style={{ fontSize: 18, fontWeight: 900, color: '#64748b' }}>72 regs</span>
+            <span style={{ fontSize: 18, fontWeight: 900, color: '#0f172a' }}>72 regs</span>
           </div>
 
           <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: 12, padding: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 1px 3px rgba(15,23,42,0.03)' }}>
@@ -948,7 +949,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
               <span style={{ fontSize: 20 }}>🥉</span>
               <div>
                 <p style={{ fontWeight: 800, color: '#0f172a', margin: 0, fontSize: 15 }}>SRM</p>
-                <span style={{ fontSize: 11, color: '#64748b' }}>SRM Institute</span>
+                <span style={{ fontSize: 11, color: '#0f172a', fontWeight: 600 }}>SRM Institute</span>
               </div>
             </div>
             <span style={{ fontSize: 18, fontWeight: 900, color: '#b45309' }}>64 regs</span>
@@ -982,10 +983,10 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <h2 style={{ fontSize: 24, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em', margin: '0 0 10px' }}>
               BUILD WITH YOUR FRIENDS
             </h2>
-            <p style={{ fontSize: 14, color: '#334155', lineHeight: 1.6, margin: '0 0 18px' }}>
+            <p style={{ fontSize: 14, color: '#0f172a', lineHeight: 1.6, margin: '0 0 18px' }}>
               Already registered? Bring your friends, climb the referral leaderboard, and compete for rewards.
             </p>
-            <p style={{ fontSize: 12, color: '#64748b', margin: '0 0 20px' }}>
+            <p style={{ fontSize: 12, color: '#0f172a', margin: '0 0 20px', fontWeight: 600 }}>
               🔒 <em>Your private referral code is generated immediately upon registration to prevent unauthorized sharing.</em>
             </p>
             <button
@@ -1017,13 +1018,13 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span style={{ fontSize: 13, color: '#0f172a', fontWeight: 600 }}>🥈 Rank #2 Runner Up</span>
-              <strong style={{ fontSize: 16, color: '#64748b' }}>₹150</strong>
+              <strong style={{ fontSize: 16, color: '#0f172a' }}>₹150</strong>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span style={{ fontSize: 13, color: '#0f172a', fontWeight: 600 }}>🥉 Rank #3 Second Runner Up</span>
               <strong style={{ fontSize: 16, color: '#b45309' }}>₹100</strong>
             </div>
-            <p style={{ fontSize: 11, color: '#64748b', margin: '6px 0 0', borderTop: '1px solid #f1f5f9', paddingTop: 8 }}>
+            <p style={{ fontSize: 11, color: '#0f172a', margin: '6px 0 0', borderTop: '1px solid #f1f5f9', paddingTop: 8, fontWeight: 600 }}>
               Strict anti-fraud: Verified unique registrations count only.
             </p>
           </div>
@@ -1059,7 +1060,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <h2 style={{ fontSize: 24, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em', margin: '0 0 10px' }}>
               THINK YOU CAN MARKET IT BETTER?
             </h2>
-            <p style={{ fontSize: 14, color: '#334155', lineHeight: 1.6, margin: '0 0 14px' }}>
+            <p style={{ fontSize: 14, color: '#0f172a', lineHeight: 1.6, margin: '0 0 14px' }}>
               Create a Reel, post, meme or WhatsApp creative promoting the workshop with your unique tracking link.
             </p>
             <div style={{
@@ -1086,7 +1087,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             textAlign: 'center',
             boxShadow: '0 1px 3px rgba(190,24,93,0.06)',
           }}>
-            <p style={{ fontSize: 11, fontWeight: 800, color: '#64748b', textTransform: 'uppercase', margin: 0 }}>
+            <p style={{ fontSize: 11, fontWeight: 800, color: '#0f172a', textTransform: 'uppercase', margin: 0 }}>
               WINNER PRIZE
             </p>
             <p style={{ fontSize: 42, fontWeight: 900, color: '#be185d', margin: '6px 0 2px' }}>
@@ -1095,7 +1096,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
             <p style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '0 0 10px' }}>
               Top Promotional Creator
             </p>
-            <div style={{ fontSize: 11, color: '#64748b', textAlign: 'left', borderTop: '1px solid #f1f5f9', paddingTop: 10 }}>
+            <div style={{ fontSize: 11, color: '#0f172a', textAlign: 'left', borderTop: '1px solid #f1f5f9', paddingTop: 10, fontWeight: 600 }}>
               Scoring Model:<br/>
               • Qualified registrations = <strong>60%</strong><br/>
               • Click-through rate = <strong>20%</strong><br/>
@@ -1118,7 +1119,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
           <h2 style={{ fontSize: 22, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em', margin: '0 0 4px' }}>
             BUILD. REFER. CREATE. WIN.
           </h2>
-          <p style={{ fontSize: 13, color: '#64748b', margin: 0 }}>
+          <p style={{ fontSize: 13, color: '#0f172a', margin: 0, fontWeight: 600 }}>
             Structured rewards aligned with quality acquisition and genuine technical output.
           </p>
         </div>
@@ -1132,19 +1133,19 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
           <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: 12, padding: '18px', textAlign: 'center', boxShadow: '0 1px 3px rgba(15,23,42,0.03)' }}>
             <p style={{ fontSize: 26, fontWeight: 900, color: '#4338ca', margin: 0 }}>₹900</p>
             <p style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '4px 0 0' }}>AI Project Competition</p>
-            <span style={{ fontSize: 11, color: '#64748b' }}>Post-workshop submissions</span>
+            <span style={{ fontSize: 11, color: '#0f172a', fontWeight: 600 }}>Post-workshop submissions</span>
           </div>
 
           <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: 12, padding: '18px', textAlign: 'center', boxShadow: '0 1px 3px rgba(15,23,42,0.03)' }}>
             <p style={{ fontSize: 26, fontWeight: 900, color: '#047857', margin: 0 }}>₹500</p>
             <p style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '4px 0 0' }}>Referral Leaderboard</p>
-            <span style={{ fontSize: 11, color: '#64748b' }}>Verified unique peers</span>
+            <span style={{ fontSize: 11, color: '#0f172a', fontWeight: 600 }}>Verified unique peers</span>
           </div>
 
           <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: 12, padding: '18px', textAlign: 'center', boxShadow: '0 1px 3px rgba(15,23,42,0.03)' }}>
             <p style={{ fontSize: 26, fontWeight: 900, color: '#be185d', margin: 0 }}>₹300</p>
             <p style={{ fontSize: 13, fontWeight: 700, color: '#0f172a', margin: '4px 0 0' }}>Creator Challenge</p>
-            <span style={{ fontSize: 11, color: '#64748b' }}>Top promotional creative</span>
+            <span style={{ fontSize: 11, color: '#0f172a', fontWeight: 600 }}>Top promotional creative</span>
           </div>
         </div>
 
@@ -1177,7 +1178,7 @@ export default function HomePage({ onNavigate, onPassportGenerated, onRegister }
           <h2 style={{ fontSize: 32, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em', margin: '0 0 12px' }}>
             READY TO BUILD YOUR FIRST AI PROJECT?
           </h2>
-          <p style={{ fontSize: 16, color: '#475569', margin: '0 0 32px' }}>
+          <p style={{ fontSize: 16, color: '#0f172a', margin: '0 0 32px', fontWeight: 600 }}>
             Start with your personalized Project Passport.
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: 14, flexWrap: 'wrap', marginBottom: 28 }}>

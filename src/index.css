@@ -41,9 +41,9 @@
   --color-surface-3: #f1f5f9;
   --color-surface-4: #e2e8f0;
   --text-primary: #0f172a;
-  --text-secondary: #334155;
-  --text-muted: #64748b;
-  --text-dim: #94a3b8;
+  --text-secondary: #0f172a;
+  --text-muted: #0f172a;
+  --text-dim: #1e293b;
   --border-subtle: #e2e8f0;
   --border-strong: #cbd5e1;
 }
@@ -449,7 +449,7 @@ select.input-base option:checked {
   border-radius: 8px;
   font-size: 13px;
   font-weight: 600;
-  color: #475569;
+  color: #0f172a;
   cursor: pointer;
   transition: all 0.15s ease;
   text-decoration: none;
@@ -508,7 +508,7 @@ select.input-base option:checked {
 
 /* Rank badge */
 .rank-gold { color: #d97706; }
-.rank-silver { color: #64748b; }
+.rank-silver { color: #334155; }
 .rank-bronze { color: #b45309; }
 
 /* Experiment card */
@@ -540,16 +540,50 @@ select.input-base option:checked {
 }
 
 /* Universal typography default - ensures maximum contrast across all devices */
-p, li, dd, dt, label {
+p, li, dd, dt, label, td, th {
   color: #0f172a;
 }
 
 /* ==========================================================================
    LIGHT THEME GLOBAL NORMALIZATION & INLINE-STYLE TRANSLATION
-   Automatically translates dark inline color signatures to accessible light theme
+   Automatically translates light fonts to high-contrast dark fonts
    ========================================================================== */
 
-/* Near-white / light text in inline styles translated to crisp near-black / charcoal */
+/* All light/muted slate and gray font colors translated to crisp dark charcoal */
+[style*="color: #64748b"],
+[style*="color: '#64748b'"],
+[style*='color: "#64748b"'],
+[style*="rgb(100, 116, 139)"],
+[style*="rgb(100,116,139)"],
+[style*="color: #94a3b8"],
+[style*="color: '#94a3b8'"],
+[style*='color: "#94a3b8"'],
+[style*="rgb(148, 163, 184)"],
+[style*="rgb(148,163,184)"],
+[style*="color: #475569"],
+[style*="color: '#475569'"],
+[style*='color: "#475569"'],
+[style*="rgb(71, 85, 105)"],
+[style*="rgb(71,85,105)"],
+[style*="color: #6b7280"],
+[style*="color: '#6b7280'"],
+[style*='color: "#6b7280"'],
+[style*="rgb(107, 114, 128)"],
+[style*="rgb(107,114,128)"],
+[style*="color: #9ca3af"],
+[style*="color: '#9ca3af'"],
+[style*='color: "#9ca3af"'],
+[style*="rgb(156, 163, 175)"],
+[style*="rgb(156,163,175)"],
+[style*="color: #334155"],
+[style*="color: '#334155'"],
+[style*='color: "#334155"'],
+[style*="rgb(51, 65, 85)"],
+[style*="rgb(51,65,85)"],
+[style*="color: #718096"],
+[style*="rgb(113, 128, 150)"],
+[style*="color: #a0aec0"],
+[style*="rgb(160, 174, 192)"],
 [style*="color: '#f1f1f5'"],
 [style*='color: "#f1f1f5"'],
 [style*="color: #f1f1f5"],
